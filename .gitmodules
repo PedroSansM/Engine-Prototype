@@ -7,3 +7,6 @@
 [submodule "vendor/ImGuizmo"]
 	path = vendor/ImGuizmo
 	url = https://github.com/CedricGuillemet/ImGuizmo.git
+[submodule "src/Core/vendor/GLFW"]
+	path = src/Core/vendor/GLFW
+	url = https://github.com/glfw/glfw.git
