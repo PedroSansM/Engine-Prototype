@@ -1,0 +1,44 @@
+Name: A_VenusBirth
+Duration: 3
+Metachannels:
+  []
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 0]
+            - Main Point: [1.0546875, 0]
+            - Main Point: [1.10546875, 1]
+            - Main Point: [1.13845444, 1]
+            - Main Point: [1.19140625, 2]
+            - Main Point: [1.23520803, 2]
+            - Main Point: [1.26953125, 2]
+            - Main Point: [1.35546875, 3]
+            - Main Point: [1.42578125, 4]
+            - Main Point: [1.51953125, 5]
+  - Component Name: Transform Component
+    Attributes:
+      - Attribute Name: Translation
+        Attribute Keyframe Type: Float
+        Attribute Components:
+          -
+            - Main Point: [0, 0]
+              Left Control Point: [-0.200000003, 0]
+              Right Control Point: [0.200000003, 0]
+            - Main Point: [1.02734375, -0.493732452]
+              Left Control Point: [0.827343762, -0.493732452]
+              Right Control Point: [1.2273438, -0.493732452]
+          -
+            - Main Point: [0, 0]
+              Left Control Point: [-0.200000003, 0]
+              Right Control Point: [0.200000003, 0]
+            - Main Point: [1.02734375, 5.00799561]
+              Left Control Point: [0.827343762, 5.00799561]
+              Right Control Point: [1.2273438, 5.00799561]
+          -
+            - Main Point: [0, 0]
+              Left Control Point: [-0.200000003, 0]
+              Right Control Point: [0.200000003, 0]

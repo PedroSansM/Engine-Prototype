@@ -61,17 +61,18 @@ struct ConstructorArgs<BoxColliderComponent>
 		DrawCollider(false)
 	{}
 
-	ConstructorArgs(DBodyType bodyType,
-			DLogic enabled,
-			DLogic isSensor,
-			DFloat gravityScale,
-			DLogic fixedRotation,
-			DLogic useCCD,
-			const DVec2& offset,
-			const DVec2& sizes,
-			PhysicsMaterialRef physicsMaterial,
-			DPhysicsLayer selfPhysicsLayer,
-			DPhysicsLayer collideWithPhysicsLayers)
+	ConstructorArgs(
+		DBodyType bodyType,
+		DLogic enabled,
+		DLogic isSensor,
+		DFloat gravityScale,
+		DLogic fixedRotation,
+		DLogic useCCD,
+		const DVec2& offset,
+		const DVec2& sizes,
+		PhysicsMaterialRef physicsMaterial,
+		DPhysicsLayer selfPhysicsLayer,
+		DPhysicsLayer collideWithPhysicsLayers)
 		:
 		BodyType(bodyType),
 		Enabled(enabled),

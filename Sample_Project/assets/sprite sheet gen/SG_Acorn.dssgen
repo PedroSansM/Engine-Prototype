@@ -1,0 +1,27 @@
+Name: SG_Acorn
+Number of Columns: 6
+Textures:
+  - UUID: fcf61261-2641-4202-9ff0-c69a7e65929e
+    Alignment: [0, 0]
+  - UUID: d24798c0-e8bf-4162-b285-6e93476dbe35
+    Alignment: [0, 0]
+  - UUID: bf046009-fafe-4d36-8f1a-f7fb3cca7b21
+    Alignment: [0, 0]
+  - UUID: b19002ad-78fb-4e30-a677-d0279d1baf8c
+    Alignment: [0, 0]
+  - UUID: d9d69276-15ab-4d22-8aaf-856e331674ea
+    Alignment: [0, 0]
+  - UUID: 57f882b2-1616-4e58-b180-54fb18d409b2
+    Alignment: [0, 0]
+  - UUID: 82db4f4a-81e3-44cd-8425-c9ebf637dbe5
+    Alignment: [0, 0]
+  - UUID: 4e3aa8f0-0c39-4673-8a27-1266fe1f9243
+    Alignment: [0, 0]
+  - UUID: 2f132304-fef6-438f-9fc9-85c5f8a4fec1
+    Alignment: [0, 0]
+  - UUID: e1801834-deb5-482d-95d3-439c24da1f8d
+    Alignment: [-2, 1]
+  - UUID: b8c38382-0c73-4a17-92ed-0b9e64479982
+    Alignment: [0, 0]
+  - UUID: c559d646-b083-4e48-95fc-ad6ab00cbf5f
+    Alignment: [1, 1]

@@ -1,0 +1,17 @@
+Name: A_UpAttacking
+Duration: 0.200000003
+Metachannels:
+  - Id: 9
+    Time: 0.200000003
+  - Id: 19
+    Time: 0
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 66]
+            - Main Point: [0.0666666701, 67]
+            - Main Point: [0.13333334, 68]

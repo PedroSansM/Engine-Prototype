@@ -1,0 +1,24 @@
+Parameters:
+  Spin:
+    ParameterType: Logic
+    ParameterValue: true
+States:
+  Spin:
+    Animation: abfadc54-fecc-435d-a901-f81f0173a3e0
+    IsInitialState: true
+    StatePosition: [-2.10907149, -0.41324541]
+  Attack:
+    Animation: 527f13d2-3023-4db7-a63d-a329f7312d91
+    IsInitialState: false
+    StatePosition: [1.95009828, -0.436574012]
+Transitions:
+  - FromState: Spin
+    ToState: Attack
+    Conditions:
+      - ParameterName: Spin
+        Value: false
+  - FromState: Attack
+    ToState: Spin
+    Conditions:
+      - ParameterName: Spin
+        Value: true

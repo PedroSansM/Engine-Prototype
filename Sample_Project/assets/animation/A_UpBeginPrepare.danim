@@ -1,0 +1,24 @@
+Name: A_UpBeginPrepare
+Duration: 0.25
+Metachannels:
+  - Id: 6
+    Time: 0.25
+  - Id: 25
+    Time: 0
+  - Id: 26
+    Time: 0.0625
+  - Id: 27
+    Time: 0.125
+  - Id: 28
+    Time: 0.187000006
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 55]
+            - Main Point: [0.0625, 56]
+            - Main Point: [0.125, 57]
+            - Main Point: [0.1875, 58]

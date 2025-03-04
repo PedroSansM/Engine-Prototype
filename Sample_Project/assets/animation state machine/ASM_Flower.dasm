@@ -1,0 +1,494 @@
+Parameters:
+  Projectiles:
+    ParameterType: Logic
+    ParameterValue: false
+  Create Begin:
+    ParameterType: Logic
+    ParameterValue: false
+  Creating:
+    ParameterType: Logic
+    ParameterValue: false
+  Throw Begin:
+    ParameterType: Logic
+    ParameterValue: false
+  Throwing:
+    ParameterType: Logic
+    ParameterValue: false
+  Create Reset:
+    ParameterType: Logic
+    ParameterValue: false
+  Create End:
+    ParameterType: Logic
+    ParameterValue: false
+  Up Face Attack:
+    ParameterType: Logic
+    ParameterValue: false
+  UFA_BeginPrepare:
+    ParameterType: Logic
+    ParameterValue: false
+  UFA_Preparing:
+    ParameterType: Logic
+    ParameterValue: false
+  UFA_BeginAttack:
+    ParameterType: Logic
+    ParameterValue: false
+  UFA_Attacking:
+    ParameterType: Logic
+    ParameterValue: false
+  UFA_EndAttack:
+    ParameterType: Logic
+    ParameterValue: false
+  Down Face Attack:
+    ParameterType: Logic
+    ParameterValue: false
+  DFA_BeginPrepare:
+    ParameterType: Logic
+    ParameterValue: false
+  DFA_Preparing:
+    ParameterType: Logic
+    ParameterValue: false
+  DFA_BeginAttack:
+    ParameterType: Logic
+    ParameterValue: false
+  DFA_Attacking:
+    ParameterType: Logic
+    ParameterValue: false
+  DFA_EndAttack:
+    ParameterType: Logic
+    ParameterValue: false
+  Gun Attack:
+    ParameterType: Logic
+    ParameterValue: false
+  Gun Begin Attack:
+    ParameterType: Logic
+    ParameterValue: false
+  Gun Attacking:
+    ParameterType: Logic
+    ParameterValue: false
+  Gun End Attack:
+    ParameterType: Logic
+    ParameterValue: false
+  Death:
+    ParameterType: Trigger
+    ParameterValue: false
+  Intro:
+    ParameterType: Logic
+    ParameterValue: false
+  Intro1:
+    ParameterType: Logic
+    ParameterValue: false
+  Intro2:
+    ParameterType: Logic
+    ParameterValue: false
+  Intro Loop:
+    ParameterType: Logic
+    ParameterValue: false
+  Intro End:
+    ParameterType: Logic
+    ParameterValue: false
+States:
+  Idle I:
+    Animation: 5387072d-7774-4a1f-a47f-e1f0828afc6e
+    IsInitialState: true
+    StatePosition: [3.67626691, 0.95325011]
+  Projectiles Hub:
+    Animation: ""
+    IsInitialState: false
+    StatePosition: [3.62654567, 4.30244493]
+  Create Begin:
+    Animation: 5e7aa65b-0d6b-4f05-b4f4-2d0292c57966
+    IsInitialState: false
+    StatePosition: [-6.21961832, 7.4006052]
+  Creating:
+    Animation: e99b15e7-0fb1-4b55-a8da-7057bf339d36
+    IsInitialState: false
+    StatePosition: [-1.90357471, 7.39116001]
+  Throw Begin:
+    Animation: 7052db29-4056-4806-9182-52ebd40571a1
+    IsInitialState: false
+    StatePosition: [2.31932092, 7.40735912]
+  Throwing:
+    Animation: 8d68d84c-17d7-4709-bb21-158c45b7f09c
+    IsInitialState: false
+    StatePosition: [6.31946659, 7.47486258]
+  Create Reset:
+    Animation: 46040c78-aa07-4cac-8244-dd3fbee0b35a
+    IsInitialState: false
+    StatePosition: [10.4571123, 7.46450186]
+  Create End:
+    Animation: 77661cc7-3c24-4241-b242-02c4a92d135e
+    IsInitialState: false
+    StatePosition: [15.0920868, 7.50262785]
+  Up Face Attack Hub:
+    Animation: ""
+    IsInitialState: false
+    StatePosition: [10.3919048, -2.18883562]
+  UFA_BeginPrepare:
+    Animation: 5ec929f4-acd3-4663-b2dc-5f4e1ed6dbff
+    IsInitialState: false
+    StatePosition: [16.1028023, -5.07228088]
+  UFA_Preparing:
+    Animation: b3420335-b8f2-44f0-84fd-43c9700141ed
+    IsInitialState: false
+    StatePosition: [16.1308041, -3.67255116]
+  UFA_BeginAttack:
+    Animation: 9bc024a3-8cda-40bd-9f95-dea0f2f2cd85
+    IsInitialState: false
+    StatePosition: [16.1587887, -2.16084123]
+  UFA_Attacking:
+    Animation: 3899741b-e5d2-4dde-aaf7-02d77cf6523a
+    IsInitialState: false
+    StatePosition: [16.1028061, -0.845094144]
+  UFA_EndAttack:
+    Animation: 16e64d4b-9abf-4801-8fb5-21dd1b3aba0c
+    IsInitialState: false
+    StatePosition: [16.1587944, 0.582630634]
+  Down Face Attack Hub:
+    Animation: ""
+    IsInitialState: false
+    StatePosition: [2.9249115, -5.4087429]
+  DFA_BeginPrepare:
+    Animation: e915aee7-690f-45b5-8788-2cb06362d1f3
+    IsInitialState: false
+    StatePosition: [-4.49940825, -8.96972752]
+  DFA_Preparing:
+    Animation: 8defbb46-a9da-41b4-81d0-14098565d63c
+    IsInitialState: false
+    StatePosition: [-0.568885922, -8.86894512]
+  DFA_BeginAttack:
+    Animation: 3ffa2599-f3a1-427f-8584-a20790c4cb91
+    IsInitialState: false
+    StatePosition: [3.22726226, -8.83535004]
+  DFA_Attacking:
+    Animation: 0075eebd-ad69-4bca-aad3-5388aaac5c7a
+    IsInitialState: false
+    StatePosition: [6.88902807, -8.8353529]
+  DFA_EndAttack:
+    Animation: 7d74e2db-a594-4041-af75-b7bfbf1bcc43
+    IsInitialState: false
+    StatePosition: [10.5171947, -8.83535099]
+  Gun Attack Hub:
+    Animation: ""
+    IsInitialState: false
+    StatePosition: [-7.62766457, -1.04680312]
+  Gun Begin Attack:
+    Animation: bdbb79fb-6eec-410f-83a5-cf7378be9b75
+    IsInitialState: false
+    StatePosition: [-12.989275, -3.06244612]
+  Gun Attacking:
+    Animation: cf1c0c19-9eb1-4b3c-af5f-566d26661376
+    IsInitialState: false
+    StatePosition: [-13.0699034, -0.361483932]
+  Gun End Attack:
+    Animation: a5cdb405-11c1-4091-a1f3-ccb5f2f0a7db
+    IsInitialState: false
+    StatePosition: [-12.9489603, 2.21854067]
+  Death:
+    Animation: 83bc1f87-f1a1-462b-9330-acc48db80caf
+    IsInitialState: false
+    StatePosition: [-0.261508167, -1.51827931]
+  Intro Hub:
+    Animation: ""
+    IsInitialState: false
+    StatePosition: [-1.91757154, 3.19160557]
+  Intro 1:
+    Animation: 5e60c796-ec4f-4494-9053-141fc3230576
+    IsInitialState: false
+    StatePosition: [-7.42700481, 1.84784102]
+  Intro 2:
+    Animation: a890482a-ee7e-4c2f-80d9-332899bde6df
+    IsInitialState: false
+    StatePosition: [-7.46059608, 3.0572319]
+  Intro Loop:
+    Animation: 5206590c-107a-49ff-ad6a-06cc72d22959
+    IsInitialState: false
+    StatePosition: [-7.42700243, 4.33380318]
+  Intro End:
+    Animation: 2c7c9c24-34d2-439e-b65a-4891b5c082c7
+    IsInitialState: false
+    StatePosition: [-7.42700481, 5.57678699]
+Transitions:
+  - FromState: Idle I
+    ToState: Projectiles Hub
+    Conditions:
+      - ParameterName: Projectiles
+        Value: true
+  - FromState: Idle I
+    ToState: Up Face Attack Hub
+    Conditions:
+      - ParameterName: Up Face Attack
+        Value: true
+  - FromState: Idle I
+    ToState: Down Face Attack Hub
+    Conditions:
+      - ParameterName: Down Face Attack
+        Value: true
+  - FromState: Idle I
+    ToState: Gun Attack Hub
+    Conditions:
+      - ParameterName: Gun Attack
+        Value: true
+  - FromState: Idle I
+    ToState: Death
+    Conditions:
+      - ParameterName: Death
+  - FromState: Idle I
+    ToState: Intro Hub
+    Conditions:
+      - ParameterName: Intro
+        Value: true
+  - FromState: Projectiles Hub
+    ToState: Create Begin
+    Conditions:
+      - ParameterName: Create Begin
+        Value: true
+  - FromState: Projectiles Hub
+    ToState: Creating
+    Conditions:
+      - ParameterName: Creating
+        Value: true
+  - FromState: Projectiles Hub
+    ToState: Throw Begin
+    Conditions:
+      - ParameterName: Throw Begin
+        Value: true
+  - FromState: Projectiles Hub
+    ToState: Throwing
+    Conditions:
+      - ParameterName: Throwing
+        Value: true
+  - FromState: Projectiles Hub
+    ToState: Create Reset
+    Conditions:
+      - ParameterName: Create Reset
+        Value: true
+  - FromState: Projectiles Hub
+    ToState: Idle I
+    Conditions:
+      - ParameterName: Projectiles
+        Value: false
+  - FromState: Projectiles Hub
+    ToState: Create End
+    Conditions:
+      - ParameterName: Create End
+        Value: true
+  - FromState: Create Begin
+    ToState: Projectiles Hub
+    Conditions:
+      - ParameterName: Create Begin
+        Value: false
+  - FromState: Creating
+    ToState: Projectiles Hub
+    Conditions:
+      - ParameterName: Creating
+        Value: false
+  - FromState: Throw Begin
+    ToState: Projectiles Hub
+    Conditions:
+      - ParameterName: Throw Begin
+        Value: false
+  - FromState: Throwing
+    ToState: Projectiles Hub
+    Conditions:
+      - ParameterName: Throwing
+        Value: false
+  - FromState: Create Reset
+    ToState: Projectiles Hub
+    Conditions:
+      - ParameterName: Create Reset
+        Value: false
+  - FromState: Create End
+    ToState: Projectiles Hub
+    Conditions:
+      - ParameterName: Create End
+        Value: false
+  - FromState: Up Face Attack Hub
+    ToState: UFA_BeginPrepare
+    Conditions:
+      - ParameterName: UFA_BeginPrepare
+        Value: true
+  - FromState: Up Face Attack Hub
+    ToState: UFA_Preparing
+    Conditions:
+      - ParameterName: UFA_Preparing
+        Value: true
+  - FromState: Up Face Attack Hub
+    ToState: UFA_BeginAttack
+    Conditions:
+      - ParameterName: UFA_BeginAttack
+        Value: true
+  - FromState: Up Face Attack Hub
+    ToState: UFA_Attacking
+    Conditions:
+      - ParameterName: UFA_Attacking
+        Value: true
+  - FromState: Up Face Attack Hub
+    ToState: UFA_EndAttack
+    Conditions:
+      - ParameterName: UFA_EndAttack
+        Value: true
+  - FromState: Up Face Attack Hub
+    ToState: Idle I
+    Conditions:
+      - ParameterName: Up Face Attack
+        Value: false
+  - FromState: UFA_BeginPrepare
+    ToState: Up Face Attack Hub
+    Conditions:
+      - ParameterName: UFA_BeginPrepare
+        Value: false
+  - FromState: UFA_Preparing
+    ToState: Up Face Attack Hub
+    Conditions:
+      - ParameterName: UFA_Preparing
+        Value: false
+  - FromState: UFA_BeginAttack
+    ToState: Up Face Attack Hub
+    Conditions:
+      - ParameterName: UFA_BeginAttack
+        Value: false
+  - FromState: UFA_Attacking
+    ToState: Up Face Attack Hub
+    Conditions:
+      - ParameterName: UFA_Attacking
+        Value: false
+  - FromState: UFA_EndAttack
+    ToState: Up Face Attack Hub
+    Conditions:
+      - ParameterName: UFA_EndAttack
+        Value: false
+  - FromState: Down Face Attack Hub
+    ToState: DFA_BeginPrepare
+    Conditions:
+      - ParameterName: DFA_BeginPrepare
+        Value: true
+  - FromState: Down Face Attack Hub
+    ToState: DFA_Preparing
+    Conditions:
+      - ParameterName: DFA_Preparing
+        Value: true
+  - FromState: Down Face Attack Hub
+    ToState: DFA_BeginAttack
+    Conditions:
+      - ParameterName: DFA_BeginAttack
+        Value: true
+  - FromState: Down Face Attack Hub
+    ToState: DFA_Attacking
+    Conditions:
+      - ParameterName: DFA_Attacking
+        Value: true
+  - FromState: Down Face Attack Hub
+    ToState: DFA_EndAttack
+    Conditions:
+      - ParameterName: DFA_EndAttack
+        Value: true
+  - FromState: Down Face Attack Hub
+    ToState: Idle I
+    Conditions:
+      - ParameterName: Down Face Attack
+        Value: false
+  - FromState: DFA_BeginPrepare
+    ToState: Down Face Attack Hub
+    Conditions:
+      - ParameterName: DFA_BeginPrepare
+        Value: false
+  - FromState: DFA_Preparing
+    ToState: Down Face Attack Hub
+    Conditions:
+      - ParameterName: DFA_Preparing
+        Value: false
+  - FromState: DFA_BeginAttack
+    ToState: Down Face Attack Hub
+    Conditions:
+      - ParameterName: DFA_BeginAttack
+        Value: false
+  - FromState: DFA_Attacking
+    ToState: Down Face Attack Hub
+    Conditions:
+      - ParameterName: DFA_Attacking
+        Value: false
+  - FromState: DFA_EndAttack
+    ToState: Down Face Attack Hub
+    Conditions:
+      - ParameterName: DFA_EndAttack
+        Value: false
+  - FromState: Gun Attack Hub
+    ToState: Gun Begin Attack
+    Conditions:
+      - ParameterName: Gun Begin Attack
+        Value: true
+  - FromState: Gun Attack Hub
+    ToState: Gun Attacking
+    Conditions:
+      - ParameterName: Gun Attacking
+        Value: true
+  - FromState: Gun Attack Hub
+    ToState: Gun End Attack
+    Conditions:
+      - ParameterName: Gun End Attack
+        Value: true
+  - FromState: Gun Attack Hub
+    ToState: Idle I
+    Conditions:
+      - ParameterName: Gun Attack
+        Value: false
+  - FromState: Gun Begin Attack
+    ToState: Gun Attack Hub
+    Conditions:
+      - ParameterName: Gun Begin Attack
+        Value: false
+  - FromState: Gun Attacking
+    ToState: Gun Attack Hub
+    Conditions:
+      - ParameterName: Gun Attacking
+        Value: false
+  - FromState: Gun End Attack
+    ToState: Gun Attack Hub
+    Conditions:
+      - ParameterName: Gun End Attack
+        Value: false
+  - FromState: Intro Hub
+    ToState: Idle I
+    Conditions:
+      - ParameterName: Intro
+        Value: false
+  - FromState: Intro Hub
+    ToState: Intro 1
+    Conditions:
+      - ParameterName: Intro1
+        Value: true
+  - FromState: Intro Hub
+    ToState: Intro 2
+    Conditions:
+      - ParameterName: Intro2
+        Value: true
+  - FromState: Intro Hub
+    ToState: Intro Loop
+    Conditions:
+      - ParameterName: Intro Loop
+        Value: true
+  - FromState: Intro Hub
+    ToState: Intro End
+    Conditions:
+      - ParameterName: Intro End
+        Value: true
+  - FromState: Intro 1
+    ToState: Intro Hub
+    Conditions:
+      - ParameterName: Intro1
+        Value: false
+  - FromState: Intro 2
+    ToState: Intro Hub
+    Conditions:
+      - ParameterName: Intro2
+        Value: false
+  - FromState: Intro Loop
+    ToState: Intro Hub
+    Conditions:
+      - ParameterName: Intro Loop
+        Value: false
+  - FromState: Intro End
+    ToState: Intro Hub
+    Conditions:
+      - ParameterName: Intro End
+        Value: false

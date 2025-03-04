@@ -1,0 +1,54 @@
+Name: A_VenusVines
+Duration: 3
+Metachannels:
+  - Id: 1
+    Time: 1.59300005
+  - Id: 2
+    Time: 3
+  - Id: 0
+    Time: 1.02699995
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 0]
+            - Main Point: [0.0789473653, 1]
+            - Main Point: [0.157894731, 2]
+            - Main Point: [0.236842096, 3]
+            - Main Point: [0.315789461, 4]
+            - Main Point: [0.394736826, 5]
+            - Main Point: [0.473684192, 6]
+            - Main Point: [0.552631557, 7]
+            - Main Point: [0.631578922, 8]
+            - Main Point: [0.710526288, 9]
+            - Main Point: [0.789473653, 10]
+            - Main Point: [0.868421018, 11]
+            - Main Point: [0.947368383, 12]
+            - Main Point: [1.02631569, 13]
+            - Main Point: [1.10526311, 14]
+            - Main Point: [1.18421054, 15]
+            - Main Point: [1.26315784, 16]
+            - Main Point: [1.34210515, 17]
+            - Main Point: [1.42105258, 18]
+            - Main Point: [1.5, 19]
+            - Main Point: [1.57894731, 18]
+            - Main Point: [1.65789461, 17]
+            - Main Point: [1.73684204, 16]
+            - Main Point: [1.81578946, 15]
+            - Main Point: [1.89473677, 14]
+            - Main Point: [1.97368407, 13]
+            - Main Point: [2.05263138, 12]
+            - Main Point: [2.13157892, 11]
+            - Main Point: [2.21052623, 10]
+            - Main Point: [2.28947353, 9]
+            - Main Point: [2.36842108, 8]
+            - Main Point: [2.44736838, 7]
+            - Main Point: [2.52631569, 6]
+            - Main Point: [2.60526299, 5]
+            - Main Point: [2.6842103, 4]
+            - Main Point: [2.76315784, 3]
+            - Main Point: [2.84210515, 2]
+            - Main Point: [2.92105246, 1]

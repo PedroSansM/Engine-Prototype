@@ -1,0 +1,3375 @@
+4224dcb6-4e77-4ecf-8d86-93d095556c41:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_idle_0001.png
+a1e95145-4d71-4728-929d-d023c60f01a4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_idle_0002.png
+0f53273a-cc8d-469d-98a1-f68757000c7a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_idle_0003.png
+6031a448-33e8-4f7e-aed5-52722dbb846b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_idle_0004.png
+de86cf0a-66b7-455e-9dbc-41d698819088:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_idle_0005.png
+5df2c805-90ef-4018-89b2-3cac546cfec3:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_run_0001.png
+1c3ab914-66c8-4594-9338-699c2c6dd0c5:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_run_0002.png
+1488338a-9a66-454e-b4e6-b1c19b2e0386:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_run_0003.png
+a56e3fb9-237f-4676-ac58-5aaf62ec7af8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_run_0004.png
+46a6a491-b85a-4226-8987-ad0a12063b14:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_run_0005.png
+392dcbb8-75a5-455a-8144-3102e9be20d0:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_run_0006.png
+d55c34d7-96cb-4208-80a7-91bf0ae94271:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_run_0007.png
+cf626241-fb6b-4129-a163-33b96c2cbcff:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_run_0008.png
+ce6cef23-d24e-4a67-a7c9-ddde22555d3b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_run_0009.png
+35664341-88db-4a35-be00-c0de768c0d55:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_run_0010.png
+1f0d6bde-38e3-493b-b69b-506086b294a9:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_run_0011.png
+965f51d8-71e6-4023-ab82-1f93e934b7e8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_run_0012.png
+cb3364e4-c800-4c0d-b9fc-89ac9432067b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_run_0013.png
+870d2804-2745-466a-a00c-dc819a750531:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_run_0014.png
+7f79e064-e97e-4c51-90fe-5f9277949771:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_run_0015.png
+62f4fade-89da-4a9e-87d8-489ae9c4c1b2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_run_0016.png
+89731a79-8386-4874-9133-1cda46f5a9de:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_dash_0001.png
+3f92e038-ab7c-4a26-a0cb-0d865ca22fcb:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_dash_0002.png
+778ba1a6-6a7d-4b12-91ba-8458d6b68ff4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_dash_0003.png
+9cfaffde-6657-4983-bb52-4e81a4b3b57f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_dash_0004.png
+e3ba1d81-7b5b-44e9-82b2-5f812e90fa2a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_dash_0005.png
+686ed0b1-0c29-4037-a068-d130ba9d04ed:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_dash_0006.png
+6e16164f-0b5f-4f7f-9b44-c1d99a38d1df:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_dash_0007.png
+aaa00c7b-7682-44a4-b234-d9833cc96c16:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_dash_0008.png
+8f1df081-1782-45f6-b5d4-b110484fce77:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_straight_0001.png
+ca92d3ed-d660-4c88-b448-4d3e93a5a085:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_straight_0002.png
+9695ce0c-dae4-4eea-8753-3723df281cde:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_straight_0003.png
+cb23f350-7f7d-4b19-8d43-bc27341bcf4c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_straight_0004.png
+6736eae4-e718-435c-a6c8-19526b192be4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_straight_0005.png
+dbbb364d-505e-43a2-9ada-53fea50b8fda:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_down_0001.png
+9d6c0fb8-2dfc-4b00-b210-2cd029e5cde2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_down_0002.png
+10f88ee9-9742-41f7-a6c8-e344a36aee35:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_down_0003.png
+61cd598f-82cf-4f71-b3f8-044c4e49abe3:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_down_0004.png
+660ac76d-3ce0-4e50-8817-c4775c5ee043:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_down_0005.png
+14b54618-f556-48c4-bffe-94a6771d7286:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_up_0001.png
+56fae540-bdd3-41a8-8da9-4232b36a26d2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_up_0002.png
+50aa361c-0074-4fd6-b795-2bc888ee6526:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_up_0003.png
+4f716c0f-8327-4939-96fa-bbfa666ba153:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_up_0004.png
+920595b6-dcf3-4f59-9ece-fb3f0863314a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_up_0005.png
+6db25046-4f04-4636-850f-e671578cdcd4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_diagonal_down_0001.png
+c7fdc0e2-62cf-4290-b3c8-39ff7e3e20ab:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_diagonal_down_0002.png
+1547fbbc-b4c4-43ad-ba1d-0af12dedb2ee:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_diagonal_down_0003.png
+4f759c21-0d78-43eb-9a60-c90b9f255a74:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_diagonal_down_0004.png
+1536b67c-1cea-4f00-918a-d8483a20df9e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_diagonal_down_0005.png
+4ff4f233-a690-4cf6-b11e-13e30d8911de:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_diagonal_up_0001.png
+9b78df1e-5de9-4f7e-9ba1-526b10eb29be:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_diagonal_up_0002.png
+fb9ebd2c-7cd2-4e0b-ab24-6b8fba57bc60:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_diagonal_up_0003.png
+f1c65c56-384e-4c8a-a9d7-9b3f1e8c56c7:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_diagonal_up_0004.png
+567b634a-bb78-4833-ad92-037dd562620a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_aim_diagonal_up_0005.png
+34b786cc-2d75-4be1-9215-31307c9bec78:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_shoot_straight_0001.png
+7b70451b-589a-4bb3-9fc4-8ab6aabb9b06:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_shoot_straight_0002.png
+f96d0b7b-9c7f-4b8c-a181-e2ee327d6b39:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_shoot_straight_0003.png
+b6ab77b8-3ae0-4dce-b018-048034d394c9:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_shoot_down_0001.png
+8d77d037-38b2-4907-9dee-09d26da751b1:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_shoot_down_0002.png
+558c3038-0f31-46da-8125-2a76eeb6a9c4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_shoot_down_0003.png
+c4013733-8268-4b9c-b90d-092901761cde:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_shoot_up_0001.png
+1b6193cf-8359-47b9-847f-cca43d28e6a8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_shoot_up_0002.png
+b0762a7c-c1c3-4bf4-b04c-74769d3b87de:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_shoot_up_0003.png
+9aec05bf-2240-41bc-8489-e0d35875df9d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_shoot_diagonal_down_0001.png
+013046ce-f939-4830-8845-dde1ff678019:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_shoot_diagonal_down_0002.png
+27fcc47e-5a5e-408d-8e11-5ec793373aa8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_shoot_diagonal_down_0003.png
+2274b136-9939-477c-893f-8b7eba7a4048:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_shoot_diagonal_up_0001.png
+ae8bdf18-9a9e-4c3d-bfd1-37178f1a2289:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_shoot_diagonal_up_0002.png
+58e2aba9-424b-4791-8fcd-ea91269cb962:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_shoot_diagonal_up_0003.png
+c80918c6-4771-4c29-a1eb-21f147ab7d32:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_0001.png
+b5611211-535e-45a2-955c-016b486dbbbb:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_0002.png
+b091c943-9f5c-40ea-abf0-85c028c812c0:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_0003.png
+c4b2dbc3-d543-490e-8dc6-70ebc20c83eb:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_0004.png
+d5403554-65bb-4b50-8f50-1497395db0df:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_0005.png
+c2226a25-22fc-4b8e-a2a3-903cfe908e06:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_0006.png
+94821f53-842c-4ca7-9642-601f3bc028da:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_0007.png
+c2ec7ff9-d5d4-4555-935d-eb65d1d160e6:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_0008.png
+55cff256-b262-4e24-b175-9febdabc7ea6:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_0009.png
+bcb430a9-fda0-4307-812e-2aa1de096c54:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_0010.png
+6474492f-16f9-4b32-8988-28f1b37983ae:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_0011.png
+44872194-911a-4105-9078-12aa2a9db000:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_0012.png
+4df711d3-bc2d-4aba-befa-212823ed06bf:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_0013.png
+6d21a946-857e-4f82-b1d2-4dccd6da82f7:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_0014.png
+77c5cd9f-8f4a-4e1d-9be2-6fff6173b784:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_0015.png
+ab3ace71-559d-413a-ad2b-8de765cdd414:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_0016.png
+b1444946-6f90-402d-afd6-b65a1ff51336:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_diagonal_up_0001.png
+35110475-75a6-498b-bd6b-4b30387d2896:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_diagonal_up_0002.png
+e76f7260-89fb-4c6c-aac7-ae805634749d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_diagonal_up_0003.png
+4c673161-b464-479e-afa0-74a6faa61f7d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_diagonal_up_0004.png
+18ad3f05-74ab-4111-bdb7-c19963b69968:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_diagonal_up_0005.png
+c37b2bc8-4cbb-43df-9d0f-a56ecf8b92a9:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_diagonal_up_0006.png
+42a67f92-ff46-45f0-b803-51a371c1f23f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_diagonal_up_0007.png
+39148769-3aac-43f4-8660-d9b4a6cea699:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_diagonal_up_0008.png
+144febae-5e26-4e1b-b525-d2c7755e70e3:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_diagonal_up_0009.png
+f814d085-04eb-4cac-aba7-a25ebdf55fa3:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_diagonal_up_0010.png
+5574031d-8cc4-40b3-b35f-4a89b8fa536a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_diagonal_up_0011.png
+16369fc0-b848-4fb4-9215-65ae8f60e967:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_diagonal_up_0012.png
+da1bcee1-1253-44f2-8c9e-594faf1b92d0:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_diagonal_up_0013.png
+3e2125c9-a6d0-4c48-8ff2-9abb401ae698:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_diagonal_up_0014.png
+d4d53647-4a5b-4d66-828c-02aecdfdda64:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_diagonal_up_0015.png
+d2ace160-6a05-4f4b-8c11-ff074af8587d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_run_shoot_diagonal_up_0016.png
+6eb5f252-6817-41d9-bfdf-a51c97ac44e4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_duck_0001.png
+be2e5a74-7032-4bdb-af04-3a86fa5034fc:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_duck_0002.png
+c9191f65-24a9-44dc-b610-4df917074098:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_duck_0004.png
+24b36567-3be1-4029-83ed-30962c1dbc36:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_duck_0005.png
+f92b5242-e3f4-444e-a4d7-1c69af53deaf:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_duck_0007.png
+2588574e-f310-4d5d-9c7f-38349056e0e1:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_duck_0008.png
+57887cf6-2983-40ab-baae-18338b0a79ac:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_duck_idle_0001.png
+c341e490-9b4e-4bf8-a783-764e2a5f8315:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_duck_idle_0002.png
+136061a1-2ca1-4ed9-8188-3b6ced40b288:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_duck_idle_0003.png
+f040aa70-950b-477b-aced-54a81b5e57d6:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_duck_idle_0004.png
+12636521-e98a-48d6-aadc-8101397a4dc9:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_duck_idle_0005.png
+bb1d9302-fbba-417a-8bbd-e704780483af:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_duck_shoot_0001.png
+40288cb8-2dac-4383-976e-7373e1b5744a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_duck_shoot_0002.png
+5042c0d3-bfd7-4e0e-9b6a-f045d2656589:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_duck_shoot_0003.png
+f0789b1f-121f-4e0e-b5a3-9a4489423dd3:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_jump_0001.png
+cf667d62-3527-4053-8180-54f70cc0e1a2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_jump_0002.png
+c9287814-b5b5-45bb-b145-8ad31e0c3d2c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_jump_0003.png
+d567f428-278b-4c7b-8033-24a09f7e38f8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_jump_0004.png
+4aa78ba3-4c0e-4056-a0c0-681d69942042:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_jump_0005.png
+d727cb03-cb89-4e24-acff-b4e72c77cbd8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_jump_0006.png
+d9f2ec3a-9451-4a58-87ae-be58b26805d3:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_jump_0007.png
+e17bccbe-f1fb-4099-a2a6-1cc67596ec02:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/cuphead_jump_0008.png
+23135d48-dc50-4280-bb92-e6fb06433d43:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/PlayerShot_0.png
+59b16c5b-c776-47e8-b65e-b9b7227b097b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/PlayerShot_1.png
+8a810cf8-cc34-49be-a6ce-29e28121f8f8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/PlayerShot_2.png
+494953c8-6cf9-42e5-9ae5-9c144eb89ba8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/PlayerShot_3.png
+a6531801-2796-4ea2-be22-ec7a9666b980:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/PlayerShot_4.png
+f83fb89f-a0b2-4073-b3b4-e9cb5ca4e9f4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/PlayerShot_5.png
+8936a81a-075c-4a18-82f3-467e3f6d1c26:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Platform.png
+f8f5650b-b32e-498c-acbb-fdb11de52e0b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/PlayerShotDeath_0.png
+4a3919d9-fe50-48a1-a277-98e1d865c661:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/PlayerShotDeath_1.png
+d56280d5-d677-47d7-9554-6e922d650428:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/PlayerShotDeath_2.png
+e99d5ec5-95fd-4513-b443-a06fa73c3749:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/PlayerShotDeath_3.png
+e581326b-ba97-48ee-9a68-6698299f70a2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/PlayerShotDeath_4.png
+6e2676a0-e0b3-4bcc-9f68-6bc1d54b6db2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/PlayerShotDeath_5.png
+4773971d-447c-4538-9fac-b9d9b43e7bd5:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/PlayerShot.png
+125fd70d-084b-4cfd-be76-d7c1756a21a9:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Background.png
+41401fc7-5ee7-4bcd-b870-260ca4a293ed:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Sky.png
+f4468acb-ab52-412d-abf3-2a972e83d837:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Plants.png
+3295ee34-ad16-42af-a5c1-62fbc7ef1c54:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_A_01.png
+98249906-11de-458a-9c83-e41104064ce6:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_A_02.png
+2ce6786f-5a68-4acd-9b9e-95fa80351139:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_A_03.png
+3600f8c5-fe7c-4979-b488-4247e0c3dedb:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/FloatingPlatformA.png
+11ad091a-476c-4972-8701-9e6ed4921f0f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_Propellor_01.png
+177a99a3-b109-4010-8a56-1be4437e9ee4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_Propellor_02.png
+929786dc-9a76-4b90-9265-1f95064ba28b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_Propellor_03.png
+eadf3df1-3d37-41ac-b2f9-facdf285493d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_Propellor_04.png
+81b71870-2d0b-4be4-9a6b-cbf9bd24cf45:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_Propellor_05.png
+ea1f9dfa-a56a-4d74-88c9-e1818e75d46b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_Propellor_06.png
+4db6e2f0-8df0-471b-8721-6eb322e8ac4e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_Propellor_07.png
+13840c38-4e2c-4434-819d-c765ac5ff269:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_Propellor_08.png
+3ade6d53-2338-483c-b318-52b0125e4413:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_Propellor_09.png
+5c54f856-cc39-406f-9df2-8a9fef564c41:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Propelor.png
+10f62853-3b50-48d4-ab7e-141365faae11:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_B_01.png
+55096c17-7f93-4599-a69a-eb692b5209a4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_B_02.png
+876bf429-49ce-444f-9dd3-79a040ca9566:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_B_03.png
+70b54fb4-d098-4366-aa9e-c7329b96d837:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/FloatingPlatformB.png
+58e2a1c1-934a-40ef-8d70-702ac9786ee3:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_C_01.png
+f38b8b93-e2f1-4efb-8cc5-77beaba89a8b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_C_02.png
+86aeaafc-0b2f-497c-ab52-b1d93d8bc896:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Platform_C_03.png
+19f75d41-9605-4370-8dbf-1297ba89bf59:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/FloatingPlatformC.png
+6240f06f-3641-4089-a7a4-eb2183744981:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Idle_01.png
+32f0164b-ea6d-4dda-a94b-2ef25ac02551:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_02.png
+a8512a20-5783-4e0d-a1d4-b2facd2cadbd:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_03.png
+b24d3ee9-0754-4460-8a24-0b97b987cfa2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_04.png
+7f63ac26-3211-4a55-b7ad-029e3a635063:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_05.png
+f830ba2c-67bd-4c12-8b35-72b2b8e4cb73:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_06.png
+b1d86fdc-3dc6-4572-8b52-8fe588650244:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_07.png
+2d8d2359-aa2b-43ac-9656-6754ee536e32:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_08.png
+20f608c6-3edd-4478-a4bb-8ae5edac52c6:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_09.png
+a4100103-4be6-4995-abd2-56ce357ac080:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_10.png
+810f3b4f-2d5d-4bd4-b4d6-1a6188a12b14:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_11.png
+30380edd-e371-4b0a-b51f-dd6f5113a294:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_12.png
+61f8471b-585b-4ae6-b3e0-bcde105d9196:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_13.png
+74c0e9eb-ddf7-40c1-a5ad-044f5727245a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_14.png
+191b945b-1b1f-4f8c-b825-391129255464:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_15.png
+963c1117-d674-43b6-93ed-5ded3d3febf7:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_16.png
+3a3f1b35-ae42-4f3b-a643-52be492d599e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_17.png
+75ff006f-ae3c-403a-afb9-d21f13f27683:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_18.png
+46bce6d2-13ed-4be1-b65d-5680dd2a5121:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_19.png
+b30738cc-ee6f-4317-b3ca-f6dfc6912347:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_20.png
+78f4e20c-bd55-4732-961a-0e34a887716f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_21.png
+f5b97e56-3b20-4fb5-aa8c-9c55fe16dd04:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_22.png
+0d3a16e1-29d0-4331-a8d6-6f67db6e8e7c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_23.png
+c18e4a23-e077-4a70-ae94-5493af4dff21:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Nearest
+  Path: texture/Flower_Idle_24.png
+7020a382-d8c7-4d1c-8da4-612241e5ce4b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_01.png
+cd9198dc-7b00-4861-9eee-65742d2d8883:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_02.png
+f3802e14-67a0-4e45-b4e1-dec9db57084b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_03.png
+4bb96d39-03d8-4312-91b2-35c66e074dbd:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_04.png
+e59c6af2-fc06-4bbe-926c-386530c6eb29:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_05.png
+f87f2557-4629-47a1-b03a-985b681fd922:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_06.png
+a11444ca-6b78-4cde-82f5-ba6a085387f0:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_07.png
+16481838-7e14-4d97-8bc9-d51092e7438a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_08.png
+4af12ac8-f9fd-4cd5-84b7-132246c43ca7:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_09.png
+4778814d-8b99-489b-970c-1806716cf951:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_10.png
+ae77b1cf-2920-4bf1-98cb-f33ad30fa90c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_11.png
+ea262c36-58c1-4976-8929-aa85363d4441:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_12.png
+83d8c6cc-7422-49b0-a1d0-647311e7e495:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_13.png
+cd494c1e-6c16-4477-b1e5-c6d599fad0ca:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_14.png
+ef23ca99-f814-4da5-bc91-8dd61f25fc63:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_15.png
+5b6291b1-756d-4778-8e07-3198e021c626:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_16.png
+6ae96708-f8fe-44ab-8daa-235e61fe9c77:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_17.png
+6a8be887-33f6-4567-a803-35a17150a77a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_18.png
+dd5d4c51-c798-4772-b9d4-e83708fc0769:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_19.png
+497b13a2-3298-4c67-8e6d-43f205c4d541:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_20.png
+e0fef14b-b18b-455f-a63c-1a81da0a7c30:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_21a.png
+e15f3a61-8cd7-4184-9de2-aaff567f2436:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_22.png
+6a3ca5f1-e8d7-4031-ba61-9a4b39c336d6:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_23.png
+ca48f867-60d8-4ecf-8f8d-7a0cef44bf51:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_24.png
+0f91a476-4193-42ef-b4a1-e3099f7642a7:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_25.png
+e504da63-402a-4419-9f81-97df699abb63:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_26.png
+1473cefd-7350-422e-b984-370d12a61583:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_x.png
+8655ca80-e8c9-4ce3-a68a-cfab799af821:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_hit_air_0001.png
+53ebca5d-78b0-42b1-9123-24c738f9b872:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_hit_air_0002.png
+288b5b0d-a284-4c81-a9c8-480abce0b371:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_hit_air_0003.png
+4d066e50-4b6e-4a2b-afbd-c73132273744:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_hit_air_0004.png
+66ded42f-1f34-4058-afff-f5172f30b086:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_hit_air_0005.png
+3bdc2879-fbba-4a32-afc2-712655926af4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/cuphead_hit_air_0006.png
+fcf61261-2641-4202-9ff0-c69a7e65929e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Acorn_01.png
+d24798c0-e8bf-4162-b285-6e93476dbe35:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Acorn_02.png
+bf046009-fafe-4d36-8f1a-f7fb3cca7b21:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Acorn_03.png
+b19002ad-78fb-4e30-a677-d0279d1baf8c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Acorn_04.png
+d9d69276-15ab-4d22-8aaf-856e331674ea:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Acorn_05.png
+57f882b2-1616-4e58-b180-54fb18d409b2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Acorn_06.png
+82db4f4a-81e3-44cd-8425-c9ebf637dbe5:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Acorn_07.png
+4e3aa8f0-0c39-4673-8a27-1266fe1f9243:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Acorn_08.png
+2f132304-fef6-438f-9fc9-85c5f8a4fec1:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Acorn_09.png
+e1801834-deb5-482d-95d3-439c24da1f8d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Acorn_10.png
+b8c38382-0c73-4a17-92ed-0b9e64479982:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Acorn_11.png
+c559d646-b083-4e48-95fc-ad6ab00cbf5f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Acorn_12.png
+3459fa8f-700c-4236-9011-fc746d49a43b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/AcornSheet.png
+ff3861d3-10aa-451b-a70d-822841a849ce:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_End_01.png
+cdf5101b-20a5-4286-a2c2-ca8e6f1b25ae:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_End_02.png
+8bdbd34c-07d0-46f1-bea9-e86234b91107:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_End_03.png
+941de926-e9c3-4ddf-b0ed-16ad2eb7193e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Flower_Create_End_04.png
+a2f5efdd-9d60-48e7-86c9-4f018e85c3fc:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Boomerang_01.png
+5d6359f1-ae28-433b-a9fe-54d4d00b80ab:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Boomerang_02.png
+2e6b3407-b916-4c21-91e8-fa4418f68959:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Boomerang_03.png
+d2c3c01f-5b60-43e9-a28c-daa4e835fc81:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Boomerang_04.png
+ac199885-60bf-48db-a892-f4e1d3dd1956:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Boomerang_05.png
+184126ad-a91b-4080-979d-6a4be778679e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Boomerang_06.png
+44ddd4de-ed69-457b-bbb5-a11af9062bf8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Boomerang_07.png
+5b143e34-25c2-4559-b729-af8c6de05da8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Boomerang_08.png
+0b9c7ba2-9ee3-45d0-8ff5-84d8e5292087:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture/Boomerang.png
+63339231-c780-415d-bb57-bbebba87a901:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Acorn_01.png
+28b4de3e-4010-4024-a37f-397c2f55d2bf:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-7.png
+eab7f45c-4e71-4750-9372-d0e6cd4900ab:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-8.png
+aaf7840f-7d89-41b8-894c-f0b20924621c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-9.png
+20470106-4aae-48e3-a532-b7df4d15e279:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-10.png
+40397e49-7388-4236-96fa-8217503199ce:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-11.png
+dc5f2bdc-6572-46d3-9a71-e6d3aaf09955:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-12.png
+9cf86d0f-91e2-4238-9030-f7059722a315:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-13.png
+aa779f7f-d94a-4182-a38d-604ea3456dc7:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-14.png
+20be07ef-c461-4ed3-9afa-a99a0056c22c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-15.png
+ccc9ba1e-0aac-4917-9654-64fd68bbb34e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-16.png
+d9627c49-19b8-4ee0-875e-316a3d467632:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-17.png
+a6e4b299-ee8d-4769-9e65-af442bf52a2a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-18.png
+4cc0f6cd-be3a-4052-83e1-fb3afe509bf1:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-0.png
+ef6ff99f-ef14-4e51-ba6e-e87cc61861ad:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-1.png
+6825fa34-18e1-4fea-8ace-1c87a8a4c575:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-2.png
+a33a2499-d4b6-4411-8495-b2bd8ee10450:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-3.png
+6929eae9-3a56-491d-b55c-04b874a8f7a4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-4.png
+4957ac43-6088-41a8-87cb-cfab90c92575:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-5.png
+0f9844fd-3df1-491c-8715-8bafad6bcf6c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Face_Attack-6.png
+4452f650-2fc6-46bb-a08b-432d745f5e73:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-0.png
+377a898c-cf75-4261-9a4d-1b45ace09a19:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-1.png
+2e993cbe-64bb-460e-afc0-59bd96cc2cca:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-2.png
+798da9c7-76a0-4441-9981-20c3a8a7d228:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-3.png
+3691f944-88f6-40dd-b880-47b7679de3e4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-4.png
+9e6cd0e5-f5e2-457d-8de5-bf72c12de848:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-5.png
+232b15b8-a50b-49a5-b9b1-72d8d46dc9a4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-6.png
+37caff5e-ff2a-4572-b2a8-e2bca6315ade:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-7.png
+e12261eb-30fc-497a-be9d-799a6b28af89:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-8.png
+c46e565d-f598-48bd-be8d-7f21259844fb:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-9.png
+e6947222-b4d2-4f0b-b10e-ed9f0b711032:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-10.png
+d813b0cd-4b79-4f9d-8a58-1f9d6d78da60:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-11.png
+b9c2bb86-c2f3-410c-9e06-c5d47301ee13:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-12.png
+11ae0ef6-dc8c-4e74-9cc5-37b532a78289:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-13.png
+08295bfe-e6e7-4a3e-b1db-ac4d0ad60b9a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-14.png
+d19c87aa-1807-495f-a615-39f52aae505b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-15.png
+73e7cd97-ae15-4649-a5ec-7e47dffecfe8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-16.png
+671431ac-b140-4dd9-a3f4-c8affd530bae:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-17.png
+ccc09108-3976-4857-b1ec-989e41f22540:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Down_Face_Attack-18.png
+2b6995a1-d744-4b39-9377-57d3328f8897:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-0.png
+c5095a38-ac45-4f81-a2a6-d0c0eafdd432:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-1.png
+05b2bc0f-8724-4f7e-ad8c-54cc1595f1df:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-2.png
+04a62942-57e0-4c24-9b07-fd10268b14b6:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-3.png
+60a61267-261e-43ca-ad81-2bad36c80263:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-4.png
+6fc5322e-078c-4de4-8fdc-82698554b5ca:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-5.png
+8427bb22-8d80-4124-b7db-d0705da7cf4b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-6.png
+51c29f32-7df1-4521-ba15-6beca5b30540:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-7.png
+c1de3ff5-92c4-4ec3-b67a-e6e77da19803:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-8.png
+f6395519-2f75-4b9a-9753-d83ffe477e4d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-9.png
+d9c7053b-61b6-4f37-ba52-c4803a8c0831:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-10.png
+9a6ced7e-50d6-4e6b-8a25-d354ee45fed8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-11.png
+1fbaf3a3-1329-4ac2-94f7-7ff0994548e9:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-12.png
+c1572670-6b6a-40eb-9668-6b27306023bd:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-13.png
+2c8d901e-c908-4ff5-b4f2-61455f88700a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-14.png
+3cec46e9-3097-4b1c-b07b-0d06c726fe69:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-15.png
+265d8740-f1b2-4217-8566-5902ffb4aabf:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-16.png
+83179cd6-edf2-4620-b081-164bea6f4361:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-17.png
+996400eb-d769-4c90-8b04-9cade6b53b9f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-18.png
+ea1b46a8-c913-419b-8349-b1009d00b718:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-19.png
+411b9fdd-189d-4d28-9300-316b87948f3f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-20.png
+587331a5-f064-4417-a3f4-38301161083b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-21.png
+ff47e04b-3206-4f9a-b4ce-f27e62a165c0:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-22.png
+4ace7593-a3a6-4597-ae13-a3f91e2225ec:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-23.png
+4ee4bfb8-93fa-4a64-98bf-5e57209682ea:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cagneyc_tommy_gun_no_loop-24.png
+dd69ecb7-bcea-42ce-8692-fcde7d335d3a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_07.png
+47801aba-9b15-4598-a5f2-a7a9fbf336c4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_08.png
+7cce2326-dd97-4f7e-9f03-6cabe7ade88e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_09.png
+2d393f28-ef22-4f50-b4d8-3431aec432fe:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_10.png
+1c283b68-36b1-4710-a439-40f048e707bd:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_11.png
+051b30d3-c4a3-452b-8daf-7ed22c1dd459:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_12.png
+0d2fcbf5-6083-4ed9-9915-de16650c952d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_13.png
+5e92241f-b1d0-4392-b612-d54d7eeb3e4f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_14.png
+07b02c76-7f22-4c60-a821-bc3517a2e396:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_15.png
+2a3adf1f-147b-4e9b-8f33-143d0538ae72:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_16.png
+dc055c8d-5d21-4137-a3ac-d1088c4e0c85:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_17.png
+085909b7-0fe6-45e6-ad38-e6db4b999d82:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_18.png
+705db35a-bf15-43fd-ae0a-b047bff449c8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_P_04.png
+660e3967-2fde-4501-9940-a6f80244c90e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_P_05.png
+8b44e2f2-1a08-4865-b6d5-2f5bee70488d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_P_06.png
+d462c483-a0a6-4839-9f55-c399e7737905:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_P_07.png
+41ca22cc-a2c7-431c-85c8-54c3d4c8099a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_P_08.png
+be99f92b-91ff-4805-97a2-f35df2ae000f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_P_09.png
+2463777e-c5c9-47b9-961b-26bf5c8b672b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_P_10.png
+c7fa974a-e644-4844-9b8a-db5ee0bcbb66:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_P_01.png
+5505b6f6-451e-4085-982c-3cbbb2caca9c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_P_02.png
+64309259-3fc3-4846-8b89-5342a4ead366:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_P_03.png
+67f6cb99-e538-4222-b15b-567b3beb518d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_02.png
+5e1eef18-bb4e-4391-99ed-c60b9b822c98:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_03.png
+8501f798-9f42-4197-982f-cba9afc14e66:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_04.png
+9b9b08c1-fc57-4c37-bab0-7f03b29a9847:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_05.png
+ad4ea415-e27c-42ed-a213-b12bb6df2f27:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_06.png
+996da21b-4a97-42ad-a473-17392e1e0272:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Seed_Fall_A_01.png
+77d2798e-4b76-485f-9993-714d1aaface1:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_02.png
+e8d40ac7-c06e-4a52-aee4-1f5ac14fed19:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_03.png
+882cd212-bc18-4995-bb7c-16434589c72e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_04.png
+620dd8da-ba07-4fb1-b745-114d8568f4ce:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_05.png
+ac16c11f-5248-417f-b451-e2dd52a29eec:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_06.png
+d94d955d-4d29-4877-9202-25c455fe4c2d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_07.png
+151f91a2-7518-40c8-bf10-6cb82190d49a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_08.png
+d6f3c6c8-f506-4906-9a2a-93df5189f2d2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_09.png
+4e2560c3-5881-4584-bdd1-8aee88736686:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_01.png
+0d151bd1-e51e-4882-aa95-91af9379e901:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\ChomperSeed.png
+0f75158e-eaa2-4b99-ae9d-514800543a77:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\flower_vine_groundburst_0001.png
+621a4831-b476-4d74-940d-c4aca677fcd8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\flower_vine_groundburst_0002.png
+a2082520-f98b-4a4a-b9ca-e61aedb4cc33:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\flower_vine_groundburst_0003.png
+62e1226a-76e4-4131-b91d-cd03a66842ab:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\flower_vine_groundburst_0004.png
+a51d0a76-f371-4c20-8afa-04118b64773b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\flower_vine_groundburst_0005.png
+c14d7f62-4855-4f37-a150-279746ba256a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\flower_vine_groundburst_0006.png
+e5c57225-96f1-409a-a3e2-38c8b2693f4d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Burst.png
+640a0441-5d58-4aa1-8ab4-ff72486fedbd:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_02.png
+68eed674-5af4-4f4f-b66b-74cca636eb85:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_03.png
+f1d9382d-9f6b-4b56-8518-1964393da655:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_04.png
+4c3ec541-8e50-445c-a2e0-432f44c8e253:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_05.png
+ee9b85c5-ad67-4df7-b8b6-5a17fe25288c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_06.png
+fed8cf85-c20f-4546-a557-97e6659acbf0:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_07.png
+90a3dc04-694b-43dc-a801-29a6fb25da3b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_08.png
+4d1803ef-871b-46cd-8c11-0a7dd34f6fa2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_09.png
+fc7d5004-bd34-42b1-9414-e80f00dcbaa3:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_10.png
+43be0f1b-9e76-4a35-b1ad-321be2508f5c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_11.png
+7de0314e-aff7-48d0-88fe-2dd616e807ce:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_12.png
+f576f7c8-993b-4daa-be64-c00097ebe580:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_13.png
+66968a91-522b-4d4c-ae3f-4bb8b5a5b058:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_14.png
+b1121387-4cd1-42bc-ac31-a4403a73db38:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_15.png
+49fc73ce-f950-4c07-acbf-5dd0fa0a77d2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_16.png
+66526e16-5f8d-4f74-90cc-7e8ee2f52a33:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_17.png
+4aaa8688-6568-471a-87a3-d146d607617f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_18.png
+5cb16eda-d894-475e-b44a-84bd9ec00971:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Fall_A_01.png
+fc6e5644-6d5c-4c10-a217-0a9f044f960b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Grow_01.png
+326e4ae0-c75e-494a-a3a7-6b72832f57c3:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Grow_02.png
+572b0da3-0d6f-4398-80d7-845c21920056:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Grow_03.png
+73aa3f01-690c-40eb-9b56-01b5f886cdf2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Grow_04.png
+69943da5-9a52-4a1f-9108-8da5b6e97e43:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Grow_05.png
+f943ec9a-fa00-4243-9810-fec3f1e36468:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Grow_06.png
+6fb447d5-3f04-4ac2-8875-2651a5c27711:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Grow_07.png
+33122ea4-1f63-4a76-89ac-d78e6278fa27:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Grow_08.png
+97ce6d32-e2d0-4b6d-b0c8-cd68f94a81b6:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Grow_09.png
+60a3a4f7-e9d9-46af-ae48-e91391c2b4fb:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Seed_Grow_10.png
+bb5fa33f-a927-4b6a-8d54-10abdb69b865:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\VenusSeed.png
+91fab7aa-f806-4dff-9f3b-aaf1029fe3a8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_12.png
+f1ead6d4-8a5d-4d93-a7fb-cfa5cb639610:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_13.png
+cb8b5a39-c64b-4e11-98de-ce34bc2b14a8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_14.png
+e6589e42-e158-4f95-b9ba-4b4a721f4647:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_15.png
+fddf6bac-88fe-4d2e-ad64-19c39ac944b5:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_16.png
+6e60b9a6-33dc-4d8a-9564-cac1f03a7967:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_17.png
+3cfc3583-922a-4d0f-b802-5b7042c8ba5c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_18.png
+c7af03e5-61da-4099-939d-73406fcd7cf7:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_19.png
+805b1cb2-4b23-4e5d-b4fb-3f68f7e33c85:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_20.png
+8c49effb-e4d2-4b4a-941a-8c7558a13f8d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_01.png
+2c843c15-5c97-4b9b-b44e-e4b84d289d17:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_02.png
+ac64f9e2-9827-4a17-8a0d-b102192ef3fe:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_03.png
+58b568a4-38bb-4a43-9663-a6943839f65c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_04.png
+e207a097-f7f6-4e13-9364-87da1f5500e5:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_05.png
+5f4e9072-1121-4792-9043-30f713b6bf4c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_06.png
+578f318d-8a5a-49ce-8942-3416ce92b428:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_07.png
+7524b728-84f2-4c73-bb70-24a44b36b6f5:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_08.png
+1b9cf5f0-f6c1-4337-b666-561cc507f039:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_09.png
+e3664422-1ad3-451f-a9aa-68c190be5e39:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_10.png
+39898fc7-be55-4eb5-ae1e-1bdc261cfcda:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Vine_C_11.png
+ae1398c6-7d9d-4354-ba46-14784b9a2bc9:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\VenusVines.png
+644fb7a4-80ad-49b2-b192-260ee0b77e3b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Birth_02.png
+26eba19d-23c3-4854-925b-2937e2fa6826:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Birth_03.png
+d859999c-a121-41c3-9132-54b09baa9fc0:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Birth_04.png
+af9afbe2-89fb-4d1b-906b-24feb4fe0927:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Birth_05.png
+6ad45c1d-1e46-4d84-87b1-22a633e9536b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Birth_06.png
+e99eff30-82f2-4a95-bd0e-bf2c5b80d286:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Birth_01.png
+d78d5279-5f2d-4954-95c8-97f849a8a18c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_10_A.png
+9fc9fa06-cd4f-4058-91b9-e6b78b194fc4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_11_A.png
+6d5f22d2-2b84-4e96-9324-c13328733103:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_12.png
+cbb21ca4-7b4a-4d1a-9bad-b51f6888b6bd:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_07_A.png
+76147415-e515-4a69-8c3b-e2d86f371f89:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_08_A.png
+f04b501c-053f-43ab-a15a-c2c94b266a4a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_09_A.png
+9427765c-6c57-4d0c-bfaf-7a9197b704ab:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Die_02.png
+c6a384fe-3f2b-4167-acf3-e257c7d50c30:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Die_03.png
+66b73607-279e-4764-b161-e6fe899710f1:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Die_04.png
+43e45f2b-ec11-4f6b-9792-31658258ee82:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Die_05.png
+46aabd27-d09a-48da-8f4d-8bb5c0c2c1bf:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Die_06.png
+464b77a0-f081-4ca4-b0e0-4ae9d687411b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Die_07.png
+90062e35-62e6-4166-8f61-8b8716bf6bb7:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Die_08.png
+2354f127-7909-4f2c-9366-9e929d1cae5a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Die_09.png
+02ff15ba-efa6-40c1-92b3-f0ad6b9749cf:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Die_10.png
+a815ead8-08bb-47c5-87c8-c823cdf78ff9:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus_Die_01.png
+c2c91705-aaa1-4c7a-a88d-9436d91e65c9:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Venus.png
+5db9d03b-fb1f-46a6-999d-c6b1062fa4e3:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Die_01.png
+1cd9bd27-0401-4938-98e8-a072c8d6dd13:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Die_02.png
+9670913f-0069-42de-8b09-e5916cf55b3e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Die_03.png
+8e16b367-47e9-4b07-bdd2-646de70b7c03:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Die_04.png
+579b62ca-e98f-4694-8a19-2d981963fc35:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Die_05.png
+cdb3eb29-d0d8-4a3a-a518-425ab27e9b01:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Die_06.png
+a3031c37-2a5d-4967-a393-01c6a0c0b41b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Die_07.png
+3dfdef49-efaa-4760-b7ac-1ddb9e8f5299:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Die_08.png
+43992a41-80c0-404c-81f1-4b4ce3e25293:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Die_09.png
+8a14085d-b14b-44da-a0b6-8aeb4906811b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Die_10.png
+b22d3355-46ac-4b60-897f-e7c24c66277e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Die_11.png
+678feb64-3f9c-4ec1-ae2e-1fa36fe768cb:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Die_12.png
+27781105-8f8a-4bc8-9515-22c6869afc0d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Die_13.png
+70ec9e02-e328-4cf2-96ce-924de48c3416:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Die_14.png
+95737efe-f3b5-4461-94dc-bb662e6809ac:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper_Die_15.png
+2be17400-fda2-4168-a97b-8afb78617d9f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Chomper.png
+d508079d-08d2-49dd-b746-6d592a79c456:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Death_12.png
+eb912dcb-f413-4574-ae14-a250cdbf42cd:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Death_01.png
+41975ee3-cc07-4fb8-b0f8-18623ea36aca:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Death_02.png
+aa0e1c4c-7206-4bcf-8553-87a75fc3db3f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Death_03.png
+6fc9e02f-ca36-4bcf-8dd8-cdb961dc2a18:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Death_04.png
+51261727-6f28-4fe2-872a-4f6c71759dd2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Death_05.png
+604e2359-f377-4093-81b3-384b4331703c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Death_06.png
+892e10fc-0bd1-4054-b2dd-6384594d696a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Death_07.png
+2acc518f-176f-4b8e-85f7-61ac1a22befc:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Death_08.png
+0128e28f-f42c-4a5d-b195-7c390f472d47:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Death_09.png
+7c957381-3181-4260-930b-7b45e1fa59d8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Death_10.png
+c4ca06d2-7b3d-4546-8e9f-d51f1db0c3e2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Death_11.png
+446029c0-8cd1-49d0-8de8-752d97df0307:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0019.png
+b4902454-4a09-48c9-a89e-26b5b0fceb97:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0020.png
+9c829af8-0cf1-4c04-9915-e34624935482:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0021.png
+cfcd35c6-8d02-4c01-9427-6d346db1675c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0022.png
+fce87f5a-9510-40df-b21a-3a767e5081b0:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0023.png
+f726c0c4-8f1b-41b8-a793-96ee61feed6c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0024.png
+81b5302f-ffcc-463b-bf7b-668fb19809f6:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0025.png
+8d69fc72-135d-45ed-bf70-bdeea9c84b8d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0026.png
+633dfbe4-c684-4392-b90a-961937db260c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0000.png
+3fd482fc-d416-45f0-9c3d-be3a20693a15:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0001.png
+5c3673e6-3f49-441d-9f99-d8252e78e4e9:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0002.png
+eef8744b-a8d4-4467-8850-d99fbb311dd7:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0003.png
+871df6bf-c0a3-4bf5-b99b-c8311aec4c5e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0004.png
+14eaa15a-45e8-4cee-9f44-f921715d4cef:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0005.png
+5c190b54-e868-49ce-8237-45489961a722:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0006.png
+5ac20c91-c342-42ee-98f6-d39f82afb59e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0007.png
+862d54b1-c31a-4afb-86cc-37f68762378a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0008.png
+5877f344-a1fb-4f54-b97a-8b5b9a0a4537:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0009.png
+31bbd935-5c96-4dbc-940f-ccd7cde93554:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0010.png
+29631577-cc2e-40dc-8783-d442fdea2679:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0011.png
+19babf56-b3ef-495e-bdc9-54d9e3fc33c4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0012.png
+f33f7128-9be5-4ba4-802f-8349665340d8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0013.png
+4593bcb2-752a-456f-b6db-433cd2792c78:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0014.png
+5d74662e-dcde-41b6-b690-caf12958a7d5:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0015.png
+5f536c7b-950d-41bb-bebb-9321b6b3469f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0016.png
+25e8f3a4-83dd-4742-967c-d99192f2defa:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0017.png
+41fd8eee-a380-4fbe-9afb-c48b13750caa:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_KO_0018.png
+b6594bbe-fa30-4d89-8458-108cc3b99378:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Knockout.png
+66e09f79-9cf3-41e5-ad4f-7834ac19f2a0:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\PC Computer - Cuphead Dont Deal With the Devil - Health.png
+f884ffc8-892c-422e-ad55-bdb0e10b80a6:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0015.png
+af630711-a3fc-4832-870d-198816a03bc0:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0016.png
+b8bb4165-156a-429f-8713-4d3b51c4f18c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0017.png
+adaf7a59-f74e-497b-8017-ccb634751026:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0018.png
+b5fd377e-5b0f-4f4a-97c5-b6b25693b961:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0019.png
+aee487b6-f0d3-4831-be9f-e1ffa1aa3479:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0020.png
+827b245c-d4d0-48b5-a5c0-b886981ed091:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0021.png
+ce889ee7-df89-4522-9ea6-d2614aa6a777:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0022.png
+b161a2b6-ef09-4b0b-8a35-62fb83fb1c44:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0023.png
+5406b548-3cda-46ff-874b-30e8793f50ba:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0024.png
+fc2438e2-a177-485d-b241-cac16e1c08f1:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0001.png
+2dff5f50-0c9f-4a24-923d-eb61f40759ee:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0002.png
+2b6f51fe-01c1-46b9-8e0b-e6dbf46ca0d8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0003.png
+83cf6ad9-d943-4ce7-be02-f1029458f14a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0004.png
+18a33346-c388-4ef3-bc06-9be6c9437984:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0005.png
+4bcb20d4-5b6d-45df-ad0a-5f60afa72b7c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0006.png
+7507e21f-d9dc-43f9-b9bb-41baaf46200c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0007.png
+ebf31a22-2627-47be-b307-d6652802d6d1:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0008.png
+50ec5447-8d0e-4b4f-a0e8-266701cf9b1b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0009.png
+e1fce6c7-1b08-4b16-8336-8f2a04b0ec20:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0010.png
+b80bd5b1-7376-41fb-9143-4af16794084d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0011.png
+e879e043-ee7e-4a19-b50b-2dd19bab8507:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0012.png
+c8f449f4-cc2b-44bc-9df0-98396eb3f86d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0013.png
+271eb48b-f819-4e25-9410-e2a70fa5a84c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_ghost_0014.png
+2f024d91-a48b-4a14-9a5c-8efc277e4f9d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\PC Computer - Cuphead Dont Deal With the Devil - YOU DIED.png
+3fdb8a4a-ac36-47d2-8273-29a2313c1515:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_12.png
+dda8d5f7-f066-4e48-aa7a-5ca4280b9678:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_13.png
+c2ed66d7-65b1-48a1-afd0-8d5c9dc78515:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_14.png
+453b65a7-7881-4bb6-92be-2c9c7ebed583:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_15.png
+b0f19b4e-5b4a-4037-8b7e-ae179177481d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_16.png
+94d53845-1e7e-4636-86f6-17564d039fe6:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_17.png
+69c9976a-ff21-45a0-b827-0aa22206b1e2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_18.png
+4637f8da-bf64-4d99-b501-1ad37f02655a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_19.png
+135d3a18-de3a-4be0-a9b2-e10ed95b2924:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_20.png
+648c2f34-7ea4-493d-b51c-334cc63d7eef:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_21.png
+d9f9b761-8e2a-4c1d-af7c-c9692e94dde5:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_22.png
+adbb27af-77b5-473e-8074-67fab7ef9660:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_23.png
+e2525ac8-98b0-463d-8e99-3d2022b11474:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_24.png
+10e7ef5d-94a3-4354-90d7-60c1eb2f484c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_25.png
+bea14571-b81c-4f40-ae34-04300433378f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_26.png
+d08d654d-4eea-4283-b241-75683cc5a9a6:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_27.png
+75048bfb-bc31-4966-82a4-46efec738ed1:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_28.png
+9c95d7c6-24ab-4fac-bb3d-32eaf421e674:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_29.png
+b17af21f-34eb-44db-a721-7cc139d20ac1:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_30.png
+1c2e2e86-bdc9-4b62-a174-0a1898559566:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_31.png
+fd20ff07-0488-46a2-adce-aaff6d50d01d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_32.png
+991a8862-5e8b-4e76-a8cb-dbe89ddc6c99:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_33.png
+69530257-4890-4194-8e88-23ddabc0df3c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_34.png
+713dd859-31b2-4202-982f-af3d20c47ccf:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_35.png
+d03ea3f0-c647-451f-be23-b1747163fa8a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_36.png
+672e3553-3729-4003-abdf-9e802ad6ef4d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_37.png
+50e2070a-7059-4568-a744-e404bc4a7cdf:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_38.png
+3a013a0c-9406-4658-a289-ef6dec9c1cd8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_39.png
+0f6b105d-5362-4b8a-95ec-fbf1c5c1eec5:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_40.png
+33bf81cb-5ab4-4a17-9f8d-9a4581eafa3e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_00.png
+f972ebe9-3509-420c-b647-63bcfbe59003:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_01.png
+49203bc7-95a6-43f1-8204-06203041d70f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_02.png
+60c16eba-b5c0-4c9d-bc44-267e875f5d2d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_03.png
+e39e5b6f-5b04-4d27-aecd-af8348b31bea:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_04.png
+3ea530b3-abbb-497c-af50-faabed80ec84:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_05.png
+432829fc-ebe9-4739-a0f5-8bb9d9b76b3c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_06.png
+6aae6e41-d1b1-470d-bb01-ec772a514f1a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_07.png
+cf5ad5a4-663d-44a9-b043-03062adc04f4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_08.png
+9b54482b-afa6-483d-b77b-58170ed63ced:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_09.png
+3436466a-664e-4ebd-86b1-f3270b7a6a69:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_10.png
+d61475e5-aa3e-4784-b23d-5dec5286b5c3:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_11.png
+ac0c4f38-4479-47db-8132-6bbc4ba2e2ec:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_45.png
+a46e943b-6189-44b7-9015-e192cf0a7d6e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_41.png
+d5a99acd-4151-417f-b4ad-c4fe53d506d7:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_42.png
+e4eba87f-afe9-4212-bcdd-d3c5324578f9:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_43.png
+fb80a7e0-844b-43cc-9db2-26aecb6fa4a2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass_44.png
+a233f066-8719-438b-a283-fc4f41d36e34:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Hourglass.png
+47466ccd-b4a6-4c73-80ac-7cf69942b36b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Missile_B_05.png
+80c91f78-24de-4cae-8bc2-442502053a04:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Missile_B_06.png
+08a756ac-0f45-4d06-a5cb-e7d3d9c8f03f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Missile_B_01.png
+a94468b6-994d-4651-819a-68422c1f115b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Missile_B_02.png
+88ae5044-574e-47bf-aa58-f4136ed95ac5:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Missile_B_03.png
+ecead2c2-2f4f-4b68-9e7e-5172331182fb:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Missile_B_04.png
+550e4bc8-f1ca-4e71-88fb-9ada3ae0159b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Missile_P_05.png
+551fb7ee-daff-4e82-b7d2-24dcaf2ab78b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Missile_P_06.png
+1143e9cf-85f9-430c-b4b7-5887a39663c4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Missile_P_01.png
+27e5c7c7-e35a-4a81-8f89-1ac897f4e531:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Missile_P_02.png
+f047572c-d3e3-4f9c-a8ed-f765c91e080e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Missile_P_03.png
+68b965f0-0559-443d-b51d-cfe5cb29e0dd:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Missile_P_04.png
+7b023c83-658c-4d4d-91ed-54cc4644c071:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\SeedMissiles.png
+d2293f2b-1247-4703-b285-5c822320bdb9:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Cuphead_(Logo).png
+973b73c2-843d-4a00-ba97-d164c7055364:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Start.png
+21fb8fd7-1cd6-415e-99bd-fa0c8916e77e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Controls.png
+267a3a83-2a6e-4879-bd0e-6f386ee6c733:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0001.png
+067d454c-f88b-445f-a70c-22cecd93216f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0002.png
+f83a5c80-d571-425e-b09b-54184e40f3cf:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0003.png
+9f068b76-5825-464b-9b36-7e0cff332c25:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0004.png
+752ba1ab-bdeb-4705-b9eb-2ce256fc9308:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0005.png
+6efcccc1-e3c8-45e5-a2e8-d3bcab9abfa5:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0006.png
+744d47c7-15e1-43d9-bca7-d534e98ac298:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0007.png
+052490f4-7ba5-4ef4-8a18-f61787f60cf4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0008.png
+143d5458-79f4-44ea-995d-291d549ead70:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0009.png
+eff41271-5e47-4f51-b8a6-a1195ab163fc:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0010.png
+064176df-d198-4ff5-8a0c-fc68ca7ff2dd:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0011.png
+b160f823-83d5-4ba4-889d-1b009e06078e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0012.png
+6742f01c-6751-418f-ad89-9f3e216cbc9a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0013.png
+1167a641-4b49-404f-95ba-efca2925c6a4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0014.png
+bee969c4-f2dc-4fc2-9990-4d92fab1ccfe:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0015.png
+8a9b0f52-5ff7-4151-bd66-220854b6b8d7:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0016.png
+f5aa7e4b-b1c6-4fe1-ad63-53e1b91153dc:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0017.png
+db636703-0808-4edd-bb5c-7dc5f2bfde4d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0018.png
+f0dd8dc6-9f34-44a4-a8c4-c6a3d4bf4ad0:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0019.png
+513dae12-b0f5-41be-b0b4-092aa63f4932:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0020.png
+a1786086-a37a-495a-b6b8-1475a18de21e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0021.png
+ba8d7c08-8c8a-4105-8049-7cc43a1e951c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0022.png
+051f12f3-b140-47b4-a62d-bf8771d50bca:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0023.png
+37d92bfb-11a6-4079-8a01-f3c1ca5ad9b7:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0024.png
+6edd97c1-6517-4630-be1d-6b050efec8ae:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0025.png
+4b06e409-b0a1-4d2a-abed-85a1fcef5c30:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0026.png
+bf6d24b6-abde-4c51-b279-32641ef0d532:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0027.png
+ede27052-528f-4590-ab5a-f45f7473f04b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\cuphead_intro_a_0028.png
+25e5092d-1e6a-4da4-8e3e-46417b7d08d7:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\CupheadSheet.png
+09e6a115-42d0-4997-9b5e-4519b6239177:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_12.png
+e7a58d44-f91f-4378-918f-0c10cf1e92e7:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_13.png
+79156f0b-1494-4996-8019-47f2e5b3656f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_14.png
+24868f01-1ec9-4b67-9a80-796a3c7243ac:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_15.png
+dc5d6b66-b56e-4cae-9843-87245b64f83c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_16.png
+bc7d98d2-a88f-4f01-bc87-66b2190b5dd2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_17.png
+8f30c1f3-a89a-4dd7-9417-bb3450643ed8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_18.png
+131bb22d-64cb-440c-97ac-e603f7108a82:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_19.png
+bcd6c200-e0b3-4681-89d7-1457ca895724:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_20.png
+085c5461-7ea5-4a4e-8ea2-3c351a685eda:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_01.png
+53277864-2c9c-46cd-a4ab-d7bbac185546:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_02.png
+7c098d2f-2991-4027-8a82-b44425b0b2ec:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_03.png
+9ac1be0a-64fb-48ec-b824-61bd848fe475:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_04.png
+3a306e19-0e4b-4620-8938-2bc8a88890b5:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_05.png
+1b91dc19-fb7c-42a7-9dd9-d1b16abde1e0:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_06.png
+75320a35-ef73-4466-a8f6-80be14155fa4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_07.png
+370faec3-fdf9-4269-b5ba-923bd3b9c560:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_08.png
+7a943f8d-559f-4f2a-aa87-96485a509011:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_09.png
+b253f2df-6578-47b4-9319-72965384c550:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_10.png
+61342421-fb3f-4838-b36c-245de4078301:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower_Intro_11.png
+39951174-56e4-4e04-93f6-e42d3e6f948e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Flower.png
+1284b31e-552b-4f4b-86d3-070f54fb26e1:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\PC Computer - Cuphead Dont Deal With the Devil - Iris Transition.png
+3044d53c-ffd0-4863-97dc-5dd09e1bdfbf:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Press R To restart.png
+f8edd031-6f34-4e40-aeb3-97a8dfe75bba:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0020.png
+b7b744e3-244c-46d1-a711-dbdc0e9dd09f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0021.png
+43aa2cc6-5476-48b7-bfbc-f6e4d1964836:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0022.png
+8c70da85-f9b7-4c09-a047-25641408c49e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0023.png
+1f32a527-b594-40c3-a331-468cb48b236c:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0024.png
+01f3c92d-2f81-4a65-8c7c-df1f96798ead:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0025.png
+a02dd71d-c4f4-4afb-82d8-8c35f9a0c67a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0026.png
+05cb01ba-b610-4567-bc8f-61e3622b114d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0027.png
+7c327511-36da-4b5b-a37f-b3b39c6803e0:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0028.png
+4fc6a605-0d54-4dbf-89c0-6eebd0d5588e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0029.png
+adb923bb-9ffc-4023-8e85-d84919cc2535:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0030.png
+4e7584d9-62a5-4c2e-b030-682b6d02e5fe:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0031.png
+d246c40d-f4a1-492a-b051-e6bb8c72422a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0032.png
+2af5b655-6e86-4417-a3c0-e5b82b994134:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0033.png
+c3c4f2d9-be28-49b0-b576-dec4b4e142b3:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0034.png
+b2e8ca03-9714-4039-ae3d-76831a00cf54:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0035.png
+e1a4c905-17a8-4328-9255-bd06749665c2:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0036.png
+ab1325b7-620a-4860-88d1-d526644435ec:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0037.png
+aa729fc0-54fa-4e36-9169-193ce3760cd8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0038.png
+04a50f04-f571-420a-a4b0-5df985b8935b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0039.png
+dc522708-4204-4965-9540-59215ddca21f:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0040.png
+2c969a99-e120-42e5-af15-38f4157fe21a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0041.png
+1c908400-8567-4739-9164-e232daa06677:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0042.png
+9953edbc-fca8-4f99-baf1-858bdd9dcb7d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0043.png
+c18f65da-bd1d-4a46-b935-8e90b4f6eed8:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0044.png
+409aea2a-45c8-4be5-a240-5ede6d50fc5a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0045.png
+fa442ed4-bc40-45ef-a147-fe99ec4f9b00:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0046.png
+e0aded13-989e-4bf0-a382-67afd92fa22e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0047.png
+e521d32c-b83c-4c43-8d02-35f0879cb27e:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0048.png
+6a5f00df-e0aa-478a-a033-470476e76b96:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0049.png
+d02de15e-00c8-4ed8-9c6c-e8bc43a7b492:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0050.png
+ebb4fbe6-fd43-49ca-b778-e4b2516cf57a:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0051.png
+1e75b930-9614-4e8c-bd66-f4c837ee2d4d:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0002.png
+baa7de8a-dc3d-4bac-b06a-f108167ae996:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0003.png
+9891bc39-3d4a-44f0-8cc5-d9fce91a61b1:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0004.png
+ffb4b262-072f-4f76-b067-30723a15fda4:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0005.png
+b974dd13-2750-42c0-967d-3321c9cb39e7:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0006.png
+8e9b35b5-30ac-44a1-918d-24982a36b015:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0007.png
+cefeb153-b8c4-4433-99e8-9cdfee5f9b98:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0008.png
+8040f30e-d198-48ec-9806-40f0a1823855:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0009.png
+b8362509-0109-4adf-968b-da4319fff736:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0010.png
+a835a7d2-972e-4c1e-aea3-6d612b4f661b:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0011.png
+4a760406-ddd6-487a-8a86-374c384daba0:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0012.png
+de97ad50-8ea9-4bbc-afc4-cee4c0be3906:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0013.png
+44275b57-5905-4e94-bd04-9ce1700711d5:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0014.png
+f559f7a2-0c50-4b9a-87d1-e05bedbf2228:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0015.png
+ded6d42e-6a68-4621-bbd9-d2743694c035:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0016.png
+99c31f41-4467-4b72-9399-2e6263f0fc54:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0017.png
+cdb845c1-164a-41a2-a19c-1998f80578e7:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0018.png
+f47b9f9d-3e15-4551-bb1d-85243e7ad913:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\FightText_GetReady_0019.png
+d297924a-50ba-46e0-a978-6d93dcad30aa:
+  SRGB: false
+  Alpha Mask: false
+  Filter: Bilinear
+  Path: texture\Ready Go Message.png

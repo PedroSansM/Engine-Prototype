@@ -1,9 +1,0 @@
-Name: SG_FloatingPlatformC
-Number of Columns: 3
-Textures:
-  - UUID: 58e2a1c1-934a-40ef-8d70-702ac9786ee3
-    Alignment: [0, 0]
-  - UUID: f38b8b93-e2f1-4efb-8cc5-77beaba89a8b
-    Alignment: [0, 0]
-  - UUID: 86aeaafc-0b2f-497c-ab52-b1d93d8bc896
-    Alignment: [0, 0]

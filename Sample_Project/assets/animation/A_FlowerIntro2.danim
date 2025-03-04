@@ -1,0 +1,19 @@
+Name: A_FlowerIntro2
+Duration: 0.300000012
+Metachannels:
+  - Id: 51
+    Time: 0.300000012
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 133]
+            - Main Point: [0.042857144, 134]
+            - Main Point: [0.0857142881, 135]
+            - Main Point: [0.128571436, 136]
+            - Main Point: [0.171428576, 137]
+            - Main Point: [0.214285716, 138]
+            - Main Point: [0.257142872, 139]

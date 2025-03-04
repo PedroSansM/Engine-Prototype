@@ -1,0 +1,15 @@
+Name: A_CupheadShootDiagonalDown
+Duration: 0.150000006
+Metachannels:
+  - Id: 4
+    Time: 0
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 63]
+            - Main Point: [0.0500000007, 64]
+            - Main Point: [0.100000001, 65]

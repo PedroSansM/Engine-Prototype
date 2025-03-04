@@ -1,0 +1,24 @@
+Parameters:
+  Burst:
+    ParameterType: Logic
+    ParameterValue: false
+States:
+  Empty:
+    Animation: ""
+    IsInitialState: true
+    StatePosition: [-2.125, -0.65625]
+  Burst:
+    Animation: 65a76873-d09f-4bbe-8885-7379e26f96b9
+    IsInitialState: false
+    StatePosition: [2.20847821, -0.637887359]
+Transitions:
+  - FromState: Empty
+    ToState: Burst
+    Conditions:
+      - ParameterName: Burst
+        Value: true
+  - FromState: Burst
+    ToState: Empty
+    Conditions:
+      - ParameterName: Burst
+        Value: false

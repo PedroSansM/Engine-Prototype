@@ -1,0 +1,27 @@
+Name: A_VenusSeedFall
+Duration: 2.5
+Metachannels:
+  []
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 0]
+            - Main Point: [0.15625, 1]
+            - Main Point: [0.3125, 2]
+            - Main Point: [0.46875, 3]
+            - Main Point: [0.625, 4]
+            - Main Point: [0.78125, 5]
+            - Main Point: [0.9375, 6]
+            - Main Point: [1.09375, 7]
+            - Main Point: [1.25, 8]
+            - Main Point: [1.40625, 9]
+            - Main Point: [1.5625, 10]
+            - Main Point: [1.71875, 11]
+            - Main Point: [1.875, 12]
+            - Main Point: [2.03125, 13]
+            - Main Point: [2.1875, 14]
+            - Main Point: [2.34375, 15]

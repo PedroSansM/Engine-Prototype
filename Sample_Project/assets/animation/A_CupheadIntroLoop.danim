@@ -1,0 +1,25 @@
+Name: A_CupheadIntroLoop
+Duration: 0.5
+Metachannels:
+  - Id: 13
+    Time: 0.5
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 165]
+            - Main Point: [0.0384615399, 166]
+            - Main Point: [0.0769230798, 167]
+            - Main Point: [0.115384623, 168]
+            - Main Point: [0.15384616, 169]
+            - Main Point: [0.192307696, 170]
+            - Main Point: [0.230769247, 171]
+            - Main Point: [0.269230783, 171]
+            - Main Point: [0.307692319, 170]
+            - Main Point: [0.346153855, 169]
+            - Main Point: [0.384615391, 168]
+            - Main Point: [0.423076928, 167]
+            - Main Point: [0.461538494, 166]

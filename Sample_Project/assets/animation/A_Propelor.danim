@@ -1,0 +1,20 @@
+Name: A_Propelor
+Duration: 0.75
+Metachannels:
+  []
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 0]
+            - Main Point: [0.0833333358, 1]
+            - Main Point: [0.166666672, 2]
+            - Main Point: [0.25, 3]
+            - Main Point: [0.333333343, 4]
+            - Main Point: [0.416666687, 5]
+            - Main Point: [0.5, 6]
+            - Main Point: [0.583333373, 7]
+            - Main Point: [0.666666687, 8]

@@ -1,9 +1,0 @@
-Parameters:
-  {}
-States:
-  Transition:
-    Animation: c0ca092d-2e7f-40bb-af15-82a464be9713
-    IsInitialState: true
-    StatePosition: [2.48028803, 1.00103223]
-Transitions:
-  []

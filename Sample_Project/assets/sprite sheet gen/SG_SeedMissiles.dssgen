@@ -1,0 +1,19 @@
+Name: SG_SeedMissiles
+Number of Columns: 8
+Textures:
+  - UUID: 08a756ac-0f45-4d06-a5cb-e7d3d9c8f03f
+    Alignment: [0, 0]
+  - UUID: a94468b6-994d-4651-819a-68422c1f115b
+    Alignment: [7, 23]
+  - UUID: f047572c-d3e3-4f9c-a8ed-f765c91e080e
+    Alignment: [0, 0]
+  - UUID: 68b965f0-0559-443d-b51d-cfe5cb29e0dd
+    Alignment: [14, 26]
+  - UUID: 1143e9cf-85f9-430c-b4b7-5887a39663c4
+    Alignment: [0, 0]
+  - UUID: 27e5c7c7-e35a-4a81-8f89-1ac897f4e531
+    Alignment: [1, 24]
+  - UUID: 88ae5044-574e-47bf-aa58-f4136ed95ac5
+    Alignment: [0, 0]
+  - UUID: ecead2c2-2f4f-4b68-9e7e-5172331182fb
+    Alignment: [4, 25]

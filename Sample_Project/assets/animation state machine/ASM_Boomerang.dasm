@@ -1,0 +1,7 @@
+Parameters: {}
+States:
+  Spin:
+    Animation: 204b029d-048f-443f-93f2-2ff8c8d569a4
+    IsInitialState: true
+    StatePosition: [-1.1015625, -0.5546875]
+Transitions: []
