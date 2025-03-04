@@ -1,2 +1,5 @@
 .cache/
 build/
+Sample_Project/build/
+Sample_Project/Debug/
+Sample_Project/Release/
