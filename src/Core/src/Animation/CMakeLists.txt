@@ -1,0 +1,21 @@
+target_sources(DommusCore
+	PRIVATE
+	Animation.cpp
+	Animation.h
+	AnimationSimulator.h
+	AnimationStateMachine.h
+	AnimationStateMachine.cpp
+	Condition.cpp
+	Condition.h
+	Parameter.cpp
+	Parameter.h
+	State.cpp
+	State.h
+	Transition.h
+	Transition.cpp
+)
+
+target_include_directories(DommusCore
+	PUBLIC
+	${CMAKE_CURRENT_SOURCE_DIR}
+)

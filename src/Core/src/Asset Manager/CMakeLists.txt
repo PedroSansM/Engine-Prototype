@@ -1,0 +1,24 @@
+target_sources(DommusCore
+	PRIVATE
+	PhysicsMaterialAssetManager.h
+	PhysicsMaterialAssetManager.cpp
+	AnimationAssetManager.cpp
+	AnimationAssetManager.h
+	AnimationStateMachineAssetManager.cpp
+	AnimationStateMachineAssetManager.h
+	Asset.h
+	AssetManager.cpp
+	AssetManager.h
+	AssetManagerTypes.h
+	SceneAssetManager.cpp
+	SceneAssetManager.h
+	SpriteMaterialAssetManager.cpp
+	SpriteMaterialAssetManager.h
+	Texture2DAssetManager.cpp
+	Texture2DAssetManager.h
+)
+
+target_include_directories(DommusCore
+	PUBLIC
+	${CMAKE_CURRENT_SOURCE_DIR}
+)

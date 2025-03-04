@@ -1,0 +1,44 @@
+target_sources(${MAIN_TARGET}
+	PRIVATE
+	AnimationPanel.cpp
+	AnimationPanel.h
+	AnimationStateMachinePanel.cpp
+	AnimationStateMachinePanel.h
+	ConfigurationPanel.cpp
+	ConfigurationPanel.h
+	ConsolePanel.cpp
+	ConsolePanel.h
+	EditorGameViewPanel.cpp
+	EditorGameViewPanel.h
+	EditorGameViewPanels.cpp
+	EditorGameViewPanels.h
+	GameStatePanel.cpp
+	GameStatePanel.h
+	GameViewPanel.cpp
+	GameViewPanel.h
+	InspectorPanel.cpp
+	InspectorPanel.h
+	Panel.cpp
+	Panel.h
+	Panels.cpp
+	Panels.h
+	PhysicsMaterialPanel.cpp
+	PhysicsMaterialPanel.h
+	ResourcesPanel.cpp
+	ResourcesPanel.h
+	SceneHierarchyPanel.cpp
+	SceneHierarchyPanel.h
+	SpriteSheetGenPanel.cpp
+	SpriteSheetGenPanel.h
+	TexturePanel.cpp
+	TexturePanel.h
+	SpriteMaterialPanel.cpp
+	SpriteMaterialPanel.h
+	UtilityPanel.cpp
+	UtilityPanel.h
+)
+
+target_include_directories(${MAIN_TARGET}
+	PRIVATE
+	${CMAKE_CURRENT_SOURCE_DIR}
+)

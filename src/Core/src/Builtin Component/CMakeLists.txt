@@ -1,0 +1,30 @@
+target_sources(DommusCore
+	PUBLIC
+	AnimationStateMachineComponent.h
+	AnimationStateMachineComponent.cpp
+	AudioListenerComponent.cpp
+	AudioListenerComponent.h
+	BoxColliderComponent.cpp
+	BoxColliderComponent.h
+	ChildComponent.cpp
+	ChildComponent.h
+	ChildrenComponent.cpp
+	ChildrenComponent.h
+	NameComponent.cpp
+	PerspectiveCameraComponent.cpp
+	PerspectiveCameraComponent.h
+	NameComponent.h
+	RootComponent.cpp
+	RootComponent.h
+	SpriteComponent.cpp
+	SpriteComponent.h
+	TransformComponent.cpp
+	TransformComponent.h
+	UUIDComponent.cpp
+	UUIDComponent.h
+)
+
+target_include_directories(DommusCore
+	PUBLIC
+	${CMAKE_CURRENT_SOURCE_DIR}
+)
