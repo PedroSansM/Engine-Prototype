@@ -44,6 +44,7 @@ int main(int argc, char** argv)
 	glfwSetErrorCallback(GLFWErrorCallback);
 	if (!glfwInit())
 	{
+		std::cout << "Fail to init GLFW" << std::endl;
 		return EXIT_FAILURE;
 	}
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
