@@ -10,3 +10,6 @@
 [submodule "src/Core/vendor/GLFW"]
 	path = src/Core/vendor/GLFW
 	url = https://github.com/glfw/glfw.git
+[submodule "src/Core/vendor/Box2D"]
+	path = src/Core/vendor/Box2D
+	url = https://github.com/erincatto/box2d.git

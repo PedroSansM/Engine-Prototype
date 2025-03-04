@@ -10,7 +10,6 @@ add_subdirectory(vendor/fmodstudio)
 add_subdirectory(vendor/glm)
 add_subdirectory(vendor/glad)
 add_subdirectory(vendor/GLFW)
-add_subdirectory(vendor/entt)
 add_subdirectory(vendor/stb)
 
 target_include_directories(DommusCore PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

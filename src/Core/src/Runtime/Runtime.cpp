@@ -1101,7 +1101,7 @@ void Runtime::UpdateEntityPhysics(EntityRef entityRef, ComponentRef<TransformCom
 		}
 		if (dirtyType & BoxColliderComponentDirtyType::Sensor)
 		{
-			b2Shape_EnableSensorEvents(shapeId, boxCollider.IsSensor());
+			//b2Shape_EnableSensorEvents(shapeId, boxCollider.IsSensor());
 		}
 		if (dirtyType & BoxColliderComponentDirtyType::GravityScale)
 		{
