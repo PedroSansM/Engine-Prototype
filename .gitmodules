@@ -4,3 +4,10 @@
 [submodule "src/Core/vendor/GLFW"]
 	path = src/Core/vendor/GLFW
 	url = https://github.com/glfw/glfw.git
+[submodule "vendor/ImGuizmo"]
+	path = vendor/ImGuizmo
+	url = https://github.com/PedroSansM/ImGuizmo.git
+[submodule "vendor/imgui"]
+	path = vendor/imgui
+	url = https://github.com/PedroSansM/imgui.git
+	branch = docking
