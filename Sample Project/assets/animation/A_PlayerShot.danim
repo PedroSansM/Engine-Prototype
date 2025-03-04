@@ -1,0 +1,17 @@
+Name: A_PlayerShot
+Duration: 0.300000012
+Metachannels:
+  []
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 0]
+            - Main Point: [0.0500000007, 1]
+            - Main Point: [0.100000001, 2]
+            - Main Point: [0.150000006, 3]
+            - Main Point: [0.200000003, 4]
+            - Main Point: [0.25, 5]

@@ -1,0 +1,7 @@
+Parameters: {}
+States:
+  State:
+    Animation: fb3ccc5a-1631-4076-b575-60e9c8ca7ce7
+    IsInitialState: true
+    StatePosition: [-0, -0]
+Transitions: []

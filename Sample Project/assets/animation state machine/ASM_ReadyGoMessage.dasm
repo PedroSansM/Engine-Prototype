@@ -1,0 +1,24 @@
+Parameters:
+  Display:
+    ParameterType: Logic
+    ParameterValue: false
+States:
+  Empty:
+    Animation: ""
+    IsInitialState: true
+    StatePosition: [-0, -0]
+  Display:
+    Animation: d4b80cb1-47f1-459c-9a0f-9ef58cf90d30
+    IsInitialState: false
+    StatePosition: [4.56688976, 0.0309401862]
+Transitions:
+  - FromState: Empty
+    ToState: Display
+    Conditions:
+      - ParameterName: Display
+        Value: true
+  - FromState: Display
+    ToState: Empty
+    Conditions:
+      - ParameterName: Display
+        Value: false

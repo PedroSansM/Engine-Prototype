@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{945b42a3-5ed7-4da9-929a-2536e786c9fd}">
+		<property name="assetPath">
+			<value>Boss/Face Attack/flower_top_laser_attack_end.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>11.0249996</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.53931972789115645</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e87ba75f-f1c2-46f3-b796-568cb847176a}</destination>
+		</relationship>
+	</object>
+</objects>

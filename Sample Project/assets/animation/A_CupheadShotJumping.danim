@@ -1,0 +1,22 @@
+Name: A_CupheadShotJumping
+Duration: 0.300000012
+Metachannels:
+  - Id: 7
+    Time: 0
+  - Id: 7
+    Time: 0.150000006
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 115]
+            - Main Point: [0.0337500013, 116]
+            - Main Point: [0.0675000027, 117]
+            - Main Point: [0.101250008, 118]
+            - Main Point: [0.135000005, 119]
+            - Main Point: [0.168750003, 120]
+            - Main Point: [0.202500015, 121]
+            - Main Point: [0.236250013, 122]

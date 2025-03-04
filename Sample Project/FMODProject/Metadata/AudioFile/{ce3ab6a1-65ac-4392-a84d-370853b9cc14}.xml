@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{ce3ab6a1-65ac-4392-a84d-370853b9cc14}">
+		<property name="assetPath">
+			<value>13.-Floral-Fury.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>225.28426303854874</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e87ba75f-f1c2-46f3-b796-568cb847176a}</destination>
+		</relationship>
+	</object>
+</objects>

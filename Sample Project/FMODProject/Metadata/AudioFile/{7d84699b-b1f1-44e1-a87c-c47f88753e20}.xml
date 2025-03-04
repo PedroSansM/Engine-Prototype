@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7d84699b-b1f1-44e1-a87c-c47f88753e20}">
+		<property name="assetPath">
+			<value>Announcer/Begin/announcer_0002_d.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>11.0249996</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.7231746031746034</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e87ba75f-f1c2-46f3-b796-568cb847176a}</destination>
+		</relationship>
+	</object>
+</objects>

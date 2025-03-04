@@ -1,0 +1,15 @@
+Name: A_FlowerCreateReset
+Duration: 0.209999993
+Metachannels:
+  - Id: 4
+    Time: 0.209999993
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 48]
+            - Main Point: [0.0700000003, 49]
+            - Main Point: [0.140000001, 50]

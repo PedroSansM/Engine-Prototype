@@ -1,0 +1,15 @@
+Name: A_CupheadShootUp
+Duration: 0.150000006
+Metachannels:
+  - Id: 3
+    Time: 0
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 60]
+            - Main Point: [0.0500000007, 61]
+            - Main Point: [0.100000001, 62]

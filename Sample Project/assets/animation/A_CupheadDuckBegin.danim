@@ -1,0 +1,18 @@
+Name: A_CupheadDuckBegin
+Duration: 0.25
+Metachannels:
+  - Id: 6
+    Time: 0.25
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 101]
+            - Main Point: [0.0416666679, 102]
+            - Main Point: [0.0833333358, 103]
+            - Main Point: [0.125, 104]
+            - Main Point: [0.166666672, 105]
+            - Main Point: [0.208333343, 106]

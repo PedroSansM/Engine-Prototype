@@ -1,0 +1,13 @@
+Name: A_FloatingPlatform
+Duration: 0.219999999
+Metachannels: []
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 0]
+            - Main Point: [0.0733333305, 1]
+            - Main Point: [0.146666661, 2]

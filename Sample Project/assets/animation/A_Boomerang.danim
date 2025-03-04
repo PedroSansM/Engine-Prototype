@@ -1,0 +1,19 @@
+Name: A_Boomerang
+Duration: 0.300000012
+Metachannels:
+  []
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 0]
+            - Main Point: [0.0375000015, 1]
+            - Main Point: [0.075000003, 2]
+            - Main Point: [0.112500004, 3]
+            - Main Point: [0.150000006, 4]
+            - Main Point: [0.1875, 5]
+            - Main Point: [0.225000009, 6]
+            - Main Point: [0.262500018, 7]

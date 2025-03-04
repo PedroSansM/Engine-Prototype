@@ -1,0 +1,27 @@
+Name: A_CupheadRun
+Duration: 0.800000012
+Metachannels:
+  []
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 5]
+            - Main Point: [0.0500000007, 6]
+            - Main Point: [0.100000001, 7]
+            - Main Point: [0.150000006, 8]
+            - Main Point: [0.200000003, 9]
+            - Main Point: [0.25, 10]
+            - Main Point: [0.300000012, 11]
+            - Main Point: [0.349999994, 12]
+            - Main Point: [0.400000006, 13]
+            - Main Point: [0.450000018, 14]
+            - Main Point: [0.5, 15]
+            - Main Point: [0.550000012, 16]
+            - Main Point: [0.600000024, 17]
+            - Main Point: [0.650000036, 18]
+            - Main Point: [0.699999988, 19]
+            - Main Point: [0.75, 20]

@@ -1,0 +1,1893 @@
+Scene:
+  Name: Game
+Entities:
+  - UUID Component:
+      UUID: 573dbf9c-f95b-485c-b278-bf0610d5d11a
+    Name Component:
+      Name: Ground
+    Transform Component:
+      Translation: [-0.430725813, -3.5108223, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Box Collider Component:
+      Type: Static
+      Enabled: true
+      Is Sensor: false
+      Gravity Scale: 1
+      Fixed Rotation: false
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [20, 1]
+      Physics Material: ""
+      Self Physics Layer: Layer2
+      Collide With Physics Layer:
+        []
+      Draw Debug Collider: false
+  - UUID Component:
+      UUID: 4a0e005c-a5f4-4418-b1b0-1c1b6f484a3e
+    Name Component:
+      Name: UI
+    Transform Component:
+      Translation: [0, 0, 8.19999981]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Perspective Camera:
+      Field of View: 60
+      Near: 0.300000012
+      Far: 1000
+    Children Component:
+      First Child: cd4d510d-4aea-4e33-80ab-f28120aefb4b
+      Number Of Children: 3
+  - UUID Component:
+      UUID: 55bb15e6-47c4-4a5f-9ca0-6f3e39b35402
+    Name Component:
+      Name: Left Barrier
+    Transform Component:
+      Translation: [-8.72867489, 1.29999995, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Box Collider Component:
+      Type: Static
+      Enabled: true
+      Is Sensor: false
+      Gravity Scale: 1
+      Fixed Rotation: false
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [1, 12]
+      Physics Material: ""
+      Self Physics Layer: Layer2
+      Collide With Physics Layer:
+        []
+      Draw Debug Collider: false
+  - UUID Component:
+      UUID: 86bb79e1-9ef8-4c8d-9fb7-87f0a641914e
+    Name Component:
+      Name: Right Barrier
+    Transform Component:
+      Translation: [8.75109863, 1.29999995, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Box Collider Component:
+      Type: Static
+      Enabled: true
+      Is Sensor: false
+      Gravity Scale: 1
+      Fixed Rotation: false
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [1, 12]
+      Physics Material: ""
+      Self Physics Layer: Layer2
+      Collide With Physics Layer:
+        []
+      Draw Debug Collider: false
+  - UUID Component:
+      UUID: 45833d06-cfe2-4078-b9bc-3c8698f2e963
+    Name Component:
+      Name: Player
+    Transform Component:
+      Translation: [-4.62762594, -2.24580574, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Box Collider Component:
+      Type: Kinematic
+      Enabled: false
+      Is Sensor: false
+      Gravity Scale: 2
+      Fixed Rotation: false
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [0.800000012, 1.5]
+      Physics Material: ""
+      Self Physics Layer: Layer1
+      Collide With Physics Layer:
+        []
+      Draw Debug Collider: false
+    Children Component:
+      First Child: c41d7d3f-d3bb-4594-a951-c8c29546acc3
+      Number Of Children: 8
+    PlayerComponent:
+      Movement Velocity: 6.5
+      Dash Cooldown: 0.100000001
+      Dash Velocity: 15
+      Jump Initial Velocity: 22
+      Gravity Scale: 6
+      Shot velocity: 22
+      Shot Material: 49ce1570-6f9d-4866-8e52-84e379d804b5
+      Shot Animation State Machine: 9f8918d2-63a6-4c71-86b2-62611e969173
+      Shot Cooldown: 0.140000001
+      Blink Period: 0.100000001
+      Blink Time: 2
+      Shoot Sound: event:/Player/Shoot Event
+      Dash Sound: event:/Player/Dash
+      Jump Sound: event:/Player/Jump
+      Land Sound: event:/Player/Land
+      Hit Sound 1: event:/Player/Hit/Hit 1
+      Hit Sound 2: event:/Player/Hit/Hit 2
+      Hit Sound 3: event:/Player/Hit/Hit 3
+      Shot Hit Sound: event:/Player/Shot Hit
+      Death Sound: event:/Player/Death
+  - UUID Component:
+      UUID: 062bbc53-101e-4fc6-a976-524a641ddb4d
+    Name Component:
+      Name: PlayerSprite
+    Transform Component:
+      Translation: [-0.987035751, 0.491539955, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 45833d06-cfe2-4078-b9bc-3c8698f2e963
+      Next: 45833d06-cfe2-4078-b9bc-3c8698f2e963
+      Previous: 58e236cb-2ed0-4413-b9a6-47d9016d4564
+    Animation State Machine Component:
+      Animation State Machine: 39eff73b-d1ca-460b-af3a-5c2fb7420933
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [17, 11]
+      Draw Order: 6
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 6115f5ac-00f1-4408-b5fb-ccf5bb7ef1ed
+      Enabled: true
+    PlayerAnimationComponent:
+      {}
+  - UUID Component:
+      UUID: 58e236cb-2ed0-4413-b9a6-47d9016d4564
+    Name Component:
+      Name: Straight Shoot Point
+    Transform Component:
+      Translation: [0.730000019, 0.204999998, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 45833d06-cfe2-4078-b9bc-3c8698f2e963
+      Next: 062bbc53-101e-4fc6-a976-524a641ddb4d
+      Previous: 092f0009-d91c-4dea-924c-af11f1ec6512
+  - UUID Component:
+      UUID: 092f0009-d91c-4dea-924c-af11f1ec6512
+    Name Component:
+      Name: Up Shoot Point
+    Transform Component:
+      Translation: [0.379689932, 1.44366336, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 45833d06-cfe2-4078-b9bc-3c8698f2e963
+      Next: 58e236cb-2ed0-4413-b9a6-47d9016d4564
+      Previous: 9cecd357-8784-4c7f-899e-c9c199aec242
+  - UUID Component:
+      UUID: 9cecd357-8784-4c7f-899e-c9c199aec242
+    Name Component:
+      Name: Down Shoot Point
+    Transform Component:
+      Translation: [0.344999999, -0.61500001, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 45833d06-cfe2-4078-b9bc-3c8698f2e963
+      Next: 092f0009-d91c-4dea-924c-af11f1ec6512
+      Previous: e5fbb826-51bb-453d-9a78-699b10a46639
+  - UUID Component:
+      UUID: e5fbb826-51bb-453d-9a78-699b10a46639
+    Name Component:
+      Name: Diagonal Down Shoot Point
+    Transform Component:
+      Translation: [0.787735462, -0.247233868, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 45833d06-cfe2-4078-b9bc-3c8698f2e963
+      Next: 9cecd357-8784-4c7f-899e-c9c199aec242
+      Previous: 20a2e5ce-7ebd-48a7-9bdc-83997df4f62b
+  - UUID Component:
+      UUID: 20a2e5ce-7ebd-48a7-9bdc-83997df4f62b
+    Name Component:
+      Name: Diagonal Up Shoot Point
+    Transform Component:
+      Translation: [0.730000019, 0.57220459, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 45833d06-cfe2-4078-b9bc-3c8698f2e963
+      Next: e5fbb826-51bb-453d-9a78-699b10a46639
+      Previous: 535c7d90-b68a-44f3-b063-5941d40196e4
+  - UUID Component:
+      UUID: 535c7d90-b68a-44f3-b063-5941d40196e4
+    Name Component:
+      Name: Duck Shoot Point
+    Transform Component:
+      Translation: [0.867999971, -0.279000014, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 45833d06-cfe2-4078-b9bc-3c8698f2e963
+      Next: 20a2e5ce-7ebd-48a7-9bdc-83997df4f62b
+      Previous: c41d7d3f-d3bb-4594-a951-c8c29546acc3
+  - UUID Component:
+      UUID: 1c52710f-ba7a-4680-bb26-59d04b12c953
+    Name Component:
+      Name: PlayerShot
+    Transform Component:
+      Translation: [-0.378154695, 9.63563347, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 3
+      Number of Sprites: [6, 2]
+      Draw Order: 7
+      Pixels Per Unit: 80
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 49ce1570-6f9d-4866-8e52-84e379d804b5
+      Enabled: false
+    Box Collider Component:
+      Type: Dynamic
+      Enabled: false
+      Is Sensor: true
+      Gravity Scale: 1
+      Fixed Rotation: true
+      Use CCD: false
+      Offset: [0.300000012, 0]
+      Sizes: [20, 0.100000001]
+      Physics Material: ""
+      Self Physics Layer: Unspecified
+      Collide With Physics Layer:
+        []
+      Draw Debug Collider: false
+    Animation State Machine Component:
+      Animation State Machine: 9f8918d2-63a6-4c71-86b2-62611e969173
+  - UUID Component:
+      UUID: 6225389c-1f72-4619-888c-47681daa5b0f
+    Name Component:
+      Name: Stage
+    Transform Component:
+      Translation: [0, 0, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Children Component:
+      First Child: 6afbb1fa-ff39-4749-aa04-d8953e64a0c7
+      Number Of Children: 4
+  - UUID Component:
+      UUID: 96f88c45-88b3-4878-bad6-c03b8fa8ee77
+    Name Component:
+      Name: Platform
+    Transform Component:
+      Translation: [0.0742238164, 0.484573722, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 6225389c-1f72-4619-888c-47681daa5b0f
+      Next: 6225389c-1f72-4619-888c-47681daa5b0f
+      Previous: 4f394226-592e-4749-87ce-f0618db20bdc
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [1, 1]
+      Draw Order: 3
+      Pixels Per Unit: 75
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 3e79c9a6-7520-4735-bddc-d39e583c07ac
+      Enabled: true
+  - UUID Component:
+      UUID: 4f394226-592e-4749-87ce-f0618db20bdc
+    Name Component:
+      Name: Background
+    Transform Component:
+      Translation: [0.150000006, 2.20000005, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 6225389c-1f72-4619-888c-47681daa5b0f
+      Next: 96f88c45-88b3-4878-bad6-c03b8fa8ee77
+      Previous: b917433d-e33d-49d6-b9f0-f931c7cf0fd4
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [1, 1]
+      Draw Order: 2
+      Pixels Per Unit: 75
+      Tint: [1, 1, 1, 1]
+      Sprite Material: d7dd4a4e-1b3a-4ae4-bc89-65c0cc6a29bd
+      Enabled: true
+  - UUID Component:
+      UUID: b917433d-e33d-49d6-b9f0-f931c7cf0fd4
+    Name Component:
+      Name: Plants
+    Transform Component:
+      Translation: [0, -3.98395538, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 6225389c-1f72-4619-888c-47681daa5b0f
+      Next: 4f394226-592e-4749-87ce-f0618db20bdc
+      Previous: 6afbb1fa-ff39-4749-aa04-d8953e64a0c7
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [1, 1]
+      Draw Order: 8
+      Pixels Per Unit: 75
+      Tint: [1, 1, 1, 1]
+      Sprite Material: b2df903f-d5ce-41bd-8e31-b2bf6700e3bf
+      Enabled: true
+  - UUID Component:
+      UUID: 6afbb1fa-ff39-4749-aa04-d8953e64a0c7
+    Name Component:
+      Name: Sky
+    Transform Component:
+      Translation: [0.111457825, 1.84764862, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 6225389c-1f72-4619-888c-47681daa5b0f
+      Next: b917433d-e33d-49d6-b9f0-f931c7cf0fd4
+      Previous: b917433d-e33d-49d6-b9f0-f931c7cf0fd4
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [1, 1]
+      Draw Order: 0
+      Pixels Per Unit: 75
+      Tint: [1, 1, 1, 1]
+      Sprite Material: ce97698b-b67f-4809-b2c4-bde68c5f8eb3
+      Enabled: true
+  - UUID Component:
+      UUID: f2eb7017-2162-4252-9d69-e7c32b3dbdff
+    Name Component:
+      Name: Floating Platform A
+    Transform Component:
+      Translation: [-6.28013992, -0.219999999, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 1
+      Number of Sprites: [3, 1]
+      Draw Order: 4
+      Pixels Per Unit: 76
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 4c949f89-44c2-43ea-abe8-5a359e0f03fa
+      Enabled: true
+    Box Collider Component:
+      Type: Kinematic
+      Enabled: true
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: true
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [2.20000005, 0.5]
+      Physics Material: ""
+      Self Physics Layer: Layer2
+      Collide With Physics Layer:
+        []
+      Draw Debug Collider: false
+    Animation State Machine Component:
+      Animation State Machine: e8359bec-6dd1-43a8-9108-c243d7dd5989
+    Children Component:
+      First Child: bd17eab5-80db-43e4-b5f7-4a6bcf97c08a
+      Number Of Children: 1
+    PlatformComponent:
+      Initial Coefficient: 0.5
+      Altitude Variation: 0.474999994
+      Movement Period: 6
+      Minimal Altitude: -0.694999993
+      Transition Velocity: 3
+  - UUID Component:
+      UUID: bd17eab5-80db-43e4-b5f7-4a6bcf97c08a
+    Name Component:
+      Name: Propelor A
+    Transform Component:
+      Translation: [0.06275177, -0.584347725, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: f2eb7017-2162-4252-9d69-e7c32b3dbdff
+      Next: f2eb7017-2162-4252-9d69-e7c32b3dbdff
+      Previous: f2eb7017-2162-4252-9d69-e7c32b3dbdff
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [9, 1]
+      Draw Order: 3
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 633a2e1b-a922-4c9b-a98a-df9a8e0328ad
+      Enabled: true
+    Animation State Machine Component:
+      Animation State Machine: 309fe3bc-4869-4e31-9a76-a0ba5e0423d0
+  - UUID Component:
+      UUID: 5cb26d3d-f695-4d16-999d-351a0131aa38
+    Name Component:
+      Name: Floating Platform B
+    Transform Component:
+      Translation: [-2.82527924, -0.781585217, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [3, 1]
+      Draw Order: 4
+      Pixels Per Unit: 76
+      Tint: [1, 1, 1, 1]
+      Sprite Material: d3089d26-2b2e-447a-abe5-f84f944973fd
+      Enabled: true
+    Box Collider Component:
+      Type: Kinematic
+      Enabled: true
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: true
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [2.20000005, 0.5]
+      Physics Material: ""
+      Self Physics Layer: Layer2
+      Collide With Physics Layer:
+        []
+      Draw Debug Collider: false
+    Animation State Machine Component:
+      Animation State Machine: e8359bec-6dd1-43a8-9108-c243d7dd5989
+    Children Component:
+      First Child: 6a51a43c-9c77-4310-823c-72a8c97a02bb
+      Number Of Children: 1
+    PlatformComponent:
+      Initial Coefficient: 0
+      Altitude Variation: 0.474999994
+      Movement Period: 6
+      Minimal Altitude: -0.694999993
+      Transition Velocity: 3
+  - UUID Component:
+      UUID: 6a51a43c-9c77-4310-823c-72a8c97a02bb
+    Name Component:
+      Name: Propelor B
+    Transform Component:
+      Translation: [0.063000001, -0.583999991, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 5cb26d3d-f695-4d16-999d-351a0131aa38
+      Next: 5cb26d3d-f695-4d16-999d-351a0131aa38
+      Previous: 5cb26d3d-f695-4d16-999d-351a0131aa38
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [9, 1]
+      Draw Order: 3
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 633a2e1b-a922-4c9b-a98a-df9a8e0328ad
+      Enabled: true
+    Animation State Machine Component:
+      Animation State Machine: 309fe3bc-4869-4e31-9a76-a0ba5e0423d0
+  - UUID Component:
+      UUID: ca87f57d-5f34-4ed5-8e5e-86ed8592602a
+    Name Component:
+      Name: Floating Platform C
+    Transform Component:
+      Translation: [0.468002439, -0.281400412, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [3, 1]
+      Draw Order: 4
+      Pixels Per Unit: 76
+      Tint: [1, 1, 1, 1]
+      Sprite Material: e74d3932-d7dc-415d-b88a-fc68f0f0a716
+      Enabled: true
+    Box Collider Component:
+      Type: Kinematic
+      Enabled: true
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: true
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [2.20000005, 0.5]
+      Physics Material: ""
+      Self Physics Layer: Layer2
+      Collide With Physics Layer:
+        []
+      Draw Debug Collider: false
+    Animation State Machine Component:
+      Animation State Machine: e8359bec-6dd1-43a8-9108-c243d7dd5989
+    Children Component:
+      First Child: ffc683e3-879d-4ab5-bf90-3f63f4b39e41
+      Number Of Children: 1
+    PlatformComponent:
+      Initial Coefficient: 0.5
+      Altitude Variation: 0.474999994
+      Movement Period: 6
+      Minimal Altitude: -0.694999993
+      Transition Velocity: 3
+  - UUID Component:
+      UUID: ffc683e3-879d-4ab5-bf90-3f63f4b39e41
+    Name Component:
+      Name: Propelor C
+    Transform Component:
+      Translation: [0.063000001, -0.583999991, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: ca87f57d-5f34-4ed5-8e5e-86ed8592602a
+      Next: ca87f57d-5f34-4ed5-8e5e-86ed8592602a
+      Previous: ca87f57d-5f34-4ed5-8e5e-86ed8592602a
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [9, 1]
+      Draw Order: 3
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 633a2e1b-a922-4c9b-a98a-df9a8e0328ad
+      Enabled: true
+    Animation State Machine Component:
+      Animation State Machine: 309fe3bc-4869-4e31-9a76-a0ba5e0423d0
+  - UUID Component:
+      UUID: 6df864c9-a1f9-4300-a393-a35e44fbbfe7
+    Name Component:
+      Name: Flower
+    Transform Component:
+      Translation: [1.20144415, -0.519611597, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 148
+      Number of Sprites: [20, 8]
+      Draw Order: 5
+      Pixels Per Unit: 74
+      Tint: [1, 1, 1, 1]
+      Sprite Material: e9eabbc2-f337-4518-aa01-9bf623548cde
+      Enabled: true
+    Animation State Machine Component:
+      Animation State Machine: 66a27eac-ab11-45fd-be86-a8995a495a58
+    FlowerComponent:
+      Minimum Attack Cooldown Time: 2
+      Maximum Attack Cooldown Offset: 1
+      Health: 300
+      Intro Sound: event:/Boss/Intro
+      Face Attack Begin Sound: event:/Boss/Face Attack/Face Attack Begin
+      Face Attack Loop Sound: event:/Boss/Face Attack/Face Attack Loop
+      Face Attack End Sound: event:/Boss/Face Attack/Face Attack End
+      Gun Attack Begin Sound: event:/Boss/Gun Attack/Gun Attack Begin
+      Gun Attack Loop Sound: event:/Boss/Gun Attack/Gun Attack Loop
+      Gun Attack End Sound: event:/Boss/Gun Attack/Gun Attack End
+      Create Sound: event:/Boss/Create
+      Knockout Sound: event:/Announcer/Knockout
+    Children Component:
+      First Child: 71d2ee36-32f7-4a36-a8d1-b729e86bfa62
+      Number Of Children: 4
+  - UUID Component:
+      UUID: 0c77a388-b129-43d4-a805-8ad00f7f5dab
+    Name Component:
+      Name: Venus 0
+    Transform Component:
+      Translation: [-3.46285772, 15.3004303, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Children Component:
+      First Child: 1897eecb-88fb-4f31-bdfa-767da361ac8f
+      Number Of Children: 4
+    Box Collider Component:
+      Type: Dynamic
+      Enabled: true
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: true
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [0.5, 0.699999988]
+      Physics Material: ""
+      Self Physics Layer: Layer3
+      Collide With Physics Layer:
+        - Layer4
+        - Layer7
+      Draw Debug Collider: false
+    VenusComponent:
+      Venus Linear Velocity: 2
+      Venus Angular Velocity: 200
+      Time Pursuing Player: 5
+      Life Time: 0.5
+      Health: 2
+      Defeated Sound: event:/Boss/Seed Defeated
+  - UUID Component:
+      UUID: c41d7d3f-d3bb-4594-a951-c8c29546acc3
+    Name Component:
+      Name: Hurt Box
+    Transform Component:
+      Translation: [0, 0, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 45833d06-cfe2-4078-b9bc-3c8698f2e963
+      Next: 535c7d90-b68a-44f3-b063-5941d40196e4
+      Previous: 535c7d90-b68a-44f3-b063-5941d40196e4
+    Box Collider Component:
+      Type: Dynamic
+      Enabled: true
+      Is Sensor: true
+      Gravity Scale: 0
+      Fixed Rotation: true
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [1, 1]
+      Physics Material: ""
+      Self Physics Layer: Layer4
+      Collide With Physics Layer:
+        - Layer3
+      Draw Debug Collider: false
+  - UUID Component:
+      UUID: 411cc7fe-0eae-4bcb-9066-d1db18ef66b0
+    Name Component:
+      Name: Acorn 1
+    Transform Component:
+      Translation: [3.66127896, 2.46261573, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 7
+      Number of Sprites: [6, 2]
+      Draw Order: 6
+      Pixels Per Unit: 68
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 65991493-a553-4126-ba8c-2d41ca7518e6
+      Enabled: true
+    Box Collider Component:
+      Type: Kinematic
+      Enabled: false
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: false
+      Use CCD: false
+      Offset: [-0.150000006, 0.0500000007]
+      Sizes: [1, 0.5]
+      Physics Material: ""
+      Self Physics Layer: Layer3
+      Collide With Physics Layer:
+        - Layer4
+      Draw Debug Collider: false
+    Animation State Machine Component:
+      Animation State Machine: 29b96521-8e2d-4287-9abf-083f2b70d2a3
+    AcornComponent:
+      Initial Velocity: 4
+      Acceleration: 15
+      Life Time: 1.5
+  - UUID Component:
+      UUID: aafaf5a6-ca42-4b40-9f4e-6a7940de40f8
+    Name Component:
+      Name: Acorn 2
+    Transform Component:
+      Translation: [3.66100001, 0.764808178, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 6
+      Number of Sprites: [6, 2]
+      Draw Order: 6
+      Pixels Per Unit: 68
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 65991493-a553-4126-ba8c-2d41ca7518e6
+      Enabled: true
+    Box Collider Component:
+      Type: Kinematic
+      Enabled: false
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: false
+      Use CCD: false
+      Offset: [-0.150000006, 0.0500000007]
+      Sizes: [1, 0.5]
+      Physics Material: ""
+      Self Physics Layer: Layer3
+      Collide With Physics Layer:
+        - Layer4
+      Draw Debug Collider: false
+    Animation State Machine Component:
+      Animation State Machine: 29b96521-8e2d-4287-9abf-083f2b70d2a3
+    AcornComponent:
+      Initial Velocity: 4
+      Acceleration: 15
+      Life Time: 1.5
+  - UUID Component:
+      UUID: 6d5322eb-01ac-40f2-9564-a372932e8fa3
+    Name Component:
+      Name: Acorn 3
+    Transform Component:
+      Translation: [3.66100001, -0.97351104, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [6, 2]
+      Draw Order: 6
+      Pixels Per Unit: 68
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 65991493-a553-4126-ba8c-2d41ca7518e6
+      Enabled: true
+    Box Collider Component:
+      Type: Kinematic
+      Enabled: false
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: false
+      Use CCD: false
+      Offset: [-0.150000006, 0.0500000007]
+      Sizes: [1, 0.5]
+      Physics Material: ""
+      Self Physics Layer: Layer3
+      Collide With Physics Layer:
+        - Layer4
+      Draw Debug Collider: false
+    Animation State Machine Component:
+      Animation State Machine: 29b96521-8e2d-4287-9abf-083f2b70d2a3
+    AcornComponent:
+      Initial Velocity: 4
+      Acceleration: 15
+      Life Time: 1.5
+  - UUID Component:
+      UUID: f161e9c4-5871-486d-a25c-632f1e87b121
+    Name Component:
+      Name: Acorn Manager
+    Transform Component:
+      Translation: [0, 7.7509613, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    AcornManagerComponent:
+      Time Between Acorn Launches: 0.5
+  - UUID Component:
+      UUID: 16998caf-9434-4e94-a68c-dad9c45adfc2
+    Name Component:
+      Name: Boomerang 1
+    Transform Component:
+      Translation: [3.42439842, 0.929730535, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 1
+      Number of Sprites: [4, 2]
+      Draw Order: 6
+      Pixels Per Unit: 80
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 680c07e5-66fe-4cc5-8939-32293a9a07f9
+      Enabled: true
+    Box Collider Component:
+      Type: Kinematic
+      Enabled: true
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: true
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [2, 1]
+      Physics Material: ""
+      Self Physics Layer: Layer3
+      Collide With Physics Layer:
+        - Layer4
+      Draw Debug Collider: false
+    Animation State Machine Component:
+      Animation State Machine: 3258575e-f3aa-4639-8b9e-b07c9195ac13
+    BoomerangComponent:
+      Sound: event:/Boss/Boomerang
+  - UUID Component:
+      UUID: 93fe10c5-e0a7-43cf-9fb2-0520fe1853e5
+    Name Component:
+      Name: Boomerang Manager
+    Transform Component:
+      Translation: [0, 0, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    BoomerangManagerComponent:
+      Half Life Time: 2
+      Velocity: 10
+      Low Translation Y: -1.45599997
+      Time To Launch: 0.5
+      Additional Return Life Time: 0.699999988
+  - UUID Component:
+      UUID: 6ee4e120-6d35-4295-9c58-beb613c93638
+    Name Component:
+      Name: Boomerang 2
+    Transform Component:
+      Translation: [3.42400002, 0.930000007, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [4, 2]
+      Draw Order: 6
+      Pixels Per Unit: 80
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 680c07e5-66fe-4cc5-8939-32293a9a07f9
+      Enabled: true
+    Box Collider Component:
+      Type: Kinematic
+      Enabled: true
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: true
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [2, 1]
+      Physics Material: ""
+      Self Physics Layer: Layer3
+      Collide With Physics Layer:
+        - Layer4
+      Draw Debug Collider: false
+    Animation State Machine Component:
+      Animation State Machine: 3258575e-f3aa-4639-8b9e-b07c9195ac13
+    BoomerangComponent:
+      Sound: event:/Boss/Boomerang
+  - UUID Component:
+      UUID: c5403c1f-5280-40cb-bf8a-a4591697db57
+    Name Component:
+      Name: Hurt Box
+    Transform Component:
+      Translation: [4.51969957, 2.66059494, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 6df864c9-a1f9-4300-a393-a35e44fbbfe7
+      Next: 6df864c9-a1f9-4300-a393-a35e44fbbfe7
+      Previous: 9e23699e-3ffa-4b24-876c-5c12fa87584d
+    Box Collider Component:
+      Type: Dynamic
+      Enabled: true
+      Is Sensor: true
+      Gravity Scale: 0
+      Fixed Rotation: false
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [2, 3]
+      Physics Material: ""
+      Self Physics Layer: Layer5
+      Collide With Physics Layer:
+        - Layer6
+      Draw Debug Collider: false
+  - UUID Component:
+      UUID: 9e23699e-3ffa-4b24-876c-5c12fa87584d
+    Name Component:
+      Name: Attack Hit Box
+    Transform Component:
+      Translation: [4.76410341, 2.69431877, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 6df864c9-a1f9-4300-a393-a35e44fbbfe7
+      Next: c5403c1f-5280-40cb-bf8a-a4591697db57
+      Previous: 82290714-457b-4217-8693-f8bb82b7ce80
+    Box Collider Component:
+      Type: Static
+      Enabled: true
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: true
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [3, 3]
+      Physics Material: ""
+      Self Physics Layer: Layer3
+      Collide With Physics Layer:
+        - Layer4
+      Draw Debug Collider: false
+  - UUID Component:
+      UUID: dcf57894-f517-4195-8001-dee5335f4155
+    Name Component:
+      Name: Seed Ground
+    Transform Component:
+      Translation: [-0.430999994, -3.51099992, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Box Collider Component:
+      Type: Static
+      Enabled: true
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: true
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [20, 1]
+      Physics Material: ""
+      Self Physics Layer: Layer7
+      Collide With Physics Layer:
+        - Layer3
+      Draw Debug Collider: false
+  - UUID Component:
+      UUID: b1476154-9e22-44eb-8e81-e020067f7caa
+    Name Component:
+      Name: Hurt Box
+    Transform Component:
+      Translation: [0, 0, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 4811153f-cc0b-441a-ab0a-8069f261e9b2
+      Next: 4811153f-cc0b-441a-ab0a-8069f261e9b2
+      Previous: 4811153f-cc0b-441a-ab0a-8069f261e9b2
+    Box Collider Component:
+      Type: Dynamic
+      Enabled: false
+      Is Sensor: true
+      Gravity Scale: 0
+      Fixed Rotation: false
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [1.20000005, 0.800000012]
+      Physics Material: ""
+      Self Physics Layer: Layer5
+      Collide With Physics Layer:
+        - Layer6
+      Draw Debug Collider: false
+  - UUID Component:
+      UUID: 81d2aa3b-27bf-45be-b6a2-a0f9f856022f
+    Name Component:
+      Name: Burst
+    Transform Component:
+      Translation: [0, 2.51634979, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 61940724-c50a-4d1e-a4ef-9decd382c958
+      Next: 4811153f-cc0b-441a-ab0a-8069f261e9b2
+      Previous: 4811153f-cc0b-441a-ab0a-8069f261e9b2
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [3, 2]
+      Draw Order: 6
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: da2dbc2b-c17f-4223-b3be-bc64e1feb083
+      Enabled: true
+    Animation State Machine Component:
+      Animation State Machine: cbdc9759-0b3f-4223-bab5-7d812d357bc2
+    BurstComponent:
+      {}
+  - UUID Component:
+      UUID: 702a2bd7-e566-483e-8230-cdeeb2e6f782
+    Name Component:
+      Name: Venus 1
+    Transform Component:
+      Translation: [1.41975641, 15.3004303, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Children Component:
+      First Child: de05436f-9218-47d7-9ac3-1e1481bd267d
+      Number Of Children: 4
+    Box Collider Component:
+      Type: Dynamic
+      Enabled: true
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: true
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [0.5, 0.699999988]
+      Physics Material: ""
+      Self Physics Layer: Layer3
+      Collide With Physics Layer:
+        - Layer4
+        - Layer7
+      Draw Debug Collider: false
+    VenusComponent:
+      Venus Linear Velocity: 1
+      Venus Angular Velocity: 100
+      Time Pursuing Player: 5
+      Life Time: 0.5
+      Health: 2
+      Defeated Sound: event:/Boss/Seed Defeated
+  - UUID Component:
+      UUID: 7c347bbf-de01-400c-bb7d-59fc1b9a1cc1
+    Name Component:
+      Name: Seed
+    Transform Component:
+      Translation: [-0.0410000011, 0, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 702a2bd7-e566-483e-8230-cdeeb2e6f782
+      Next: 702a2bd7-e566-483e-8230-cdeeb2e6f782
+      Previous: b9968575-aa91-41b9-938f-725d914dc8fa
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [6, 4]
+      Draw Order: 6
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: bd160829-688c-448c-9665-bcc3b2dd2c5b
+      Enabled: true
+    SeedComponent:
+      Seed Fall Velocity: 5
+    Animation State Machine Component:
+      Animation State Machine: 902f364b-f48d-4967-a8a3-7aaf25d1c57c
+  - UUID Component:
+      UUID: 7d671453-8b9d-4818-b7be-8437013f1435
+    Name Component:
+      Name: Burst
+    Transform Component:
+      Translation: [0, 2.51634979, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 0c77a388-b129-43d4-a805-8ad00f7f5dab
+      Next: 0c77a388-b129-43d4-a805-8ad00f7f5dab
+      Previous: 72cf7b98-3f23-4934-9d45-28f7c7905f6a
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [3, 2]
+      Draw Order: 6
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: da2dbc2b-c17f-4223-b3be-bc64e1feb083
+      Enabled: true
+    Animation State Machine Component:
+      Animation State Machine: cbdc9759-0b3f-4223-bab5-7d812d357bc2
+    BurstComponent:
+      {}
+  - UUID Component:
+      UUID: 72cf7b98-3f23-4934-9d45-28f7c7905f6a
+    Name Component:
+      Name: Venus
+    Transform Component:
+      Translation: [-0.493732452, 5.00799561, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 0c77a388-b129-43d4-a805-8ad00f7f5dab
+      Next: 7d671453-8b9d-4818-b7be-8437013f1435
+      Previous: 19a5854c-ddbb-4544-924d-68a378e26cd0
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [6, 4]
+      Draw Order: 6
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: a3675347-060c-423a-ab03-feece9e350a3
+      Enabled: true
+    Animation State Machine Component:
+      Animation State Machine: 3f6d1e84-7662-47a3-b0c7-a9f423412dc7
+    Box Collider Component:
+      Type: Dynamic
+      Enabled: false
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: false
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [1.20000005, 0.800000012]
+      Physics Material: ""
+      Self Physics Layer: Layer3
+      Collide With Physics Layer:
+        - Layer4
+      Draw Debug Collider: false
+    Children Component:
+      First Child: 0f43943a-bc92-43b6-a309-96a72572966f
+      Number Of Children: 1
+    SeedEnemyAnimationComponent:
+      {}
+  - UUID Component:
+      UUID: 19a5854c-ddbb-4544-924d-68a378e26cd0
+    Name Component:
+      Name: Vines
+    Transform Component:
+      Translation: [-0.0946121216, 2.33863831, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 0c77a388-b129-43d4-a805-8ad00f7f5dab
+      Next: 72cf7b98-3f23-4934-9d45-28f7c7905f6a
+      Previous: 1897eecb-88fb-4f31-bdfa-767da361ac8f
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [4, 5]
+      Draw Order: 5
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: cde01b0a-8fbb-4084-8df9-c39accc57107
+      Enabled: false
+    Animation State Machine Component:
+      Animation State Machine: b7c3a1db-29e4-43a1-8671-49fc147933ff
+    VinesComponent:
+      {}
+  - UUID Component:
+      UUID: 1897eecb-88fb-4f31-bdfa-767da361ac8f
+    Name Component:
+      Name: Seed
+    Transform Component:
+      Translation: [-0.0410000011, 0, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 0c77a388-b129-43d4-a805-8ad00f7f5dab
+      Next: 19a5854c-ddbb-4544-924d-68a378e26cd0
+      Previous: 19a5854c-ddbb-4544-924d-68a378e26cd0
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [6, 4]
+      Draw Order: 6
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: bd160829-688c-448c-9665-bcc3b2dd2c5b
+      Enabled: true
+    SeedComponent:
+      Seed Fall Velocity: 5
+    Animation State Machine Component:
+      Animation State Machine: 902f364b-f48d-4967-a8a3-7aaf25d1c57c
+  - UUID Component:
+      UUID: e65754be-3f15-4da0-a334-f2e139d0e38d
+    Name Component:
+      Name: Chomper 0
+    Transform Component:
+      Translation: [0, 7.94226074, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Children Component:
+      First Child: ccdd279a-2ed6-44df-9d9c-9a2a3edb5558
+      Number Of Children: 3
+    Box Collider Component:
+      Type: Dynamic
+      Enabled: true
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: true
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [0.5, 0.699999988]
+      Physics Material: ""
+      Self Physics Layer: Layer3
+      Collide With Physics Layer:
+        - Layer4
+        - Layer7
+      Draw Debug Collider: false
+    ChomperComponent:
+      Life Time: 10
+      Health: 2
+      Defeated Sound: event:/Boss/Seed Defeated
+  - UUID Component:
+      UUID: 96dfc8d8-0d0b-4586-92b5-a09e5b1c04ff
+    Name Component:
+      Name: Chomper
+    Transform Component:
+      Translation: [0, 0.06300354, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: e65754be-3f15-4da0-a334-f2e139d0e38d
+      Next: e65754be-3f15-4da0-a334-f2e139d0e38d
+      Previous: 238e12db-c3ab-4863-91c9-2951b8443bb7
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 1
+      Number of Sprites: [4, 6]
+      Draw Order: 6
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: c3a2314f-f19c-4a1f-8cc6-397aafd0b5e8
+      Enabled: true
+    Animation State Machine Component:
+      Animation State Machine: 8dafc720-7abf-4dd9-bdc1-4c225a130134
+    Box Collider Component:
+      Type: Dynamic
+      Enabled: true
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: true
+      Use CCD: false
+      Offset: [0, 0.200000003]
+      Sizes: [0.800000012, 1]
+      Physics Material: ""
+      Self Physics Layer: Layer3
+      Collide With Physics Layer:
+        - Layer4
+      Draw Debug Collider: false
+    Children Component:
+      First Child: c97f9203-8fa0-43af-be21-6ac95d8d61f4
+      Number Of Children: 1
+    SeedEnemyAnimationComponent:
+      {}
+  - UUID Component:
+      UUID: c97f9203-8fa0-43af-be21-6ac95d8d61f4
+    Name Component:
+      Name: Hurt Box
+    Transform Component:
+      Translation: [0, 0, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 96dfc8d8-0d0b-4586-92b5-a09e5b1c04ff
+      Next: 96dfc8d8-0d0b-4586-92b5-a09e5b1c04ff
+      Previous: 96dfc8d8-0d0b-4586-92b5-a09e5b1c04ff
+    Box Collider Component:
+      Type: Dynamic
+      Enabled: false
+      Is Sensor: true
+      Gravity Scale: 0
+      Fixed Rotation: true
+      Use CCD: false
+      Offset: [0, 0.200000003]
+      Sizes: [0.800000012, 1]
+      Physics Material: ""
+      Self Physics Layer: Layer5
+      Collide With Physics Layer:
+        - Layer6
+      Draw Debug Collider: false
+  - UUID Component:
+      UUID: 238e12db-c3ab-4863-91c9-2951b8443bb7
+    Name Component:
+      Name: Burst
+    Transform Component:
+      Translation: [0, 2.51634979, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: e65754be-3f15-4da0-a334-f2e139d0e38d
+      Next: 96dfc8d8-0d0b-4586-92b5-a09e5b1c04ff
+      Previous: ccdd279a-2ed6-44df-9d9c-9a2a3edb5558
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [3, 2]
+      Draw Order: 6
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: da2dbc2b-c17f-4223-b3be-bc64e1feb083
+      Enabled: false
+    Animation State Machine Component:
+      Animation State Machine: cbdc9759-0b3f-4223-bab5-7d812d357bc2
+    BurstComponent:
+      {}
+  - UUID Component:
+      UUID: ccdd279a-2ed6-44df-9d9c-9a2a3edb5558
+    Name Component:
+      Name: Seed
+    Transform Component:
+      Translation: [-0.0410919189, 0, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: e65754be-3f15-4da0-a334-f2e139d0e38d
+      Next: 238e12db-c3ab-4863-91c9-2951b8443bb7
+      Previous: 238e12db-c3ab-4863-91c9-2951b8443bb7
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [14, 2]
+      Draw Order: 6
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 6e8b2633-5bc9-49f7-a0ac-130385ef738f
+      Enabled: true
+    SeedComponent:
+      Seed Fall Velocity: 5
+    Animation State Machine Component:
+      Animation State Machine: 902f364b-f48d-4967-a8a3-7aaf25d1c57c
+  - UUID Component:
+      UUID: b9968575-aa91-41b9-938f-725d914dc8fa
+    Name Component:
+      Name: Vines
+    Transform Component:
+      Translation: [-0.0946121216, 2.33863831, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 702a2bd7-e566-483e-8230-cdeeb2e6f782
+      Next: 7c347bbf-de01-400c-bb7d-59fc1b9a1cc1
+      Previous: 60cdcd93-cf50-4b83-9e6e-2c291ab5d691
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [4, 5]
+      Draw Order: 5
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: cde01b0a-8fbb-4084-8df9-c39accc57107
+      Enabled: false
+    Animation State Machine Component:
+      Animation State Machine: b7c3a1db-29e4-43a1-8671-49fc147933ff
+    VinesComponent:
+      {}
+  - UUID Component:
+      UUID: 0f43943a-bc92-43b6-a309-96a72572966f
+    Name Component:
+      Name: Hurt Box
+    Transform Component:
+      Translation: [0, 0, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 72cf7b98-3f23-4934-9d45-28f7c7905f6a
+      Next: 72cf7b98-3f23-4934-9d45-28f7c7905f6a
+      Previous: 72cf7b98-3f23-4934-9d45-28f7c7905f6a
+    Box Collider Component:
+      Type: Dynamic
+      Enabled: false
+      Is Sensor: true
+      Gravity Scale: 0
+      Fixed Rotation: false
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [1.20000005, 0.800000012]
+      Physics Material: ""
+      Self Physics Layer: Layer5
+      Collide With Physics Layer:
+        - Layer6
+      Draw Debug Collider: false
+  - UUID Component:
+      UUID: 61940724-c50a-4d1e-a4ef-9decd382c958
+    Name Component:
+      Name: Venus 2
+    Transform Component:
+      Translation: [-1.18967175, 15.3004303, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Children Component:
+      First Child: 81d2aa3b-27bf-45be-b6a2-a0f9f856022f
+      Number Of Children: 4
+    Box Collider Component:
+      Type: Dynamic
+      Enabled: true
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: true
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [0.5, 0.699999988]
+      Physics Material: ""
+      Self Physics Layer: Layer3
+      Collide With Physics Layer:
+        - Layer4
+        - Layer7
+      Draw Debug Collider: false
+    VenusComponent:
+      Venus Linear Velocity: 1.5
+      Venus Angular Velocity: 150
+      Time Pursuing Player: 5
+      Life Time: 0.5
+      Health: 2
+      Defeated Sound: event:/Boss/Seed Defeated
+  - UUID Component:
+      UUID: c70eb78e-ceb5-4223-a480-a97a32a38ff1
+    Name Component:
+      Name: Seed
+    Transform Component:
+      Translation: [-0.0410000011, 0, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 61940724-c50a-4d1e-a4ef-9decd382c958
+      Next: 61940724-c50a-4d1e-a4ef-9decd382c958
+      Previous: 1b8ece43-2d0c-4728-85cd-1d176c4a3c52
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [6, 4]
+      Draw Order: 6
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: bd160829-688c-448c-9665-bcc3b2dd2c5b
+      Enabled: true
+    SeedComponent:
+      Seed Fall Velocity: 5
+    Animation State Machine Component:
+      Animation State Machine: 902f364b-f48d-4967-a8a3-7aaf25d1c57c
+  - UUID Component:
+      UUID: 1b8ece43-2d0c-4728-85cd-1d176c4a3c52
+    Name Component:
+      Name: Vines
+    Transform Component:
+      Translation: [-0.0946121216, 2.33863831, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 61940724-c50a-4d1e-a4ef-9decd382c958
+      Next: c70eb78e-ceb5-4223-a480-a97a32a38ff1
+      Previous: 4811153f-cc0b-441a-ab0a-8069f261e9b2
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [4, 5]
+      Draw Order: 5
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: cde01b0a-8fbb-4084-8df9-c39accc57107
+      Enabled: false
+    Animation State Machine Component:
+      Animation State Machine: b7c3a1db-29e4-43a1-8671-49fc147933ff
+    VinesComponent:
+      {}
+  - UUID Component:
+      UUID: 4811153f-cc0b-441a-ab0a-8069f261e9b2
+    Name Component:
+      Name: Venus
+    Transform Component:
+      Translation: [-0.493732452, 5.00799561, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 61940724-c50a-4d1e-a4ef-9decd382c958
+      Next: 1b8ece43-2d0c-4728-85cd-1d176c4a3c52
+      Previous: 81d2aa3b-27bf-45be-b6a2-a0f9f856022f
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [6, 4]
+      Draw Order: 6
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: a3675347-060c-423a-ab03-feece9e350a3
+      Enabled: true
+    Animation State Machine Component:
+      Animation State Machine: 3f6d1e84-7662-47a3-b0c7-a9f423412dc7
+    Box Collider Component:
+      Type: Dynamic
+      Enabled: false
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: false
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [1.20000005, 0.800000012]
+      Physics Material: ""
+      Self Physics Layer: Layer3
+      Collide With Physics Layer:
+        - Layer4
+      Draw Debug Collider: false
+    Children Component:
+      First Child: b1476154-9e22-44eb-8e81-e020067f7caa
+      Number Of Children: 1
+    SeedEnemyAnimationComponent:
+      {}
+  - UUID Component:
+      UUID: dbb6ae13-2420-4d5b-81f1-7837617e8a70
+    Name Component:
+      Name: Seed Enemies Launcher
+    Transform Component:
+      Translation: [-8.25150299, 7.84599304, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    SeedEnemiesLauncherComponent:
+      Max Seed Spawn Distances: [10, 20]
+  - UUID Component:
+      UUID: 60cdcd93-cf50-4b83-9e6e-2c291ab5d691
+    Name Component:
+      Name: Venus
+    Transform Component:
+      Translation: [-0.493732452, 5.00799561, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 702a2bd7-e566-483e-8230-cdeeb2e6f782
+      Next: b9968575-aa91-41b9-938f-725d914dc8fa
+      Previous: de05436f-9218-47d7-9ac3-1e1481bd267d
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [6, 4]
+      Draw Order: 6
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: a3675347-060c-423a-ab03-feece9e350a3
+      Enabled: true
+    Animation State Machine Component:
+      Animation State Machine: 3f6d1e84-7662-47a3-b0c7-a9f423412dc7
+    Box Collider Component:
+      Type: Dynamic
+      Enabled: false
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: false
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [1.20000005, 0.800000012]
+      Physics Material: ""
+      Self Physics Layer: Layer3
+      Collide With Physics Layer:
+        - Layer4
+      Draw Debug Collider: false
+    Children Component:
+      First Child: db37f048-3f69-4b30-8c76-04adaed4e766
+      Number Of Children: 1
+    SeedEnemyAnimationComponent:
+      {}
+  - UUID Component:
+      UUID: db37f048-3f69-4b30-8c76-04adaed4e766
+    Name Component:
+      Name: Hurt Box
+    Transform Component:
+      Translation: [0, 0, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 60cdcd93-cf50-4b83-9e6e-2c291ab5d691
+      Next: 60cdcd93-cf50-4b83-9e6e-2c291ab5d691
+      Previous: 60cdcd93-cf50-4b83-9e6e-2c291ab5d691
+    Box Collider Component:
+      Type: Dynamic
+      Enabled: false
+      Is Sensor: true
+      Gravity Scale: 0
+      Fixed Rotation: false
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [1.20000005, 0.800000012]
+      Physics Material: ""
+      Self Physics Layer: Layer5
+      Collide With Physics Layer:
+        - Layer6
+      Draw Debug Collider: false
+  - UUID Component:
+      UUID: de05436f-9218-47d7-9ac3-1e1481bd267d
+    Name Component:
+      Name: Burst
+    Transform Component:
+      Translation: [0, 2.51634979, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 702a2bd7-e566-483e-8230-cdeeb2e6f782
+      Next: 60cdcd93-cf50-4b83-9e6e-2c291ab5d691
+      Previous: 60cdcd93-cf50-4b83-9e6e-2c291ab5d691
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [3, 2]
+      Draw Order: 6
+      Pixels Per Unit: 70
+      Tint: [1, 1, 1, 1]
+      Sprite Material: da2dbc2b-c17f-4223-b3be-bc64e1feb083
+      Enabled: true
+    Animation State Machine Component:
+      Animation State Machine: cbdc9759-0b3f-4223-bab5-7d812d357bc2
+    BurstComponent:
+      {}
+  - UUID Component:
+      UUID: 82290714-457b-4217-8693-f8bb82b7ce80
+    Name Component:
+      Name: Ground Hit Box
+    Transform Component:
+      Translation: [5.53272295, -0.868356705, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 6df864c9-a1f9-4300-a393-a35e44fbbfe7
+      Next: 9e23699e-3ffa-4b24-876c-5c12fa87584d
+      Previous: 71d2ee36-32f7-4a36-a8d1-b729e86bfa62
+    Box Collider Component:
+      Type: Static
+      Enabled: true
+      Is Sensor: false
+      Gravity Scale: 0
+      Fixed Rotation: true
+      Use CCD: false
+      Offset: [0, 0]
+      Sizes: [6, 5]
+      Physics Material: ""
+      Self Physics Layer: Layer3
+      Collide With Physics Layer:
+        - Layer4
+      Draw Debug Collider: false
+  - UUID Component:
+      UUID: 7c6eaac9-baab-4797-a090-801545be1d32
+    Name Component:
+      Name: Knockout Message
+    Transform Component:
+      Translation: [0, 0, -4]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 4a0e005c-a5f4-4418-b1b0-1c1b6f484a3e
+      Next: 4a0e005c-a5f4-4418-b1b0-1c1b6f484a3e
+      Previous: 03cadb5d-3322-45e1-8c99-67cf79a2336c
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [8, 4]
+      Draw Order: 10
+      Pixels Per Unit: 62
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 497c4d35-fe2d-4f9b-b8b8-18b4776f55cd
+      Enabled: false
+    Animation State Machine Component:
+      Animation State Machine: 728edac6-0cfd-4b0a-b938-25b62dea5bd8
+    KnockoutComponent:
+      {}
+  - UUID Component:
+      UUID: 03cadb5d-3322-45e1-8c99-67cf79a2336c
+    Name Component:
+      Name: Player Health
+    Transform Component:
+      Translation: [-9.22476196, -5.09923649, -10]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 4a0e005c-a5f4-4418-b1b0-1c1b6f484a3e
+      Next: 7c6eaac9-baab-4797-a090-801545be1d32
+      Previous: cd4d510d-4aea-4e33-80ab-f28120aefb4b
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 5
+      Number of Sprites: [6, 2]
+      Draw Order: 9
+      Pixels Per Unit: 61
+      Tint: [1, 1, 1, 1]
+      Sprite Material: aeff53e9-c728-4f9e-b5bd-7aefad6135ee
+      Enabled: true
+    PlayerHealthComponent:
+      {}
+  - UUID Component:
+      UUID: cd4d510d-4aea-4e33-80ab-f28120aefb4b
+    Name Component:
+      Name: You Died Message
+    Transform Component:
+      Translation: [0, 0, -4]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 4a0e005c-a5f4-4418-b1b0-1c1b6f484a3e
+      Next: 03cadb5d-3322-45e1-8c99-67cf79a2336c
+      Previous: 03cadb5d-3322-45e1-8c99-67cf79a2336c
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 9
+      Number of Sprites: [3, 7]
+      Draw Order: 10
+      Pixels Per Unit: 131
+      Tint: [1, 1, 1, 1]
+      Sprite Material: d3a45269-6f17-405b-91a9-78c6123b289d
+      Enabled: false
+    Animation State Machine Component:
+      Animation State Machine: 7495e7f0-29d9-4a9d-bd13-c4b53a02cbd7
+    Children Component:
+      First Child: 4a279145-a4f8-4a20-849e-f4296eca54a2
+      Number Of Children: 2
+    YouDiedMessageComponent:
+      {}
+  - UUID Component:
+      UUID: 28a0fc93-dc70-42db-a11a-edc0a53eac2b
+    Name Component:
+      Name: Background
+    Transform Component:
+      Translation: [0, 0, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: cd4d510d-4aea-4e33-80ab-f28120aefb4b
+      Next: cd4d510d-4aea-4e33-80ab-f28120aefb4b
+      Previous: 4a279145-a4f8-4a20-849e-f4296eca54a2
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [1, 1]
+      Draw Order: 10
+      Pixels Per Unit: 2
+      Tint: [0, 0, 0, 0.470588237]
+      Sprite Material: ""
+      Enabled: false
+  - UUID Component:
+      UUID: 71d2ee36-32f7-4a36-a8d1-b729e86bfa62
+    Name Component:
+      Name: Seed Missiles
+    Transform Component:
+      Translation: [4.34580088, 5.0544281, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: 6df864c9-a1f9-4300-a393-a35e44fbbfe7
+      Next: 82290714-457b-4217-8693-f8bb82b7ce80
+      Previous: 82290714-457b-4217-8693-f8bb82b7ce80
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [8, 1]
+      Draw Order: 4
+      Pixels Per Unit: 76
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 4eeea646-590d-438d-84df-2692c2277759
+      Enabled: true
+    Animation State Machine Component:
+      Animation State Machine: f5a9a2eb-fdb3-4921-a7c7-cb312fd92823
+  - UUID Component:
+      UUID: 3c2bfe6f-ad12-4de4-ae44-f2459229b4a2
+    Name Component:
+      Name: Iris Transition
+    Transform Component:
+      Translation: [0, 0.207481384, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 15
+      Number of Sprites: [3, 6]
+      Draw Order: 11
+      Pixels Per Unit: 26
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 610d71ee-1ffc-42ff-b0ef-e5238efd40db
+      Enabled: true
+    Animation State Machine Component:
+      Animation State Machine: e1dc444a-7970-4d26-857c-a5992b4fbc68
+    IrisTransitionComponent:
+      {}
+  - UUID Component:
+      UUID: 9587488a-edf2-40d7-95bf-21cb366043f7
+    Name Component:
+      Name: Announcer
+    Transform Component:
+      Translation: [0, 0, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    AnnouncerComponent:
+      Ready Sound: event:/Announcer/Ready
+      Begin Sound: event:/Announcer/Begin
+      Delay To Start Ready Sound: 0.5
+      Delay To Start Begin Sound: 2.20000005
+  - UUID Component:
+      UUID: 4a279145-a4f8-4a20-849e-f4296eca54a2
+    Name Component:
+      Name: Press R To Restart
+    Transform Component:
+      Translation: [0.0543289185, 1.76870739, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Child Component:
+      Parent: cd4d510d-4aea-4e33-80ab-f28120aefb4b
+      Next: 28a0fc93-dc70-42db-a11a-edc0a53eac2b
+      Previous: 28a0fc93-dc70-42db-a11a-edc0a53eac2b
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 0
+      Number of Sprites: [1, 1]
+      Draw Order: 10
+      Pixels Per Unit: 255
+      Tint: [1, 1, 1, 1]
+      Sprite Material: b944eccd-91d2-4018-8d57-8d8404681bbf
+      Enabled: false
+  - UUID Component:
+      UUID: d95dcb59-9aa9-4c80-bd6d-c02564ab9219
+    Name Component:
+      Name: Ready Go Message
+    Transform Component:
+      Translation: [0, 0, 0]
+      Rotation: 0
+      Scale: [1, 1]
+    Root component:
+      {}
+    Sprite Component:
+      Flip X: false
+      Flip Y: false
+      Sprite Index: 49
+      Number of Sprites: [15, 4]
+      Draw Order: 10
+      Pixels Per Unit: 30
+      Tint: [1, 1, 1, 1]
+      Sprite Material: 946240b6-9828-4f39-b8d0-9e081f4a1a5d
+      Enabled: false
+    Animation State Machine Component:
+      Animation State Machine: 95d4fadf-19f8-4425-8ea7-0f310abeb121
+    ReadyGoMessageComponent:
+      Presentation Delay: 1.5

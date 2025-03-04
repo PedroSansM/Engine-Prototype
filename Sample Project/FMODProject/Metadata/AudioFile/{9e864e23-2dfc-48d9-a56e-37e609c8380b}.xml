@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9e864e23-2dfc-48d9-a56e-37e609c8380b}">
+		<property name="assetPath">
+			<value>Player/Default Player Fire Loop (Nr. 1 Cuphead Sound) - Sound Effect for editing.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>11.0249996</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>3.1671655328798187</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e87ba75f-f1c2-46f3-b796-568cb847176a}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,21 @@
+Name: A_CupheadAimUp
+Duration: 0.5
+Metachannels:
+  []
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 39]
+            - Main Point: [0.0500000007, 40]
+            - Main Point: [0.100000001, 41]
+            - Main Point: [0.150000006, 42]
+            - Main Point: [0.200000003, 43]
+            - Main Point: [0.25, 43]
+            - Main Point: [0.300000012, 42]
+            - Main Point: [0.349999994, 41]
+            - Main Point: [0.400000006, 40]
+            - Main Point: [0.450000018, 39]

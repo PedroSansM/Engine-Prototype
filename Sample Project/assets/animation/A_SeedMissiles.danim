@@ -1,0 +1,48 @@
+Name: A_SeedMissiles
+Duration: 0.375
+Metachannels:
+  []
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 0]
+            - Main Point: [0.046875, 1]
+            - Main Point: [0.09375, 2]
+            - Main Point: [0.140625, 3]
+            - Main Point: [0.1875, 4]
+            - Main Point: [0.234375, 5]
+            - Main Point: [0.28125, 6]
+            - Main Point: [0.328125, 7]
+  - Component Name: Transform Component
+    Attributes:
+      - Attribute Name: Translation
+        Attribute Keyframe Type: Float
+        Attribute Components:
+          -
+            - Main Point: [0, 4.31795454]
+              Left Control Point: [-0.200000003, 4.31795454]
+              Right Control Point: [0.116219789, 4.31795454]
+            - Main Point: [0.116219789, 4.85140181]
+              Left Control Point: [0, 4.85140181]
+              Right Control Point: [0.282772362, 4.85140181]
+            - Main Point: [0.282772362, 4.1892314]
+              Left Control Point: [0.116219789, 4.1892314]
+              Right Control Point: [0.48277235, 4.1892314]
+          -
+            - Main Point: [0, 5.0544281]
+              Left Control Point: [-0.200000003, 5.0544281]
+              Right Control Point: [0.116219789, 5.0544281]
+            - Main Point: [0.116219789, 5.0544281]
+              Left Control Point: [0, 5.0544281]
+              Right Control Point: [0.282772362, 5.0544281]
+            - Main Point: [0.282772362, 5.0544281]
+              Left Control Point: [0.116219789, 5.0544281]
+              Right Control Point: [0.48277235, 5.0544281]
+          -
+            - Main Point: [0, 0]
+              Left Control Point: [-0.200000003, 0]
+              Right Control Point: [0.200000003, 0]

@@ -1,0 +1,24 @@
+Name: A_Burst
+Duration: 0.899999976
+Metachannels:
+  - Id: 0
+    Time: 0.680000007
+  - Id: 1
+    Time: 0.899999976
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 0]
+            - Main Point: [0.0899999961, 1]
+            - Main Point: [0.179999992, 2]
+            - Main Point: [0.269999981, 1]
+            - Main Point: [0.359999985, 0]
+            - Main Point: [0.449999988, 1]
+            - Main Point: [0.539999962, 2]
+            - Main Point: [0.629999995, 3]
+            - Main Point: [0.719999969, 4]
+            - Main Point: [0.809999943, 5]

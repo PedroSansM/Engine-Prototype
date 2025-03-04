@@ -1,0 +1,47 @@
+Parameters:
+  Birth:
+    ParameterType: Trigger
+    ParameterValue: false
+  Bite:
+    ParameterType: Trigger
+    ParameterValue: false
+  Death:
+    ParameterType: Trigger
+    ParameterValue: false
+  Reset:
+    ParameterType: Trigger
+    ParameterValue: false
+States:
+  Empty:
+    Animation: ""
+    IsInitialState: true
+    StatePosition: [-0, -0]
+  Birth:
+    Animation: 6f65ff68-e7ef-42e0-bb27-b40372d0d08a
+    IsInitialState: false
+    StatePosition: [-0.0361112356, 1.83949983]
+  Bite:
+    Animation: 6a547f92-d476-4a4e-b8b2-b46d21f5f6a5
+    IsInitialState: false
+    StatePosition: [-0.0199117027, 3.60532808]
+  Death:
+    Animation: e44df5e5-d6d0-4729-b352-8c211b962913
+    IsInitialState: false
+    StatePosition: [4.74110985, 1.97654605]
+Transitions:
+  - FromState: Empty
+    ToState: Birth
+    Conditions:
+      - ParameterName: Birth
+  - FromState: Birth
+    ToState: Bite
+    Conditions:
+      - ParameterName: Bite
+  - FromState: Bite
+    ToState: Death
+    Conditions:
+      - ParameterName: Death
+  - FromState: Death
+    ToState: Empty
+    Conditions:
+      - ParameterName: Reset

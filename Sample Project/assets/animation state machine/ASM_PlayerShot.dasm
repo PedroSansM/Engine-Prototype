@@ -1,0 +1,24 @@
+Parameters:
+  Dead:
+    ParameterType: Logic
+    ParameterValue: false
+States:
+  Loop:
+    Animation: 824a2c9c-18ba-410b-984c-40ef60a91274
+    IsInitialState: true
+    StatePosition: [-2.421875, -1.171875]
+  Death:
+    Animation: 0376749d-b5cc-4624-b7d5-d1192ad28def
+    IsInitialState: false
+    StatePosition: [1.85345995, -1.14382875]
+Transitions:
+  - FromState: Loop
+    ToState: Death
+    Conditions:
+      - ParameterName: Dead
+        Value: true
+  - FromState: Death
+    ToState: Loop
+    Conditions:
+      - ParameterName: Dead
+        Value: false

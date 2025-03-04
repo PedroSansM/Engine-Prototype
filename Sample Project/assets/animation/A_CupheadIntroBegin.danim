@@ -1,0 +1,24 @@
+Name: A_CupheadIntroBegin
+Duration: 0.5
+Metachannels:
+  - Id: 12
+    Time: 0.5
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 153]
+            - Main Point: [0.0416666679, 154]
+            - Main Point: [0.0833333358, 155]
+            - Main Point: [0.125, 156]
+            - Main Point: [0.166666672, 157]
+            - Main Point: [0.208333343, 158]
+            - Main Point: [0.25, 159]
+            - Main Point: [0.291666687, 160]
+            - Main Point: [0.333333343, 161]
+            - Main Point: [0.375, 162]
+            - Main Point: [0.416666687, 163]
+            - Main Point: [0.458333343, 164]

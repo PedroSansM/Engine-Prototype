@@ -1,0 +1,34 @@
+Name: A_CupheadRunShootingDiagonalUp
+Duration: 0.800000012
+Metachannels:
+  - Id: 5
+    Time: 0
+  - Id: 5
+    Time: 0.200000003
+  - Id: 5
+    Time: 0.400000006
+  - Id: 5
+    Time: 0.600000024
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 85]
+            - Main Point: [0.0500000007, 86]
+            - Main Point: [0.100000001, 87]
+            - Main Point: [0.150000006, 88]
+            - Main Point: [0.200000003, 89]
+            - Main Point: [0.25, 90]
+            - Main Point: [0.300000012, 91]
+            - Main Point: [0.349999994, 92]
+            - Main Point: [0.400000006, 93]
+            - Main Point: [0.450000018, 94]
+            - Main Point: [0.5, 95]
+            - Main Point: [0.550000012, 96]
+            - Main Point: [0.600000024, 97]
+            - Main Point: [0.650000036, 98]
+            - Main Point: [0.699999988, 99]
+            - Main Point: [0.75, 100]

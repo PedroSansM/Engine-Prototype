@@ -1,0 +1,37 @@
+Name: A_Chomper_Seed_Fall
+Duration: 2.5
+Metachannels:
+  []
+Components:
+  - Component Name: Sprite Component
+    Attributes:
+      - Attribute Name: Sprite Index
+        Attribute Keyframe Type: Integer
+        Attribute Components:
+          -
+            - Main Point: [0, 0]
+            - Main Point: [0.0961538479, 1]
+            - Main Point: [0.192307696, 2]
+            - Main Point: [0.288461536, 3]
+            - Main Point: [0.384615391, 4]
+            - Main Point: [0.480769247, 5]
+            - Main Point: [0.576923072, 6]
+            - Main Point: [0.673076928, 7]
+            - Main Point: [0.769230783, 8]
+            - Main Point: [0.865384638, 9]
+            - Main Point: [0.961538494, 10]
+            - Main Point: [1.05769229, 11]
+            - Main Point: [1.15384614, 12]
+            - Main Point: [1.25, 13]
+            - Main Point: [1.34615386, 12]
+            - Main Point: [1.44230771, 11]
+            - Main Point: [1.53846157, 10]
+            - Main Point: [1.63461542, 9]
+            - Main Point: [1.73076928, 8]
+            - Main Point: [1.82692313, 7]
+            - Main Point: [1.92307699, 6]
+            - Main Point: [2.01923084, 5]
+            - Main Point: [2.11538458, 4]
+            - Main Point: [2.21153855, 3]
+            - Main Point: [2.30769229, 2]
+            - Main Point: [2.40384626, 1]
