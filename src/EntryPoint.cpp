@@ -31,7 +31,11 @@ void GLFWDropCallback(GLFWwindow* window, int count, const char** paths)
 int main(int argc, char** argv)
 {
 #ifdef _WIN32
-	assert(SUCCEEDED(CoInitializeEx(NULL, COINIT_APARTMENTTHREADED | COINIT_DISABLE_OLE1DDE)));
+	if (!SUCCEEDED(CoInitializeEx(NULL, COINIT_APARTMENTTHREADED | COINIT_DISABLE_OLE1DDE)))
+	{
+		std::cout << "Fail to init COM" << std::endl;
+		return EXIT_FAILURE;
+	}
 #endif
 	DASSERT_E(argc == 3);
 	DEditor::ProgramContext::Get().SetProjectAssetsDirectoryPath(argv[1]);

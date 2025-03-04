@@ -3,3 +3,6 @@ build/
 Sample_Project/build/
 Sample_Project/Debug/
 Sample_Project/Release/
+Sample_Project/MinSizeRel/
+Sample_Project/RelWithDebInfo/
+Sample_Project/output/
