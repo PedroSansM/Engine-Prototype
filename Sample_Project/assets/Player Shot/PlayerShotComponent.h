@@ -72,7 +72,7 @@ public:
 		}
 	}
 
-	virtual void OnMetachannelEvent(size_t metachannelId) override
+	virtual void OnAnimationEvent(size_t metachannelId) override
 	{
 		constexpr size_t deadEndAnimationEvent(0);
 		switch (deadEndAnimationEvent)

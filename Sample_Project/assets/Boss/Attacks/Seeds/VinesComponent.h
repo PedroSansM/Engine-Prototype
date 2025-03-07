@@ -36,7 +36,7 @@ public:
 	{}
 public:
 	virtual void Start() override;
-	virtual void OnMetachannelEvent(size_t meachannelId) override;
+	virtual void OnAnimationEvent(size_t meachannelId) override;
 public:
 	void BeginGrow();
 private:

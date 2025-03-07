@@ -35,7 +35,7 @@ public:
 	virtual ~ScriptComponent() = default;
 public:
 	// Physics
-	bool RayCastBox(float boxRotation, const DVec2& boxSizes, const DVec2& origin, const DVec2& direction, float maxDistance = FLT_MAX, uint64_t onlyCollideWithLayers = COLLIDE_WITH_ALL_MASK, rayCastResultType* out = nullptr);
+	bool CastBox(float boxRotation, const DVec2& boxSizes, const DVec2& origin, const DVec2& direction, float maxDistance = FLT_MAX, uint64_t onlyCollideWithLayers = COLLIDE_WITH_ALL_MASK, rayCastResultType* out = nullptr);
 	bool OverlapBox(float boxRotation, const DVec2& boxSizes, const DVec2& origin, uint64_t selfPhysicsLayer = UNDEFINED_PHYSICS_LAYER_MASK, uint64_t onlyCollideWithLayers = COLLIDE_WITH_ALL_MASK, overlapResultType* result = nullptr, size_t entitiesSize = 0);
 	// Debug rendering
 	void DrawDebugBox(const DVec2& translation, float rotation, const DVec2& sizes, const DVec4& color);
@@ -102,7 +102,7 @@ public:
 	virtual void OnOverlapEnd(EntityRef other)
 	{}
 
-	virtual void OnMetachannelEvent(size_t metachannelId)
+	virtual void OnAnimationEvent(size_t eventId)
 	{}
 public:
 	template <class ...Components, class ...TupleArgs>
@@ -397,7 +397,7 @@ public:
 		);
 	}
 
-	void OnMetachannelEvent(size_t metachannelId)
+	void OnAnimationEvent(size_t metachannelId)
 	{
 		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().GetComponents
@@ -405,7 +405,7 @@ public:
 			m_entity, &m_componentId, 1,
 			[&](ComponentIdType componentId, void* component) -> void
 			{
-				static_cast<ScriptComponent*>(component)->OnMetachannelEvent(metachannelId);
+				static_cast<ScriptComponent*>(component)->OnAnimationEvent(metachannelId);
 			}
 		);
 	}

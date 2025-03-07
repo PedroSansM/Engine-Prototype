@@ -7,9 +7,9 @@
 namespace DCore
 {
 
-bool ScriptComponent::RayCastBox(float boxRotation, const DVec2& boxSizes, const DVec2& origin, const DVec2& direction, float maxDistance, uint64_t onlyColliderWithLayers, rayCastResultType* out)
+bool ScriptComponent::CastBox(float boxRotation, const DVec2& boxSizes, const DVec2& origin, const DVec2& direction, float maxDistance, uint64_t onlyColliderWithLayers, rayCastResultType* out)
 {
-	return m_runtime->RayCastBox(boxRotation, boxSizes, origin, direction, maxDistance, onlyColliderWithLayers, out);
+	return m_runtime->CastBox(boxRotation, boxSizes, origin, direction, maxDistance, onlyColliderWithLayers, out);
 }	
 
 bool ScriptComponent::OverlapBox(float boxRotation, const DVec2& boxSizes, const DVec2& origin, uint64_t selfPhysicsLayer, uint64_t onlyCollideWithLayers, overlapResultType* result, size_t entitiesSize)

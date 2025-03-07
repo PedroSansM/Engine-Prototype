@@ -31,7 +31,7 @@ void BurstComponent::Start()
 	m_spriteComponent.SetEnabled(false);
 }
 
-void BurstComponent::OnMetachannelEvent(size_t metachannelId)
+void BurstComponent::OnAnimationEvent(size_t metachannelId)
 {
 	constexpr size_t burstReleaseAnimationEventId(0);
 	constexpr size_t burstEndAnimationEventId(1);

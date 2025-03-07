@@ -48,7 +48,7 @@ void AnimationStateMachineComponent::Tick(float deltaTime)
 						&componentId, 1,
 						[&](ComponentRef<Component> component) -> void
 						{
-							static_cast<ScriptComponent*>(component.GetRawComponent())->OnMetachannelEvent(metachannelId);
+							static_cast<ScriptComponent*>(component.GetRawComponent())->OnAnimationEvent(metachannelId);
 						});
 				}
 			});

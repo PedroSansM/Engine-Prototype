@@ -346,7 +346,7 @@ void PlayerComponent::PhysicsUpdate(float physicsDeltaTime)
 	constexpr float safetyDistanceY(0.2f);
 	rayCastResultType castResult;
 	// Y
-	if (const float maxDistance{std::max(0.3f, glm::abs(deltaY)) + safetyDistanceY}; RayCastBox(0.0f, boxColliderSizes, boxColliderTranslation + DCore::DVec2{0.0f, deltaY > 0.0f ? -safetyDistanceY : safetyDistanceY}, {0.0f, deltaY > 0.0f ? 1.0f : -1.0f}, maxDistance, DCore::Physics::GetLayersMask(DCore::Physics::PhysicsLayer::Layer2), &castResult) && castResult.Normal.y > 0.0f)
+	if (const float maxDistance{std::max(0.3f, glm::abs(deltaY)) + safetyDistanceY}; CastBox(0.0f, boxColliderSizes, boxColliderTranslation + DCore::DVec2{0.0f, deltaY > 0.0f ? -safetyDistanceY : safetyDistanceY}, {0.0f, deltaY > 0.0f ? 1.0f : -1.0f}, maxDistance, DCore::Physics::GetLayersMask(DCore::Physics::PhysicsLayer::Layer2), &castResult) && castResult.Normal.y > 0.0f)
 	{
 		m_velocity.y = 0.0f;
 		if (!m_grounded)
@@ -375,7 +375,7 @@ void PlayerComponent::PhysicsUpdate(float physicsDeltaTime)
 		}
 	}
 	// X
-	if (m_velocity.x != 0.0f && RayCastBox(0.0f, boxColliderSizes, boxColliderTranslation, glm::normalize(DCore::DVec2(m_velocity.x, 0.0f)), glm::abs(deltaX), DCore::Physics::GetLayersMask(DCore::Physics::PhysicsLayer::Layer2), &castResult))
+	if (m_velocity.x != 0.0f && CastBox(0.0f, boxColliderSizes, boxColliderTranslation, glm::normalize(DCore::DVec2(m_velocity.x, 0.0f)), glm::abs(deltaX), DCore::Physics::GetLayersMask(DCore::Physics::PhysicsLayer::Layer2), &castResult))
 	{
 		constexpr float nearInterval(0.1f);
 		bool positiveNormal(castResult.Normal.x <= 1.0f + nearInterval && castResult.Normal.x >= 1.0f - nearInterval);

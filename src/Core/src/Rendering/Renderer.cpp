@@ -22,26 +22,6 @@ Renderer::Renderer()
 	m_clearColor{1.0f, 1.0f, 1.0f, 1.0f}
 {}
 
-Renderer::Renderer(Renderer&& other) noexcept
-	:
-	m_isRenderingDone(true),
-	m_submitionsDone(false),
-	m_toTerminate(false),
-	m_context(other.m_context),
-	m_outputTexture(0),
-	m_clickRequest(false),
-	m_clearColor{1.0f, 1.0f, 1.0f, 1.0f}
-{
-	other.m_toTerminate.store(true, std::memory_order_relaxed);
-	if (other.m_thread.joinable())
-	{
-		other.m_thread.join();
-	}
-	other.m_context = nullptr;
-	DASSERT_E(m_context != nullptr);
-	Initiate(m_context);
-}
-
 void Renderer::Initiate(GLFWwindow* mainWindow)
 {
 	m_toTerminate.store(false, std::memory_order_relaxed);
@@ -62,10 +42,7 @@ void Renderer::Terminate()
 		return;
 	}
 	m_toTerminate.store(true, std::memory_order_relaxed);
-	if (m_thread.joinable())
-	{
-		m_thread.join();
-	}
+	m_thread.join();
 	if (m_context != nullptr)
 	{
 		glfwDestroyWindow(m_context);

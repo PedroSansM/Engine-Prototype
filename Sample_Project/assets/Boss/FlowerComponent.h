@@ -63,7 +63,7 @@ public:
 public:
 	virtual void Start() override;
 	virtual void Update(float deltaTime) override;
-	virtual void OnMetachannelEvent(size_t eventId) override;
+	virtual void OnAnimationEvent(size_t eventId) override;
 	virtual void OnOverlapBegin(DCore::EntityRef) override;
 public:
 	void PlayerDied();

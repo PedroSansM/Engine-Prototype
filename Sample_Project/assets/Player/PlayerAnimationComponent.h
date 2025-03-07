@@ -53,7 +53,7 @@ public:
 		DEditor::Log::Get().ConsoleLog(DEditor::LogLevel::Warning, "%s", "Fail to get player component in player animation component.");
 	}
 
-	virtual void OnMetachannelEvent(size_t metachannelId) override
+	virtual void OnAnimationEvent(size_t eventId) override
 	{
 		constexpr size_t dashEndAnimationEventId(0);
 		constexpr size_t shootStraightEventId(1);
@@ -71,7 +71,7 @@ public:
 		constexpr size_t introLoopEnd(13);
 		constexpr size_t introEndEnd(14);
 		PlayerComponent* playerComponent(static_cast<PlayerComponent*>(m_playerComponent.GetRawComponent()));
-		switch (metachannelId)
+		switch (eventId)
 		{
 		case dashEndAnimationEventId:
 			playerComponent->OnDashEnd();

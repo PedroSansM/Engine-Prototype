@@ -25,7 +25,7 @@ void SeedEnemyAnimationComponent::Start()
 	}
 }
 
-void SeedEnemyAnimationComponent::OnMetachannelEvent(size_t metachannelId)
+void SeedEnemyAnimationComponent::OnAnimationEvent(size_t metachannelId)
 {
 	constexpr size_t deathEndAnimationEvent(0);
 	switch (metachannelId)

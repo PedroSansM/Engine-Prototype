@@ -75,7 +75,7 @@ void SeedComponent::OnCollisionBegin(DCore::EntityRef entity)
 	m_asmComponent.SetParameterValue<DCore::ParameterType::Logic>(m_plantAnimationParameter, DCore::LogicParameter{ true });
 }
 
-void SeedComponent::OnMetachannelEvent(size_t metachannelId)
+void SeedComponent::OnAnimationEvent(size_t metachannelId)
 {
 	constexpr size_t plantAnimationEventId(0);
 	switch (metachannelId)

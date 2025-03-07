@@ -37,7 +37,7 @@ public:
 	{}
 public:
 	virtual void Start();
-	virtual void OnMetachannelEvent(size_t metachannelId) override;
+	virtual void OnAnimationEvent(size_t metachannelId) override;
 public:
 	void BeginBurst();
 private:

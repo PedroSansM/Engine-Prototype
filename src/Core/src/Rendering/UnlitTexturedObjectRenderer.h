@@ -150,7 +150,7 @@ public:
 					switched = true;
 				}
 			}
-		} while(switched);
+		} while (switched);
 	}
 
 	void Render()

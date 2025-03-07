@@ -61,7 +61,7 @@ void ReadyGoMessageComponent::Update(float deltaTime)
 	}
 }
 
-void ReadyGoMessageComponent::OnMetachannelEvent(size_t eventId)
+void ReadyGoMessageComponent::OnAnimationEvent(size_t eventId)
 {
 	constexpr size_t displayEnd{0};
 	switch (eventId)

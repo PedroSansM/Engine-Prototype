@@ -38,7 +38,7 @@ void YouDiedMessageComponent::Start()
 		});
 }
 
-void YouDiedMessageComponent::OnMetachannelEvent(size_t metachannelId)
+void YouDiedMessageComponent::OnAnimationEvent(size_t metachannelId)
 {
 	constexpr size_t displayAnimationEvent(0);
 	switch (metachannelId)

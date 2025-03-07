@@ -174,14 +174,14 @@ public:
 	{
 		DASSERT_E(HaveQuads());
 		// Making the pivot in the center for now.
-		Quad2 currentVertexPostions;
+		Quad2 currentVertexPositions;
 		const DVec2 diffuseMapSizes(GetDiffuseMapSizes());
 		const DVec2 absoluteSizes(diffuseMapSizes.x / (2 * m_numberOfSprites.x * m_pixelsPerUnit), diffuseMapSizes.y / (2 * m_numberOfSprites.y * m_pixelsPerUnit));
-		currentVertexPostions.BottomLeft = {-absoluteSizes.x, -absoluteSizes.y};
-		currentVertexPostions.BottomRight = {absoluteSizes.x, -absoluteSizes.y};
-		currentVertexPostions.TopRight = {absoluteSizes.x, absoluteSizes.y};
-		currentVertexPostions.TopLeft = {-absoluteSizes.x, absoluteSizes.y};
-		return currentVertexPostions;
+		currentVertexPositions.BottomLeft = {-absoluteSizes.x, -absoluteSizes.y};
+		currentVertexPositions.BottomRight = {absoluteSizes.x, -absoluteSizes.y};
+		currentVertexPositions.TopRight = {absoluteSizes.x, absoluteSizes.y};
+		currentVertexPositions.TopLeft = {-absoluteSizes.x, absoluteSizes.y};
+		return currentVertexPositions;
 	}
 	
 	const DVec4 GetDiffuseColor()

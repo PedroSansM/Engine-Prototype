@@ -80,7 +80,6 @@ SpriteSheetGenPanel::SpriteSheetGenPanel(SpriteSheetGenPanel&& other) noexcept
 	m_spriteSheetGen(other.m_spriteSheetGen),
 	m_isOpened(other.m_isOpened),
 	m_windowFlags(other.m_windowFlags),
-	m_renderer(std::move(other.m_renderer)),
 	m_cameraComponent(DCore::ConstructorArgs<DCore::PerspectiveCameraComponent>()),
 	m_addedTextures(std::move(other.m_addedTextures)),
 	m_textureNames(std::move(other.m_textureNames)),
@@ -91,6 +90,8 @@ SpriteSheetGenPanel::SpriteSheetGenPanel(SpriteSheetGenPanel&& other) noexcept
 	m_centerIconEntity(other.m_centerIconEntity)
 {
 	other.m_spriteSheetGen.Invalidate();
+	other.m_renderer.Terminate();
+	m_renderer.Initiate(ProgramContext::Get().GetMainContext());
 }
 
 SpriteSheetGenPanel::~SpriteSheetGenPanel()

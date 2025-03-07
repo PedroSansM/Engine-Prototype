@@ -32,7 +32,10 @@ GameViewPanel::~GameViewPanel()
 void GameViewPanel::Open()
 {
 	m_isOpened = true;
-	m_renderer.Initiate(ProgramContext::Get().GetMainContext());
+	if (m_currentGameState == GameState::NotPlaying)
+	{
+		m_renderer.Initiate(ProgramContext::Get().GetMainContext());
+	}
 }
 
 void GameViewPanel::Render()
@@ -85,7 +88,7 @@ void GameViewPanel::Render()
 			m_currentGameState = GameState::Playing;
 			break;
 		}
-		if (m_renderer.IsRenderingDone() && totalViewportSizes.x > 0 && totalViewportSizes.y > 0)
+		if (m_renderer.IsRenderingDone() && rendererViewportSizes.x > 0 && rendererViewportSizes.y > 0)
 		{
 			m_renderer.Begin({rendererViewportSizes.x, rendererViewportSizes.y});
 			DCore::Runtime::MakeDefaultRendererSubmitions({rendererViewportSizes.x, rendererViewportSizes.y}, m_renderer);
@@ -104,12 +107,10 @@ void GameViewPanel::Render()
 			m_currentGameState = GameState::NotPlaying;
 			break;
 		}
-		if (m_renderer.IsRenderingDone() && totalViewportSizes.x > 0 && totalViewportSizes.y > 0)
+		if (m_renderer.IsRenderingDone() && rendererViewportSizes.x > 0 && rendererViewportSizes.y > 0)
 		{
 			m_runtime.Render({rendererViewportSizes.x, rendererViewportSizes.y}, m_renderer);
 		}
-		m_runtime.SetRendererViewportSizes({rendererViewportSizes.x, rendererViewportSizes.y});
-		// Declare a Renderer object in this class.
 		ImGui::Image((ImTextureID)(uintptr_t)m_renderer.GetOutputTextureId(), rendererViewportSizes, {0, 1}, {1, 0});
 		break;
 	default:

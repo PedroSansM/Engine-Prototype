@@ -290,7 +290,7 @@ void FlowerComponent::Update(float deltaTime)
 	}
 }
 
-void FlowerComponent::OnMetachannelEvent(size_t eventId)
+void FlowerComponent::OnAnimationEvent(size_t eventId)
 {
 	constexpr size_t createBeginEnd(0);
 	constexpr size_t creatingEnd(1);

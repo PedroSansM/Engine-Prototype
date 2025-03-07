@@ -14,7 +14,6 @@ Texture2DAssetManager::~Texture2DAssetManager()
 
 bool Texture2DAssetManager::IsTexture2DLoaded(const UUIDType& uuid)
 {
-	ReadWriteLockGuard guard(LockType::ReadLock, m_lockData);
 	return m_loadedTextures2D.find(uuid) != m_loadedTextures2D.end();
 }
 

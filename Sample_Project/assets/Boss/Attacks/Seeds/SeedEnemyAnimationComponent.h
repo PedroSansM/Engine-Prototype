@@ -37,7 +37,7 @@ public:
 	{}
 public:
 	virtual void Start() override;
-	virtual void OnMetachannelEvent(size_t metachannelId) override;
+	virtual void OnAnimationEvent(size_t metachannelId) override;
 private:
 	DCore::ComponentRef<DCore::Component> m_burstable;
 };

@@ -37,7 +37,7 @@ public:
 	{}
 public:
 	virtual void Start() override;
-	virtual void OnMetachannelEvent(size_t eventId) override;
+	virtual void OnAnimationEvent(size_t eventId) override;
 private:
 	DCore::ComponentRef<DCore::SpriteComponent> m_spriteComponent;
 };

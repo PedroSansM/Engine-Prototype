@@ -190,6 +190,10 @@ void EditorGameViewPanel::Update()
 			break;
 		case GizmoOperation::Scale:
 			operation = ImGuizmo::SCALE_X | ImGuizmo::SCALE_Y;
+			break;
+		default:
+			operation = ImGuizmo::TRANSLATE_X | ImGuizmo::TRANSLATE_Y;
+			break;
 		}
 		ImGuizmo::Manipulate
 		(

@@ -65,7 +65,6 @@ public:
 public:
 	void Begin();
 	void End();
-	void SetRendererViewportSizes(const DVec2&);
 	void DestroyEntity(EntityRef);
 	void Render(const DVec2& viewportSizes, Renderer&);
 	// Physics.
@@ -77,7 +76,7 @@ public:
 	void RemoveFromOnCollisionEnd(size_t componentIndex, DBodyId);
 	void RemoveFromOnOverlapBegin(size_t registrationIndex, DBodyId);
 	void RemoveFromOnOverlapEnd(size_t componentIndex, DBodyId);
-	bool RayCastBox(
+	bool CastBox(
 		float boxRotation, 
 		const DVec2& boxSizes,
 		const DVec2& origin, 
@@ -131,7 +130,6 @@ private:
 private:
 	atomicBoolType m_toContinueSimulation;
 	threadType m_gameLoopThread;
-	AtomicVec2 m_rendererViewportSizes;
 	RuntimeState m_currentState;
 	b2WorldId m_physicsWorldId;
 	LockData m_lockData;

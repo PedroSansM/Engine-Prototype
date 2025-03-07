@@ -14,7 +14,7 @@ void IrisTransitionComponent::Start()
 	m_spriteComponent.SetSpriteIndex(0);
 }
 
-void IrisTransitionComponent::OnMetachannelEvent(size_t eventId)
+void IrisTransitionComponent::OnAnimationEvent(size_t eventId)
 {
 	constexpr size_t transitionEnd(0);
 	switch (eventId)

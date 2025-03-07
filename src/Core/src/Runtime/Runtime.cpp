@@ -304,11 +304,6 @@ void Runtime::End()
 	Input::Get().RemoveRuntime(m_inputIndex);
 }
 
-void Runtime::SetRendererViewportSizes(const DVec2& sizes)
-{
-	m_rendererViewportSizes.Set(sizes.x, sizes.y);
-}
-
 void Runtime::DestroyEntity(EntityRef entity)
 {
 	ReadWriteLockGuard runtimeGuard(LockType::WriteLock, m_lockData);
@@ -414,7 +409,7 @@ void Runtime::RemoveFromOnOverlapEnd(size_t registrationIndex, DBodyId bodyId)
 	userData.OverlapEndScriptComponents.RemoveElementAtIndex(registrationIndex);
 }
 
-bool Runtime::RayCastBox(float boxRotation, const DVec2& boxSizes, const DVec2& origin, const DVec2& direction, float maxDistance, uint64_t onlyColliderWithLayers, rayCastResultType* out)
+bool Runtime::CastBox(float boxRotation, const DVec2& boxSizes, const DVec2& origin, const DVec2& direction, float maxDistance, uint64_t onlyColliderWithLayers, rayCastResultType* out)
 {
 	RayCastContext rayCastContext;
 	rayCastContext.Runtime = this;
@@ -499,7 +494,7 @@ void Runtime::GameLoop()
 {
 	constexpr float physicsDeltaTime{1.0f/60.0f};
 	constexpr float animationDeltaTime{1.0f/30.0f};
-	constexpr float biggestDeltaTime{animationDeltaTime};
+	constexpr float biggestDeltaTime{physicsDeltaTime};
 	glfwMakeContextCurrent(m_context);
 	float physicsAccumulatedDeltaTime{0.0f};
 	float animationAccumulatedDeltaTime{0.0f};

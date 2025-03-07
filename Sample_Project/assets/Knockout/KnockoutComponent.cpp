@@ -17,7 +17,7 @@ void KnockoutComponent::Start()
 	m_spriteComponent.SetEnabled(false);
 }
 
-void KnockoutComponent::OnMetachannelEvent(size_t metachannelId)
+void KnockoutComponent::OnAnimationEvent(size_t metachannelId)
 {
 	constexpr size_t displayEnd(0);
 	switch (displayEnd)

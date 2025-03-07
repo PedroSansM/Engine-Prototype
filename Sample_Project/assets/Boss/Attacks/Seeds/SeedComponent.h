@@ -38,7 +38,7 @@ public:
 public:
 	virtual void Awake() override;
 	virtual void OnCollisionBegin(DCore::EntityRef) override;
-	virtual void OnMetachannelEvent(size_t matachannelId) override;
+	virtual void OnAnimationEvent(size_t matachannelId) override;
 public:
 	void BeginFall();
 public:

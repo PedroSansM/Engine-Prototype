@@ -33,7 +33,7 @@ void VinesComponent::Start()
 	DASSERT_K(m_asmComponent.TryGetParameterIndexWithName<DCore::ParameterType::Logic>("Grow", m_growAnimationParameter));
 }
 
-void VinesComponent::OnMetachannelEvent(size_t metachannelId)
+void VinesComponent::OnAnimationEvent(size_t metachannelId)
 {
 	constexpr size_t showCreatureAnimationEvent(0);
 	constexpr size_t releaseAnimationEvent(1);

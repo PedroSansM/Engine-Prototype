@@ -33,7 +33,6 @@ public:
 	using debugRectObjectRenderer = DebugRectObjectRenderer<maxNumberOfDebguRectObjects>;
 public:
 	Renderer();
-	Renderer(Renderer&&) noexcept;
 	~Renderer() = default;
 private:
 	enum class RenderStateEnum : uint8_t
