@@ -78,6 +78,7 @@ void SceneManager::CreateScene(const stringType& sceneName, const pathType& thum
 
 void SceneManager::LoadScene(const DCore::UUIDType& uuid, sceneRefType* outScene)
 {
+	//  Its assumed that the user will never try to load the same scene at same time.
 	const DCore::DString uuidString((std::string)uuid);
 	DASSERT_E(s_scenesNode[uuidString.Data()]);
 	DASSERT_E(s_scenesNode[uuidString.Data()][s_nameKey]);

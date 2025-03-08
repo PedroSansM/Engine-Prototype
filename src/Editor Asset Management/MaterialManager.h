@@ -4,7 +4,8 @@
 
 #include <filesystem>
 #include <string>
-#include <unordered_map>
+#include <unordered_set>
+#include <mutex>
 
 
 
@@ -17,8 +18,10 @@ public:
 	using uuidType = DCore::UUIDType;
 	using spriteMaterialType = DCore::SpriteMaterialType;
 	using spriteMaterialRefType = DCore::SpriteMaterialRef;
+	using lockDataType = DCore::LockData;
 	using stringType = std::string;
 	using pathType = std::filesystem::path;
+	using materialsLoadingSetType = std::unordered_set<uuidType>;
 public:
 	~MaterialManager() = default;
 public:
@@ -38,8 +41,11 @@ public:
 private:
 	MaterialManager();
 private:
+	lockDataType m_lockData;
+	materialsLoadingSetType m_resourcesLoading;
+private:
 	pathType GetMaterialsPath() const;
-	void GenerateSpriteMaterialThumbail(const pathType& thumbailPath, const stringType& uuidString, const stringType& spriteMaterialTypeString, const stringType& materialName);
+	void GenerateSpriteMaterialThumbnail(const pathType& thumbailPath, const stringType& uuidString, const stringType& spriteMaterialTypeString, const stringType& materialName);
 	void SaveMaterialsMap();
 };
 

@@ -81,6 +81,23 @@ DCore::Texture2DRef TextureManager::LoadTexture2D(const DCore::UUIDType& uuid)
 			return DCore::AssetManager::Get().GetTexture2DRef(uuid);
 		}
 	}
+	{
+		DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, m_lockData);
+		if (m_texturesLoading.count(uuid) == 0)
+		{
+			m_texturesLoading.insert(uuid);
+			goto LoadTexture;
+		}
+	}
+	while (true)
+	{
+		DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::Texture2DAssetManager*>(&DCore::AssetManager::Get()));
+		if (DCore::AssetManager::Get().IsTexture2DLoaded(uuid))
+		{
+			return DCore::AssetManager::Get().GetTexture2DRef(uuid);
+		}
+	}
+LoadTexture:
 	const DCore::DString uuidString(((std::string)uuid).c_str());
 	DASSERT_E(s_texturesNode[uuidString.Data()]);
 	DASSERT_E(s_texturesNode[uuidString.Data()][s_pathKey]);
@@ -92,6 +109,8 @@ DCore::Texture2DRef TextureManager::LoadTexture2D(const DCore::UUIDType& uuid)
 	DASSERT_E(binary != nullptr);
 	DCore::Texture2DRef ref(DCore::AssetManager::Get().LoadTexture2D(uuid, binary, {width, height}, numberChannels, metadata));
 	stbi_image_free(binary);
+	DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, m_lockData);
+	m_texturesLoading.erase(uuid);
 	return ref;
 }
 

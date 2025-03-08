@@ -20,8 +20,8 @@ bool PhysicsMaterialAssetManager::IsPhysicsMaterialLoaded(const UUIDType& uuid)
 
 PhysicsMaterialRef PhysicsMaterialAssetManager::LoadPhysicsMaterial(const UUIDType& uuid, PhysicsMaterial&& physicsMaterial)
 {
-	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);
 	DASSERT_E(m_loadedPhysicsMaterials.find(uuid) == m_loadedPhysicsMaterials.end());
+	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);
 	InternalPhysicsMaterialRefType internalRef(m_physicsMaterials.PushBack(uuid, std::move(physicsMaterial)));
 	m_loadedPhysicsMaterials.insert({uuid, internalRef});
 	return PhysicsMaterialRef(internalRef, m_lockData);
@@ -29,9 +29,9 @@ PhysicsMaterialRef PhysicsMaterialAssetManager::LoadPhysicsMaterial(const UUIDTy
 
 PhysicsMaterialRef PhysicsMaterialAssetManager::GetPhysicsMaterial(const UUIDType& uuid)
 {
-	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);
 	DASSERT_E(m_loadedPhysicsMaterials.find(uuid) != m_loadedPhysicsMaterials.end());
 	InternalPhysicsMaterialRefType internalRef(m_loadedPhysicsMaterials.find(uuid)->second);
+	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);
 	internalRef->AddReferenceCount();
 	return PhysicsMaterialRef(internalRef, m_lockData);
 }

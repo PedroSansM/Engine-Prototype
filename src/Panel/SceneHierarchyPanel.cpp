@@ -40,7 +40,7 @@ void SceneHierarchyPanel::Render()
 		ImGui::End();
 		return;
 	}
-	if (ImGui::IsWindowFocused() && m_selectedEntityRef.IsValid() && ImGui::IsKeyPressed(ImGuiKey_Delete))
+	if (ImGui::IsKeyPressed(ImGuiKey_Delete) && ImGui::IsWindowFocused() && m_selectedEntityRef.IsValid())
 	{
 		GameViewPanel::Get().GetRuntime().DestroyEntity(m_selectedEntityRef);
 		m_selectedEntityRef.Destroy();

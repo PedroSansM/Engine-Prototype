@@ -89,9 +89,9 @@ int main(int argc, char** argv)
 //	ImGui::ShowDemoWindow();
 		ImGui::Render();
 		glfwGetFramebufferSize(window, &width, &height);
-		glViewport(0, 0, width, height);
-		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
+		glViewport(0, 0, width, height); CHECK_GL_ERROR;
+		glClearColor(1.0f, 1.0f, 1.0f, 1.0f); CHECK_GL_ERROR;
+		glClear(GL_COLOR_BUFFER_BIT); CHECK_GL_ERROR;
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 		glfwSwapBuffers(window);
 	}

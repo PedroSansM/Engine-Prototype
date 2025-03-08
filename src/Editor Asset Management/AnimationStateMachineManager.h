@@ -19,11 +19,11 @@ public:
 	using animationStateMachineType = EditorAnimationStateMachine;	
 	using coreAnimationStateMachineType = DCore::AnimationStateMachine;
 	using uuidType = DCore::UUIDType;
-	using pathType = std::filesystem::path;
-	using stringType = std::string;
 	using parameterInfoContainerType = AnimationStateMachinePanel::parameterInfoContainerType;
 	using parameterInfoType = AnimationStateMachinePanel::ParameterInfo;
 	using coreAnimationStateMachineRefType = DCore::AnimationStateMachineRef;
+	using pathType = std::filesystem::path;
+	using stringType = std::string;
 public:
 	~AnimationStateMachineManager() = default;
 public:

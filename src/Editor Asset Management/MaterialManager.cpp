@@ -83,7 +83,7 @@ void MaterialManager::CreateSpriteMaterial(spriteMaterialType type, const string
 	DASSERT_E(ostream);
 	pathType thumbailPath(thumbnailDirectory / materialName.c_str());
 	thumbailPath += ".dtsprmat";
-	GenerateSpriteMaterialThumbail(thumbailPath, uuidString, spriteMaterialTypeString, materialName);
+	GenerateSpriteMaterialThumbnail(thumbailPath, uuidString, spriteMaterialTypeString, materialName);
 	SaveMaterialsMap();
 }
 
@@ -97,17 +97,35 @@ DCore::SpriteMaterialRef MaterialManager::LoadSpriteMaterial(const DCore::UUIDTy
 			return DCore::AssetManager::Get().GetSpriteMaterial(uuid);
 		}
 	}
+	{
+		DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, m_lockData);
+		if (m_resourcesLoading.count(uuid) == 0)
+		{
+			m_resourcesLoading.insert(uuid);
+			goto LoadMaterial;
+		}
+	}
+	while (true)
+	{
+		DCore::ReadWriteLockGuard materialGuard(DCore::LockType::ReadLock, *static_cast<DCore::SpriteMaterialAssetManager*>(&DCore::AssetManager::Get()));
+		if (DCore::AssetManager::Get().IsSpriteMaterialLoaded(uuid))
+		{
+			DCore::ReadWriteLockGuard textureGuard(DCore::LockType::ReadLock, *static_cast<DCore::Texture2DAssetManager*>(&DCore::AssetManager::Get()));
+			return DCore::AssetManager::Get().GetSpriteMaterial(uuid);
+		}
+	}
+LoadMaterial:
 	const stringType uuidString(((stringType)uuid).c_str());
 	DASSERT_E(s_materialsNode[uuidString.c_str()]);	
 	pathType materialPath(ProgramContext::Get().GetProjectAssetsDirectoryPath() / s_materialsNode[uuidString.c_str()].as<stringType>());
 	YAML::Node materialNode(YAML::LoadFile(materialPath.string()));
-	DASSERT_K(materialNode[s_typeKey]);
-	DASSERT_K(materialNode[s_nameKey]);
-	DASSERT_K(materialNode[s_ambientMapKey]);
-	DASSERT_K(materialNode[s_diffuseMapKey]);
-	DASSERT_K(materialNode[s_specularMapKey]);
-	DASSERT_K(materialNode[s_glossinessKey]);
-	DASSERT_K(materialNode[s_diffuseColorKey]);
+	DASSERT_E(materialNode[s_typeKey]);
+	DASSERT_E(materialNode[s_nameKey]);
+	DASSERT_E(materialNode[s_ambientMapKey]);
+	DASSERT_E(materialNode[s_diffuseMapKey]);
+	DASSERT_E(materialNode[s_specularMapKey]);
+	DASSERT_E(materialNode[s_glossinessKey]);
+	DASSERT_E(materialNode[s_diffuseColorKey]);
 	const stringType typeString(materialNode[s_typeKey].as<stringType>().c_str());
 	const stringType ambientMapString(materialNode[s_ambientMapKey].as<stringType>().c_str());
 	const stringType diffuseMapString(materialNode[s_diffuseMapKey].as<stringType>().c_str());
@@ -141,7 +159,12 @@ DCore::SpriteMaterialRef MaterialManager::LoadSpriteMaterial(const DCore::UUIDTy
 		DCore::Texture2DRef specularMapRef(TextureManager::Get().LoadTexture2D(uuid));
 		spriteMaterial.SetSpecularMapRef(specularMapRef);
 	}
-	return DCore::AssetManager::Get().LoadSpriteMaterial(uuid, std::move(spriteMaterial));
+	DCore::SpriteMaterialRef spriteMaterialRef(DCore::AssetManager::Get().LoadSpriteMaterial(uuid, std::move(spriteMaterial)));
+	{
+		DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, m_lockData);
+		m_resourcesLoading.erase(uuid);
+	}
+	return spriteMaterialRef;
 }
 
 MaterialManager::pathType MaterialManager::GetMaterialsPath() const
@@ -313,7 +336,7 @@ bool MaterialManager::SpriteMaterialExists(const uuidType& uuid)
 	return false;
 }
 
-void MaterialManager::GenerateSpriteMaterialThumbail(const pathType& thumbailPath, const stringType& uuidString, const stringType& spriteMaterialTypeString, const stringType& materialName)
+void MaterialManager::GenerateSpriteMaterialThumbnail(const pathType& thumbailPath, const stringType& uuidString, const stringType& spriteMaterialTypeString, const stringType& materialName)
 {
 	std::ofstream ostream(thumbailPath);
 	DASSERT_K(ostream);

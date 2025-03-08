@@ -4,6 +4,7 @@
 
 #include <string>
 #include <filesystem>
+#include <unordered_set>
 
 
 
@@ -15,8 +16,10 @@ class PhysicsMaterialManager
 public:
 	using physicsMaterialRefType = DCore::PhysicsMaterialRef;
 	using uuidType = DCore::UUIDType;
+	using lockDataType = DCore::LockData;
 	using stringType = std::string;
 	using pathType = std::filesystem::path;
+	using loadingPhysicsMaterialsSetType = std::unordered_set<uuidType>;
 public:
 	~PhysicsMaterialManager() = default;
 public:;
@@ -33,6 +36,9 @@ public:
 	bool RenamePhysicsMaterial(const uuidType& uuid, const stringType& newName);
 private:
 	PhysicsMaterialManager();
+private:
+	lockDataType m_lockData;
+	loadingPhysicsMaterialsSetType m_loadingPhysicsMaterials;
 private:
 	pathType GetPhysicsMaterialsPath() const;
 	void GeneratePhysicsMaterialThumbnail(const pathType& thumbailPath, const stringType& uuidString, const stringType& physicsMaterialName);

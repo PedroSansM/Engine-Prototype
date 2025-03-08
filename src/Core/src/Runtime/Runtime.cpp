@@ -1303,6 +1303,7 @@ void Runtime::UnloadScene(const stringType& sceneName)
 
 void Runtime::LoadSceneAsync(stringType sceneName, AsyncSceneContext* context)
 {
+	//Timer<std::chrono::milliseconds> timer("Scene Loading");
 	glfwMakeContextCurrent(context->Context);
 	context->LoadedScene = SceneLoader::Get().LoadScene(sceneName);
 	context->AtomicLoadingDone.store(true, std::memory_order_release);

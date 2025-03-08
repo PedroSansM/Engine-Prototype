@@ -69,11 +69,30 @@ void PhysicsMaterialManager::CreatePhysicsMaterial(const stringType& physicsMate
 
 PhysicsMaterialManager::physicsMaterialRefType PhysicsMaterialManager::LoadPhysicsMaterial(const uuidType& uuid)
 {
-	DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::PhysicsMaterialAssetManager*>(&DCore::AssetManager::Get()));
-	if (DCore::AssetManager::Get().IsPhysicsMaterialLoaded(uuid))
 	{
-		return DCore::AssetManager::Get().GetPhysicsMaterial(uuid);
+		DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::PhysicsMaterialAssetManager*>(&DCore::AssetManager::Get()));
+		if (DCore::AssetManager::Get().IsPhysicsMaterialLoaded(uuid))
+		{
+			return DCore::AssetManager::Get().GetPhysicsMaterial(uuid);
+		}
 	}
+	{
+		DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, m_lockData);
+		if (m_loadingPhysicsMaterials.count(uuid) == 0)
+		{
+			m_loadingPhysicsMaterials.insert(uuid);
+			goto LoadPhysicsMaterial;
+		}
+	}
+	while (true)
+	{
+		DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::PhysicsMaterialAssetManager*>(&DCore::AssetManager::Get()));
+		if (DCore::AssetManager::Get().IsPhysicsMaterialLoaded(uuid))
+		{
+			return DCore::AssetManager::Get().GetPhysicsMaterial(uuid);
+		}
+	}
+LoadPhysicsMaterial:
 	stringType uuidString(uuid);
 	DASSERT_E(s_physicsMaterialsNode[uuidString]);
 	YAML::Node physicsMaterialNode(YAML::LoadFile((ProgramContext::Get().GetProjectAssetsDirectoryPath() / s_physicsMaterialsNode[uuidString].as<stringType>()).string()));
@@ -85,7 +104,10 @@ PhysicsMaterialManager::physicsMaterialRefType PhysicsMaterialManager::LoadPhysi
 	const float restitution(physicsMaterialNode[s_restitutionKey].as<float>());
 	DCore::PhysicsMaterial physicsMaterial(density, friction, restitution);
 	physicsMaterial.SetName(pathType(s_physicsMaterialsNode[uuidString].as<stringType>()).stem().string());
-	return DCore::AssetManager::Get().LoadPhysicsMaterial(uuid, std::move(physicsMaterial));
+	DCore::PhysicsMaterialRef physicsMaterialRef(DCore::AssetManager::Get().LoadPhysicsMaterial(uuid, std::move(physicsMaterial)));
+	DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, m_lockData);
+	m_loadingPhysicsMaterials.erase(uuid);
+	return physicsMaterialRef;
 }
 
 void PhysicsMaterialManager::SaveChanges(const physicsMaterialRefType physicsMaterial)

@@ -23,9 +23,9 @@ bool SceneAssetManager::IsSceneLoaded(const UUIDType& uuid)
 
 SceneRef SceneAssetManager::LoadScene(const UUIDType& uuid, Scene&& scene)
 {
-	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);
 	DASSERT_E(m_scenes.Size() <= maximumNumberOfLoadedScenes);
 	DASSERT_E(m_loadedScenes.find(uuid) == m_loadedScenes.end());
+	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);
 	InternalSceneRefType internalRef(m_scenes.PushBack(uuid, std::move(scene)));
 	m_loadedScenes.insert({uuid, internalRef});
 	return SceneRef(internalRef, m_lockData);

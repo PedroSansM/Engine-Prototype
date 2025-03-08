@@ -4,7 +4,7 @@
 
 #include <filesystem>
 #include <functional>
-
+#include <unordered_set>
 
 
 namespace DEditor
@@ -24,9 +24,11 @@ class TextureManager
 public:
 	using uuidType = DCore::UUIDType;
 	using textureRefType = DCore::Texture2DRef;
+	using lockDataType = DCore::LockData;
 	using stringType = std::string;
 	using pathType = std::filesystem::path;
 	using textureIterationCallbackType = std::function<bool(const uuidType&, const stringType&)>;
+	using loadingTexturesSetType = std::unordered_set<uuidType>;
 public:
 	~TextureManager() = default;
 public:
@@ -48,6 +50,9 @@ public:
 	bool TextureExists(const uuidType&);
 private:
 	TextureManager(); 
+private:
+	lockDataType m_lockData;
+	loadingTexturesSetType m_texturesLoading;
 private:
 	pathType GetTextureDirectoryPath() const;
 	void SaveTexturesMap() const;

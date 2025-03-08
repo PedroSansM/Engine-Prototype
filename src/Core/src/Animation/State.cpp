@@ -11,11 +11,12 @@ State::State(const stringType& name)
 	m_name(name)
 {}
 
-State::State(const State& other,
-			integerParameterContainerType& integerParameters,
-			floatParameterContainerType& floatParameters,
-			logicParameterContainerType& logicParameters,
-			triggerParameterContainerType& triggerParameters)
+State::State(
+	const State& other,
+	integerParameterContainerType& integerParameters,
+	floatParameterContainerType& floatParameters,
+	logicParameterContainerType& logicParameters,
+	triggerParameterContainerType& triggerParameters)
 	:
 	m_name(other.m_name),
 	m_toStateIndexes(other.m_toStateIndexes),
@@ -35,11 +36,12 @@ State::State(const State& other,
 	);
 }
 
-State::State(State&& other,
-			integerParameterContainerType& integerParameters,
-			floatParameterContainerType& floatParameters,
-			logicParameterContainerType& logicParameters,
-			triggerParameterContainerType& triggerParameters) noexcept
+State::State(
+	State&& other,
+	integerParameterContainerType& integerParameters,
+	floatParameterContainerType& floatParameters,
+	logicParameterContainerType& logicParameters,
+	triggerParameterContainerType& triggerParameters) noexcept
 	:
 	m_name(std::move(other.m_name)),
 	m_toStateIndexes(std::move(other.m_toStateIndexes)),

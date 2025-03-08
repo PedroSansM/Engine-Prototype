@@ -619,7 +619,7 @@ void ResourcesPanel::OnSceneDoubleClick(ResourceItem& resourceItem)
 {
 	if (GameStatePanel::Get().GetGameState() == GameState::Playing)
 	{
-		Log::Get().TerminalLog("Cannot load a scene from the editor while the game is playing.");
+		Log::Get().TerminalLog("%s", "Cannot load a scene from the editor while the game is playing.");
 		Log::Get().ConsoleLog(LogLevel::Error, "%s", "Cannot load a scene from the editor while the game is playing.");
 		return;
 	}
@@ -632,7 +632,11 @@ void ResourcesPanel::OnSceneDoubleClick(ResourceItem& resourceItem)
 	const DCore::UUIDType uuid(sceneNode["UUID"].as<std::string>());
 	DCore::SceneRef scene;
 	SceneManager::Get().LoadScene(uuid, &scene);
-	scene.LoadingCompleted();
+	DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::SceneAssetManager*>(&DCore::AssetManager::Get()));
+	if (scene.IsValid())
+	{
+		scene.LoadingCompleted();
+	}
 }
 
 void ResourcesPanel::OnTexture2DDoubleClick(ResourceItem& resourceItem)

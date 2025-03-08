@@ -1,13 +1,11 @@
 #pragma once
 
-#include "DCoreAssert.h"
-
 #include <cstdint>
 #include <atomic>
 #include <mutex>
 #include <unordered_set>
 #include <thread>
-#include <vector>
+#include <queue>
 
 
 
@@ -30,8 +28,8 @@ using LockData = struct LockData
 	std::unordered_set<std::thread::id> ReadingThreads;
 	std::thread::id WritingThread;
 	bool IsThreadWriting;
-	std::vector<std::thread::id> Queue;
-	std::vector<std::thread::id> PriorityQueue;
+	std::queue<std::thread::id> Queue;
+	std::queue<std::thread::id> PriorityQueue;
 	std::mutex Mutex;
 };
 

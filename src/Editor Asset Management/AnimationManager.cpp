@@ -369,19 +369,39 @@ void AnimationManager::DeleteAnimation(const uuidType& animationUUID)
 	AnimationStateMachineManager::Get().RemoveAnimationReferences(animationUUID);
 }
 
-AnimationManager::coreAnimationRefType AnimationManager::LoadCoreAnimation(const uuidType &animationUUID)
+AnimationManager::coreAnimationRefType AnimationManager::LoadCoreAnimation(const uuidType& uuid)
 {
 	using coreAnimationType = DCore::Animation;
 	{
 		DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
-		if (DCore::AssetManager::Get().IsAnimationLoaded(animationUUID))
+		if (DCore::AssetManager::Get().IsAnimationLoaded(uuid))
 		{
-			return DCore::AssetManager::Get().GetAnimation(animationUUID);
+			return DCore::AssetManager::Get().GetAnimation(uuid);
 		}
 	}
-	Animation editorAnimation(LoadAnimation(animationUUID));
+	{
+		DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, m_lockData);
+		if (m_animationsLoading.count(uuid) == 0)
+		{
+			m_animationsLoading.insert(uuid);
+			goto LoadAnimation;
+		}
+	}
+	while (true)
+	{
+		DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
+		if (DCore::AssetManager::Get().IsAnimationLoaded(uuid))
+		{
+			return DCore::AssetManager::Get().GetAnimation(uuid);
+		}
+	}
+LoadAnimation:
+	Animation editorAnimation(LoadAnimation(uuid));
 	coreAnimationType coreAnimation(editorAnimation.GenerateCoreAnimation());
-	return DCore::AssetManager::Get().LoadAnimation(animationUUID, std::move(coreAnimation));
+	coreAnimationRefType coreAnimationRef(DCore::AssetManager::Get().LoadAnimation(uuid, std::move(coreAnimation)));
+	DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, m_lockData);
+	m_animationsLoading.erase(uuid);
+	return coreAnimationRef;
 }
 
 bool AnimationManager::RenameAnimation(const uuidType& uuid, const stringType& newName)
