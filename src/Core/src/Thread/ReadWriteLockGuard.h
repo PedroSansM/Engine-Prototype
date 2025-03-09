@@ -29,7 +29,6 @@ using LockData = struct LockData
 	std::thread::id WritingThread;
 	bool IsThreadWriting;
 	std::queue<std::thread::id> Queue;
-	std::unordered_set<std::thread::id> ThreadsInQueue;
 	std::mutex Mutex;
 };
 

@@ -37,10 +37,6 @@ void ReadWriteLockGuard::HandleLock()
 	using lockGuardType = std::lock_guard<std::mutex>;
 	{
 		lockGuardType guard(m_lockData.Mutex);
-		if (m_lockData.ThreadsInQueue.count(m_thisThreadId) > 0)
-		{
-			return;
-		}
 		switch (m_desiredLock)
 		{
 		case DCore::ReadLock:
@@ -67,7 +63,6 @@ void ReadWriteLockGuard::HandleLock()
 			break;
 		}
 		m_lockData.Queue.push(m_thisThreadId);
-		m_lockData.ThreadsInQueue.insert(m_thisThreadId);
 	}
 	switch (m_desiredLock)
 	{
@@ -80,7 +75,6 @@ void ReadWriteLockGuard::HandleLock()
 			{
 				m_lockData.ReadingThreads.insert(m_thisThreadId);
 				m_lockData.Queue.pop();
-				m_lockData.ThreadsInQueue.erase(m_thisThreadId);
 				m_lockObtained = true;
 				return;
 			}
@@ -97,7 +91,6 @@ void ReadWriteLockGuard::HandleLock()
 				m_lockData.WritingThread = m_thisThreadId;
 				m_lockData.IsThreadWriting = true;
 				m_lockData.Queue.pop();
-				m_lockData.ThreadsInQueue.erase(m_thisThreadId);
 				m_lockObtained = true;
 				return;
 			}
