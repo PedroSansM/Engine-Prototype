@@ -135,7 +135,7 @@ public:
 	{}
 	~ComponentRef() = default;
 public:
-	void GetAttrbutePtr(AttributeIdType attributeId, void* out, size_t attributeSize)
+	void GetAttributePtr(AttributeIdType attributeId, void* out, size_t attributeSize)
 	{
 		DASSERT_E(IsValid());
 		PerspectiveCameraComponent& perspectiveCameraComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<PerspectiveCameraComponent>(m_entity));
@@ -144,8 +144,8 @@ public:
 
 	void OnAttributeChange(AttributeIdType attributeId, void* newValue, AttributeType typeHint)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		PerspectiveCameraComponent& perspectiveCameraComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<PerspectiveCameraComponent>(m_entity));
 		perspectiveCameraComponent.OnAttributeChange(attributeId, newValue, typeHint);
 	}

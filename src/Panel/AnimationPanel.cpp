@@ -173,7 +173,6 @@ void AnimationPanel::RemoveFromAllSynchronizationPanels()
 void AnimationPanel::SetCursorTime(float time)
 {
 	m_cursorTime = time;
-	DCore::ReadWriteLockGuard animationGuard(DCore::LockType::ReadLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
 	DCore::AnimationSimulator::Simulate(m_attachedEntity, m_coreAnimation, m_cursorTime, 0.0f, [](DCore::EntityRef, size_t){});
 }
 
@@ -411,7 +410,6 @@ void AnimationPanel::DrawCanvas()
 	{
 		m_cursorTime = centerValueX + (io.MousePos.x - canvasCenterPos.x)/m_pixelsPerUnit;
 		m_cursorTime = std::max(0.0f, std::min(m_cursorTime, m_editorAnimation.GetDuration()));
-		DCore::ReadWriteLockGuard animationGuard(DCore::LockType::ReadLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
 		DCore::AnimationSimulator::Simulate(m_attachedEntity, m_coreAnimation, m_cursorTime, 0.0f, [](DCore::EntityRef, size_t){});
 		SetSynchronizedCursorTime(m_cursorTime);
 	}
@@ -421,7 +419,6 @@ void AnimationPanel::DrawCanvas()
 	{
 		m_cursorTime = centerValueX + (io.MousePos.x - canvasCenterPos.x)/m_pixelsPerUnit;
 		m_cursorTime = std::max(0.0f, std::min(m_cursorTime, m_editorAnimation.GetDuration()));
-		DCore::ReadWriteLockGuard animationGuard(DCore::LockType::ReadLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
 		DCore::AnimationSimulator::Simulate(m_attachedEntity, m_coreAnimation, m_cursorTime, 0.0f, [](DCore::EntityRef, size_t){});
 		SetSynchronizedCursorTime(m_cursorTime);
 	}
@@ -790,20 +787,21 @@ void AnimationPanel::DrawPlay()
 		} 
 		else
 		{
-			static constexpr ImVec2 stopSymbolSizes{15.0f, 50.0f};
-			static constexpr float stopSymbolDistance{10.0f};
+			static constexpr ImVec2 stopSymbolSizes{ 15.0f, 50.0f };
+			static constexpr float stopSymbolDistance{ 10.0f };
 			ImVec2 cursorPos(ImGui::GetCursorScreenPos());
-			if (ImGui::InvisibleButton("Stop", {2 * stopSymbolSizes.x + stopSymbolDistance, stopSymbolSizes.y}))
+			if (ImGui::InvisibleButton("Stop", { 2 * stopSymbolSizes.x + stopSymbolDistance, stopSymbolSizes.y }))
 			{
 				m_isPlaying = false;
 			}
-			Draw::DrawStopSymbol({stopSymbolSizes.x, stopSymbolSizes.y}, stopSymbolDistance, {cursorPos.x, cursorPos.y});
+			Draw::DrawStopSymbol({ stopSymbolSizes.x, stopSymbolSizes.y }, stopSymbolDistance, { cursorPos.x, cursorPos.y });
 			if (m_cursorTime >= m_editorAnimation.GetDuration())
 			{
 				m_cursorTime = 0;
 			}
-			DCore::ReadWriteLockGuard animationGuard(DCore::LockType::ReadLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
-			DCore::AnimationSimulator::Simulate(m_attachedEntity, m_coreAnimation, m_cursorTime, 0.0f, [](DCore::EntityRef, size_t){});
+			guard.~ReadWriteLockGuard();
+			new (&guard) DCore::ReadWriteLockGuard(DCore::LockType::WriteLock, *static_cast<DCore::SceneAssetManager*>(&DCore::AssetManager::Get()));
+			DCore::AnimationSimulator::Simulate(m_attachedEntity, m_coreAnimation, m_cursorTime, 0.0f, [](DCore::EntityRef, size_t) {});
 			m_cursorTime += io.DeltaTime;
 		}
 	}
@@ -811,6 +809,7 @@ void AnimationPanel::DrawPlay()
 	{
 		ImGui::Text("%s", "Attachment: NOT ATTACHED");
 		m_isPlaying = false;
+		return;
 	}
 //ImGui::TreePop();
 }

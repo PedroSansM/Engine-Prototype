@@ -150,6 +150,7 @@ void Runtime::MakeDefaultRendererSubmitions(const DVec2& viewportSizes, Renderer
 
 void Runtime::MakeRendererSubmitions(const DMat4& viewProjectionMatrix, Renderer& renderer, const drawDebugBoxCommandContainerType* drawDebugBoxCommands)
 {
+	ReadWriteLockGuard guard(LockType::ReadLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
 	AssetManager::Get().IterateOnLoadedScenes
 	(
 		[&](SceneRef sceneRef) -> bool
@@ -323,10 +324,11 @@ void Runtime::DestroyEntity(EntityRef entity)
 void Runtime::Render(const DVec2& viewportSizes, Renderer& renderer)
 {
 	DASSERT_E(viewportSizes.x > 0.0f && viewportSizes.y > 0.0f && renderer.IsRenderingDone());
-	ReadWriteLockGuard readGuard(LockType::ReadLock, m_lockData);
 	renderer.Begin(viewportSizes);
+	ReadWriteLockGuard guard(LockType::ReadLock, m_lockData);
 	MakeDefaultRendererSubmitions(viewportSizes, renderer, &m_drawDebugBoxCommands);
-	ReadWriteLockGuard writeGuard(LockType::WriteLock, m_lockData);
+	guard.~ReadWriteLockGuard();
+	new (&guard) ReadWriteLockGuard(LockType::WriteLock, m_lockData);
 	m_drawDebugBoxCommands.Clear();
 	renderer.Render();
 }
@@ -601,7 +603,7 @@ void Runtime::SetupPhysics()
 	m_physicsWorldId = b2CreateWorld(&worldDef);
 	m_userDatas.Clear();
 	ReadWriteLockGuard runtimeGuard(LockType::WriteLock, m_lockData);
-	ReadWriteLockGuard sceneGuard(LockType::ReadLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard sceneGuard(LockType::WriteLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
 	AssetManager::Get().IterateOnLoadedScenes
 	(
 		[&](SceneRef scene) -> bool
@@ -675,12 +677,12 @@ void Runtime::SetupKeyStateBuffers()
 void Runtime::AwakeScripts()
 {
 	const ComponentForms::scriptComponentIdContainerType& scriptComponentIds(ComponentForms::Get().GetScriptComponentIds());
-	ReadWriteLockGuard sceneGuard(LockType::ReadLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard asmGuard(LockType::ReadLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard animationGuard(LockType::ReadLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard physicsMaterialGuard(LockType::ReadLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard spriteMaterialGuard(LockType::ReadLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard textureGuard(LockType::ReadLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard sceneGuard(LockType::WriteLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard asmGuard(LockType::WriteLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard animationGuard(LockType::WriteLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard physicsMaterialGuard(LockType::WriteLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard spriteMaterialGuard(LockType::WriteLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard textureGuard(LockType::WriteLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
 	DCore::AssetManager::Get().IterateOnLoadedScenes(
 		[&](SceneRef scene) -> bool
 		{
@@ -704,12 +706,12 @@ void Runtime::AwakeScripts()
 void Runtime::StartScripts()
 {
 	const ComponentForms::scriptComponentIdContainerType& scriptComponentIds(ComponentForms::Get().GetScriptComponentIds());
-	ReadWriteLockGuard sceneGuard(LockType::ReadLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard asmGuard(LockType::ReadLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard animationGuard(LockType::ReadLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard physicsMaterialGuard(LockType::ReadLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard spriteMaterialGuard(LockType::ReadLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard textureGuard(LockType::ReadLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard sceneGuard(LockType::WriteLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard asmGuard(LockType::WriteLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard animationGuard(LockType::WriteLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard physicsMaterialGuard(LockType::WriteLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard spriteMaterialGuard(LockType::WriteLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard textureGuard(LockType::WriteLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
 	DCore::AssetManager::Get().IterateOnLoadedScenes(
 		[&](SceneRef scene) -> bool
 		{
@@ -732,12 +734,12 @@ void Runtime::StartScripts()
 void Runtime::UpdateScripts(float deltaTime)
 {
 	const ComponentForms::scriptComponentIdContainerType& scriptComponentIds(ComponentForms::Get().GetScriptComponentIds());
-	ReadWriteLockGuard sceneGuard(LockType::ReadLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard asmGuard(LockType::ReadLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard animationGuard(LockType::ReadLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard physicsMaterialGuard(LockType::ReadLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard spriteMaterialGuard(LockType::ReadLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard textureGuard(LockType::ReadLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard sceneGuard(LockType::WriteLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard asmGuard(LockType::WriteLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard animationGuard(LockType::WriteLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard physicsMaterialGuard(LockType::WriteLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard spriteMaterialGuard(LockType::WriteLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard textureGuard(LockType::WriteLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
 	DCore::AssetManager::Get().IterateOnLoadedScenes(
 		[&](SceneRef scene) -> bool
 		{
@@ -764,12 +766,12 @@ void Runtime::UpdateScripts(float deltaTime)
 void Runtime::LateUpdateScripts(float deltaTime)
 {
 	const ComponentForms::scriptComponentIdContainerType& scriptComponentIds(ComponentForms::Get().GetScriptComponentIds());
-	ReadWriteLockGuard sceneGuard(LockType::ReadLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard asmGuard(LockType::ReadLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard animationGuard(LockType::ReadLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard physicsMaterialGuard(LockType::ReadLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard spriteMaterialGuard(LockType::ReadLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard textureGuard(LockType::ReadLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard sceneGuard(LockType::WriteLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard asmGuard(LockType::WriteLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard animationGuard(LockType::WriteLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard physicsMaterialGuard(LockType::WriteLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard spriteMaterialGuard(LockType::WriteLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard textureGuard(LockType::WriteLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
 	DCore::AssetManager::Get().IterateOnLoadedScenes(
 		[&](SceneRef scene) -> bool
 		{
@@ -796,12 +798,12 @@ void Runtime::LateUpdateScripts(float deltaTime)
 void Runtime::PhysicsUpdateScripts(float physicsDeltaTime)
 {
 	const ComponentForms::scriptComponentIdContainerType& scriptComponentIds(ComponentForms::Get().GetScriptComponentIds());
-	ReadWriteLockGuard sceneGuard(LockType::ReadLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard asmGuard(LockType::ReadLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard animationGuard(LockType::ReadLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard physicsMaterialGuard(LockType::ReadLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard spriteMaterialGuard(LockType::ReadLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard textureGuard(LockType::ReadLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard sceneGuard(LockType::WriteLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard asmGuard(LockType::WriteLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard animationGuard(LockType::WriteLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard physicsMaterialGuard(LockType::WriteLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard spriteMaterialGuard(LockType::WriteLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard textureGuard(LockType::WriteLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
 	DCore::AssetManager::Get().IterateOnLoadedScenes(
 		[&](SceneRef scene) -> bool
 		{
@@ -828,12 +830,12 @@ void Runtime::PhysicsUpdateScripts(float physicsDeltaTime)
 void Runtime::PhysicsLateUpdateScripts(float physicsDeltaTime)
 {
 	const ComponentForms::scriptComponentIdContainerType& scriptComponentIds(ComponentForms::Get().GetScriptComponentIds());
-	ReadWriteLockGuard sceneGuard(LockType::ReadLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard asmGuard(LockType::ReadLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard animationGuard(LockType::ReadLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard physicsMaterialGuard(LockType::ReadLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard spriteMaterialGuard(LockType::ReadLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard textureGuard(LockType::ReadLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard sceneGuard(LockType::WriteLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard asmGuard(LockType::WriteLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard animationGuard(LockType::WriteLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard physicsMaterialGuard(LockType::WriteLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard spriteMaterialGuard(LockType::WriteLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard textureGuard(LockType::WriteLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
 	DCore::AssetManager::Get().IterateOnLoadedScenes(
 		[&](SceneRef scene) -> bool
 		{
@@ -860,12 +862,12 @@ void Runtime::PhysicsLateUpdateScripts(float physicsDeltaTime)
 void Runtime::AnimationUpdateScripts(float animationDeltaTime)
 {
 	const ComponentForms::scriptComponentIdContainerType& scriptComponentIds(ComponentForms::Get().GetScriptComponentIds());
-	ReadWriteLockGuard sceneGuard(LockType::ReadLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard asmGuard(LockType::ReadLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard animationGuard(LockType::ReadLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard physicsMaterialGuard(LockType::ReadLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard spriteMaterialGuard(LockType::ReadLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard textureGuard(LockType::ReadLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard sceneGuard(LockType::WriteLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard asmGuard(LockType::WriteLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard animationGuard(LockType::WriteLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard physicsMaterialGuard(LockType::WriteLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard spriteMaterialGuard(LockType::WriteLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard textureGuard(LockType::WriteLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
 	DCore::AssetManager::Get().IterateOnLoadedScenes(
 		[&](SceneRef scene) -> bool
 		{
@@ -893,7 +895,7 @@ void Runtime::PhysicsUpdate(float physicsDeltaTime)
 {
 	constexpr int subStepCount{4};
 	ReadWriteLockGuard runtimeGuard(LockType::ReadLock, m_lockData);
-	ReadWriteLockGuard sceneGuard(LockType::ReadLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard sceneGuard(LockType::WriteLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
 	DCore::AssetManager::Get().IterateOnLoadedScenes(
 		[&](SceneRef scene) -> bool
 		{
@@ -1151,8 +1153,8 @@ void Runtime::UpdateEntityPhysics(EntityRef entityRef, ComponentRef<TransformCom
 
 void Runtime::AnimationSetup()
 {
-	ReadWriteLockGuard sceneGuard(LockType::ReadLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard asmGuard(LockType::ReadLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard sceneGuard(LockType::WriteLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard asmGuard(LockType::WriteLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
 	AssetManager::Get().IterateOnLoadedScenes(
 		[&](SceneRef scene) -> bool
 		{
@@ -1172,9 +1174,7 @@ void Runtime::AnimationSetup()
 
 void Runtime::AnimationUpdate(float deltaTime)
 {
-	ReadWriteLockGuard sceneGuard(LockType::ReadLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard asmGuard(LockType::ReadLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard animationGuard(LockType::ReadLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard sceneGuard(LockType::WriteLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
 	AssetManager::Get().IterateOnLoadedScenes(
 		[&](SceneRef scene) -> bool
 		{
@@ -1245,12 +1245,7 @@ void Runtime::DestroyEntityNoLock(EntityRef entity)
 
 void Runtime::TerminateEntities()
 {
-	ReadWriteLockGuard sceneGuard(LockType::ReadLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard asmGuard(LockType::ReadLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard animationGuard(LockType::ReadLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard physicsMaterialGuard(LockType::ReadLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard spriteMaterialGuard(LockType::ReadLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard textureGuard(LockType::ReadLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard sceneGuard(LockType::WriteLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
 	DCore::AssetManager::Get().IterateOnLoadedScenes
 	(
 		[&](SceneRef scene) -> bool
@@ -1272,11 +1267,6 @@ void Runtime::UnloadScene(const stringType& sceneName)
 {
 	ReadWriteLockGuard runtimeGuard(LockType::WriteLock, m_lockData);
 	ReadWriteLockGuard sceneGuard(LockType::ReadLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard asmGuard(LockType::ReadLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard animationGuard(LockType::ReadLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard physicsMaterialGuard(LockType::ReadLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard spriteMaterialGuard(LockType::ReadLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard textureGuard(LockType::ReadLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
 	AssetManager::Get().IterateOnLoadedScenes(
 		[&](SceneRef scene) -> bool
 		{
@@ -1313,12 +1303,7 @@ void Runtime::LoadSceneAsync(stringType sceneName, AsyncSceneContext* context)
 void Runtime::SetupScene(SceneRef scene)
 {
 	ReadWriteLockGuard runtimeGuard(LockType::WriteLock, m_lockData);
-	ReadWriteLockGuard sceneGuard(LockType::ReadLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard asmGuard(LockType::ReadLock, *static_cast<AnimationStateMachineAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard animationGuard(LockType::ReadLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard physicsMaterialGuard(LockType::ReadLock, *static_cast<PhysicsMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard spriteMaterialGuard(LockType::ReadLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
-	ReadWriteLockGuard textureGuard(LockType::ReadLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
+	ReadWriteLockGuard sceneGuard(LockType::WriteLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
 	const ComponentForms::scriptComponentIdContainerType& scriptComponentIds(ComponentForms::Get().GetScriptComponentIds());
 	scene.Iterate<AnimationStateMachineComponent>(
 		[&](Entity entity, ComponentRef<AnimationStateMachineComponent> asmComponent) -> bool

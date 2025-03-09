@@ -249,8 +249,8 @@ public:
 
 	void SetParent(EntityRef parent)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		ChildComponent& childComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<ChildComponent>(m_entity));
 		childComponent.SetParent(parent);
 	}
@@ -264,16 +264,16 @@ public:
 
 	void SetNext(EntityRef next)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		ChildComponent& childComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<ChildComponent>(m_entity));
 		childComponent.SetNext(next);
 	}
 
 	void SetPrevious(EntityRef previous)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		ChildComponent& childComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<ChildComponent>(m_entity));
 		childComponent.SetPrevious(previous);
 	}
@@ -312,16 +312,16 @@ public:
 
 	void RemoveNext()
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		ChildComponent& childComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<ChildComponent>(m_entity));
 		childComponent.RemoveNext();
 	}
 
 	void RemovePrevious()
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		ChildComponent& childComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<ChildComponent>(m_entity));
 		childComponent.RemovePrevious();
 	}

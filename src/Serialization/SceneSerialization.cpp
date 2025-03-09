@@ -257,7 +257,7 @@ SceneSerialization::returnErrorType SceneSerialization::DeserializeScene(const p
 						const stringType animationStateMachineName(AnimationStateMachineManager::Get().GetAnimationStateMachineName(animationStateMachineUUID));
 						coreAnimationStateMachineType animationStateMachine(std::move(AnimationStateMachineManager::Get().LoadAnimationStateMachine(animationStateMachineUUID, animationStateMachineName).GetCoreAnimationStateMachine()));
 						animationStateMachineRef = DCore::AssetManager::Get().AddAnimationStateMachine(std::move(animationStateMachine));
-						DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::AnimationStateMachineAssetManager*>(&DCore::AssetManager::Get()));
+						DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, *static_cast<DCore::AnimationStateMachineAssetManager*>(&DCore::AssetManager::Get()));
 						DASSERT_E(animationStateMachineRef.IsValid());
 						animationStateMachineRef.AttachTo(entities[entityIndex]);
 					}
@@ -410,7 +410,7 @@ SceneSerialization::returnErrorType SceneSerialization::DeserializeScene(const p
 		delete[] argsBuffer;
 		delete[] componentIds;
 		delete[] componentSizes;
-		DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *sceneRef.GetLockData());
+		DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, *sceneRef.GetLockData());
 		entityRef.IterateOnComponents
 		(
 			[&](DCore::ComponentIdType componentId, void* componentAddress) -> bool
@@ -418,7 +418,6 @@ SceneSerialization::returnErrorType SceneSerialization::DeserializeScene(const p
 				const DCore::ComponentForm& componentForm(DCore::ComponentForms::Get()[componentId]);
 				if (componentForm.IsScriptComponent)
 				{
-					DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, *sceneRef.GetLockData());
 					DCore::ScriptComponent* scriptComponent(static_cast<DCore::ScriptComponent*>(componentAddress));
 					scriptComponent->Setup(entityRef, componentId);
 				}

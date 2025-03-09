@@ -104,36 +104,36 @@ UUIDType SpriteMaterialRef::GetUUID() const
 
 void SpriteMaterialRef::SetAmbientMapRef(Texture2DRef texture2DRef)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	m_ref->GetAsset().SetAmbientMapRef(texture2DRef);
 }	
 
 void SpriteMaterialRef::SetDiffuseMapRef(Texture2DRef texture2DRef)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	m_ref->GetAsset().SetDiffuseMapRef(texture2DRef);
 }
 
 void SpriteMaterialRef::SetSpecularMapRef(Texture2DRef texture2DRef)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	m_ref->GetAsset().SetSpecularMapRef(texture2DRef);
 }
 
 void SpriteMaterialRef::SetGlossiness(DFloat value)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	m_ref->GetAsset().SetGlossiness(value);
 }
 
 void SpriteMaterialRef::SetDiffuseColor(const DVec4& color)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	m_ref->GetAsset().SetDiffuseColor(color);
 }
 
@@ -199,6 +199,7 @@ void SpriteMaterialRef::ClearDiffuseMapRef()
 
 void SpriteMaterialRef::Unload()
 {
+	ReadWriteLockGuard guard(DCore::LockType::WriteLock, *m_lockData);
 	if (m_ref.IsValid())
 	{
 		AssetManager::Get().UnloadSpriteMaterial(m_ref->GetUUID());

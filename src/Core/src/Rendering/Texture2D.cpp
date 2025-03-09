@@ -62,11 +62,6 @@ const char* Texture2DMetadata::FilterToString(Texture2DFilter filter)
 // End Texture 2D Metadata
 
 // Texture 2D
-Texture2DRef::Texture2DRef()
-	:
-	m_lockData(nullptr)
-{}
-
 Texture2D::Texture2D()
 	:
 	m_valid(false)
@@ -124,16 +119,14 @@ void Texture2D::SetFilter(Texture2DFilter filter)
 // End Texture 2D
 
 // Begin Texture2DRef
-Texture2DRef::Texture2DRef(InternalTexture2DRefType ref, LockData& lockData)
+Texture2DRef::Texture2DRef(InternalTexture2DRefType ref)
 	:
-	m_ref(ref),
-	m_lockData(&lockData)
+	m_ref(ref)
 {}
 
 Texture2DRef::Texture2DRef(const Texture2DRef& other)
 	:
-	m_ref(other.m_ref),
-	m_lockData(other.m_lockData)
+	m_ref(other.m_ref)
 {}
 
 //exture2DRef::Texture2DRef(Texture2DRef&& other) noexcept
@@ -146,7 +139,7 @@ Texture2DRef::Texture2DRef(const Texture2DRef& other)
 
 bool Texture2DRef::IsValid() const
 {
-	return m_lockData != nullptr && m_ref.IsValid();
+	return m_ref.IsValid();
 }
 
 UUIDType Texture2DRef::GetUUID() const
@@ -181,13 +174,14 @@ Texture2DFilter Texture2DRef::GetFilter() const
 
 void Texture2DRef::SetFilter(Texture2DFilter filter)
 {
+	ReadWriteLockGuard guard(LockType::WriteLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
 	DASSERT_E(IsValid());
-	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 	m_ref->GetAsset().SetFilter(filter);
 }
 
 void Texture2DRef::Unload()
 {
+	ReadWriteLockGuard guard(LockType::WriteLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
 	if (m_ref.IsValid())
 	{
 		DCore::AssetManager::Get().UnloadTexture2D(m_ref->GetUUID());

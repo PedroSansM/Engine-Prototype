@@ -26,7 +26,7 @@ Texture2DRef Texture2DAssetManager::LoadTexture2D(const UUIDType& uuid, unsigned
 	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);
 	InternalTexture2DRefType internalRef(m_textures.PushBack(uuid, std::move(texture2D)));
 	m_loadedTextures2D.insert({uuid, internalRef});
-	return Texture2DRef(internalRef, m_lockData);
+	return Texture2DRef(internalRef);
 }
 
 Texture2D Texture2DAssetManager::LoadRawTexture2D(unsigned char* binary, const DVec2& size, int numberChannels, Texture2DMetadata metadata)
@@ -40,7 +40,7 @@ Texture2DRef Texture2DAssetManager::GetTexture2DRef(const UUIDType& uuid)
 	InternalTexture2DRefType internalRef(m_loadedTextures2D.find(uuid)->second);
 	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);
 	internalRef->AddReferenceCount();
-	return Texture2DRef(internalRef, m_lockData);
+	return Texture2DRef(internalRef);
 }
 
 void Texture2DAssetManager::UnloadTexture2D(const UUIDType& uuid, bool removeAllReferences)

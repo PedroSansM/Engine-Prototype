@@ -224,6 +224,7 @@ public:
 
 	void Setup(EntityRef entity, ComponentIdType componentId)
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().GetComponents
 		(
@@ -237,6 +238,7 @@ public:
 
 	void SetRuntime(Runtime* runtime)
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().GetComponents
 		(
@@ -256,6 +258,7 @@ public:
 
 	void Awake()
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().GetComponents
 		(
@@ -269,6 +272,7 @@ public:
 
 	void Start()
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().GetComponents
 		(
@@ -282,6 +286,7 @@ public:
 
 	void Update(float deltaTime)
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().GetComponents
 		(
@@ -295,6 +300,7 @@ public:
 
 	void LateUpdate(float deltaTime)
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().GetComponents
 		(
@@ -308,6 +314,7 @@ public:
 
 	void PhysicsUpdate(float physicsDeltaTime) 
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().GetComponents
 		(
@@ -321,6 +328,7 @@ public:
 
 	void PhysicsLateUpdate(float physicsDeltaTime)
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().GetComponents
 		(
@@ -334,6 +342,7 @@ public:
 
 	void AnimationUpdate(float animationDeltaTime)
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().GetComponents
 		(
@@ -347,6 +356,7 @@ public:
 
 	void OnCollisionBegin(EntityRef entity)
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().GetComponents
 		(
@@ -360,6 +370,7 @@ public:
 
 	void OnCollisionEnd(EntityRef entity)
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().GetComponents
 		(
@@ -373,6 +384,7 @@ public:
 
 	void OnOverlapBegin(EntityRef entity)
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().GetComponents
 		(
@@ -386,6 +398,7 @@ public:
 
 	void OnOverlapEnd(EntityRef entity)
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().GetComponents
 		(
@@ -399,6 +412,7 @@ public:
 
 	void OnAnimationEvent(size_t metachannelId)
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().GetComponents
 		(

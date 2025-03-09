@@ -632,7 +632,7 @@ void ResourcesPanel::OnSceneDoubleClick(ResourceItem& resourceItem)
 	const DCore::UUIDType uuid(sceneNode["UUID"].as<std::string>());
 	DCore::SceneRef scene;
 	SceneManager::Get().LoadScene(uuid, &scene);
-	DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::SceneAssetManager*>(&DCore::AssetManager::Get()));
+	DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, *static_cast<DCore::SceneAssetManager*>(&DCore::AssetManager::Get()));
 	if (scene.IsValid())
 	{
 		scene.LoadingCompleted();

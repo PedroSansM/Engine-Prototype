@@ -90,10 +90,9 @@ void MaterialManager::CreateSpriteMaterial(spriteMaterialType type, const string
 DCore::SpriteMaterialRef MaterialManager::LoadSpriteMaterial(const DCore::UUIDType& uuid)
 {
 	{
-		DCore::ReadWriteLockGuard materialGuard(DCore::LockType::ReadLock, *static_cast<DCore::SpriteMaterialAssetManager*>(&DCore::AssetManager::Get()));
+		DCore::ReadWriteLockGuard materialGuard(DCore::LockType::WriteLock, *static_cast<DCore::SpriteMaterialAssetManager*>(&DCore::AssetManager::Get()));
 		if (DCore::AssetManager::Get().IsSpriteMaterialLoaded(uuid))
 		{
-			DCore::ReadWriteLockGuard textureGuard(DCore::LockType::ReadLock, *static_cast<DCore::Texture2DAssetManager*>(&DCore::AssetManager::Get()));
 			return DCore::AssetManager::Get().GetSpriteMaterial(uuid);
 		}
 	}
@@ -107,10 +106,9 @@ DCore::SpriteMaterialRef MaterialManager::LoadSpriteMaterial(const DCore::UUIDTy
 	}
 	while (true)
 	{
-		DCore::ReadWriteLockGuard materialGuard(DCore::LockType::ReadLock, *static_cast<DCore::SpriteMaterialAssetManager*>(&DCore::AssetManager::Get()));
+		DCore::ReadWriteLockGuard materialGuard(DCore::LockType::WriteLock, *static_cast<DCore::SpriteMaterialAssetManager*>(&DCore::AssetManager::Get()));
 		if (DCore::AssetManager::Get().IsSpriteMaterialLoaded(uuid))
 		{
-			DCore::ReadWriteLockGuard textureGuard(DCore::LockType::ReadLock, *static_cast<DCore::Texture2DAssetManager*>(&DCore::AssetManager::Get()));
 			return DCore::AssetManager::Get().GetSpriteMaterial(uuid);
 		}
 	}
@@ -279,7 +277,7 @@ void MaterialManager::DeleteSpriteMaterial(const uuidType& materialUUID)
 	ostream.close();
 	DASSERT_E(ostream);
 	{
-		DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::SpriteMaterialAssetManager*>(&DCore::AssetManager::Get()));
+		DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, *static_cast<DCore::SpriteMaterialAssetManager*>(&DCore::AssetManager::Get()));
 		if (DCore::AssetManager::Get().IsSpriteMaterialLoaded(materialUUID))
 		{
 			DCore::AssetManager::Get().UnloadSpriteMaterial(materialUUID, true);

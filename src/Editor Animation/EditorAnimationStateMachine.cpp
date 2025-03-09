@@ -131,9 +131,6 @@ void EditorAnimationStateMachine::Setup()
 
 void EditorAnimationStateMachine::Tick(float deltaTime)
 {
-	DCore::ReadWriteLockGuard sceneGuard(DCore::LockType::ReadLock, *static_cast<DCore::SceneAssetManager*>(&DCore::AssetManager::Get()));
-	DCore::ReadWriteLockGuard animationGuard(DCore::LockType::ReadLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
-	DCore::ReadWriteLockGuard asmGuard(DCore::LockType::ReadLock, *static_cast<DCore::AnimationStateMachineAssetManager*>(&DCore::AssetManager::Get()));
 	m_animationStateMachine.Tick(deltaTime, [](DCore::EntityRef, size_t){});
 }
 

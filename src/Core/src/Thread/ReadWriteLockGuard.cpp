@@ -1,4 +1,5 @@
 #include "ReadWriteLockGuard.h"
+#include "DCoreAssert.h"
 
 
 
@@ -10,7 +11,7 @@ ReadWriteLockGuard::ReadWriteLockGuard(LockType desiredLock, LockData& lockData)
 	m_thisThreadId(std::this_thread::get_id()),
 	m_desiredLock(desiredLock),
 	m_lockData(lockData),
-	m_wasReading(false)
+	m_lockObtained(false)
 {
 	HandleLock();
 }
@@ -18,6 +19,10 @@ ReadWriteLockGuard::ReadWriteLockGuard(LockType desiredLock, LockData& lockData)
 ReadWriteLockGuard::~ReadWriteLockGuard()
 {
 	using lockGuardType = std::lock_guard<std::mutex>;
+	if (!m_lockObtained)
+	{
+		return;
+	}
 	lockGuardType guard(m_lockData.Mutex);
 	if (m_desiredLock == LockType::ReadLock)
 	{
@@ -25,10 +30,6 @@ ReadWriteLockGuard::~ReadWriteLockGuard()
 		return;
 	}
 	m_lockData.IsThreadWriting = false;
-	if (m_wasReading)
-	{
-		m_lockData.ReadingThreads.insert(m_thisThreadId);
-	}
 }
 
 void ReadWriteLockGuard::HandleLock()
@@ -36,16 +37,37 @@ void ReadWriteLockGuard::HandleLock()
 	using lockGuardType = std::lock_guard<std::mutex>;
 	{
 		lockGuardType guard(m_lockData.Mutex);
-		if (m_desiredLock == LockType::WriteLock && m_lockData.ReadingThreads.count(m_thisThreadId) != 0)
+		if (m_lockData.ThreadsInQueue.count(m_thisThreadId) > 0)
 		{
-			m_lockData.ReadingThreads.erase(m_thisThreadId);
-			m_lockData.PriorityQueue.push(m_thisThreadId);
-			m_wasReading = true;
+			return;
 		}
-		else
+		switch (m_desiredLock)
 		{
-			m_lockData.Queue.push(m_thisThreadId);
+		case DCore::ReadLock:
+			if (m_lockData.IsThreadWriting && m_lockData.WritingThread == m_thisThreadId)
+			{
+				DASSERT_E(false);
+			}
+			if (m_lockData.ReadingThreads.count(m_thisThreadId) != 0)
+			{
+				return;
+			}
+			break;
+		case DCore::WriteLock:
+			if (m_lockData.ReadingThreads.count(m_thisThreadId) > 0)
+			{
+				DASSERT_E(false);
+			}
+			if (m_lockData.IsThreadWriting && m_lockData.WritingThread == m_thisThreadId)
+			{
+				return;
+			}
+			break;
+		default:
+			break;
 		}
+		m_lockData.Queue.push(m_thisThreadId);
+		m_lockData.ThreadsInQueue.insert(m_thisThreadId);
 	}
 	switch (m_desiredLock)
 	{
@@ -53,11 +75,14 @@ void ReadWriteLockGuard::HandleLock()
 		while (true)
 		{
 			lockGuardType guard(m_lockData.Mutex);
-			if ((m_lockData.PriorityQueue.empty() && m_lockData.Queue.front() == m_thisThreadId) &&
+			if (m_lockData.Queue.front() == m_thisThreadId &&
 				!m_lockData.IsThreadWriting)
 			{
 				m_lockData.ReadingThreads.insert(m_thisThreadId);
-				goto End;
+				m_lockData.Queue.pop();
+				m_lockData.ThreadsInQueue.erase(m_thisThreadId);
+				m_lockObtained = true;
+				return;
 			}
 		}
 		break;
@@ -65,25 +90,20 @@ void ReadWriteLockGuard::HandleLock()
 		while (true)
 		{
 			lockGuardType guard(m_lockData.Mutex);
-			if (((m_wasReading && m_lockData.PriorityQueue.front() == m_thisThreadId) || 
-				(m_lockData.PriorityQueue.empty() && m_lockData.Queue.front() == m_thisThreadId)) && 
-				(m_lockData.ReadingThreads.size() == 0 && !m_lockData.IsThreadWriting))
+			if (m_lockData.Queue.front() == m_thisThreadId &&
+				m_lockData.ReadingThreads.size() == 0 && 
+				!m_lockData.IsThreadWriting)
 			{
 				m_lockData.WritingThread = m_thisThreadId;
 				m_lockData.IsThreadWriting = true;
-				goto End;
+				m_lockData.Queue.pop();
+				m_lockData.ThreadsInQueue.erase(m_thisThreadId);
+				m_lockObtained = true;
+				return;
 			}
 		}
 		break;
 	}
-End:
-	lockGuardType lock(m_lockData.Mutex);
-	if (m_wasReading)
-	{
-		m_lockData.PriorityQueue.pop();
-		return;
-	}
-	m_lockData.Queue.pop();
 }
 
 }

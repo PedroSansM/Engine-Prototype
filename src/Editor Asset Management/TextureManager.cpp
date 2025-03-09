@@ -75,7 +75,7 @@ void TextureManager::ImportTexture(const std::filesystem::path& outsidePath, con
 DCore::Texture2DRef TextureManager::LoadTexture2D(const DCore::UUIDType& uuid)
 {
 	{
-		DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::Texture2DAssetManager*>(&DCore::AssetManager::Get()));
+		DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, *static_cast<DCore::Texture2DAssetManager*>(&DCore::AssetManager::Get()));
 		if (DCore::AssetManager::Get().IsTexture2DLoaded(uuid))
 		{
 			return DCore::AssetManager::Get().GetTexture2DRef(uuid);
@@ -91,7 +91,7 @@ DCore::Texture2DRef TextureManager::LoadTexture2D(const DCore::UUIDType& uuid)
 	}
 	while (true)
 	{
-		DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::Texture2DAssetManager*>(&DCore::AssetManager::Get()));
+		DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, *static_cast<DCore::Texture2DAssetManager*>(&DCore::AssetManager::Get()));
 		if (DCore::AssetManager::Get().IsTexture2DLoaded(uuid))
 		{
 			return DCore::AssetManager::Get().GetTexture2DRef(uuid);

@@ -122,8 +122,8 @@ public:
 
 	void LoadingCompleted()
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		m_ref->GetAsset().LoadingCompleted();
 	}
 
@@ -149,16 +149,16 @@ public:
 	template <class Func>
 	Entity CreateEntity(const ComponentId* componentIds, const size_t* componentSizes, size_t numberOfComponents, Func function)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		return m_ref->GetAsset().GetRegistry().CreateEntity(componentIds, componentSizes, numberOfComponents, function);
 	}
 
 	template <class Component, class ...Components, class TupleArg, class ...TupleArgs>
 	Entity CreateEntity(TupleArg&& tupleArg, TupleArgs&& ...tupleArgs)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		return m_ref->GetAsset().GetRegistry().CreateEntity<Component, Components...>(std::forward<TupleArg>(tupleArg), std::forward<TupleArgs>(tupleArgs)...);
 	}
 

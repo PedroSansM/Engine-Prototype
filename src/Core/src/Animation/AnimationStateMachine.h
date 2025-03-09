@@ -611,7 +611,7 @@ class AnimationStateMachineRef
 public:
 	using stringType = std::string;
 public:
-	AnimationStateMachineRef() = default;
+	AnimationStateMachineRef();
 	AnimationStateMachineRef(InternalAnimationStateMachineRefType, LockData&);
 	AnimationStateMachineRef(const AnimationStateMachineRef&);
 	~AnimationStateMachineRef() = default;
@@ -634,6 +634,7 @@ public:
 
 	void Setup()
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		m_ref->GetAsset().Setup();
 	}
@@ -641,6 +642,7 @@ public:
 	template <class Func>
 	void Tick(float deltaTime, Func metachannelsCallback)
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		m_ref->GetAsset().Tick(deltaTime, metachannelsCallback);
 	}
@@ -658,6 +660,7 @@ public:
 	template <ParameterType ParameterT, class ParameterValueType>
 	void SetParameterValue(size_t parameterIndex, ParameterValueType value)
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		if (!IsValid())
 		{
 			return;

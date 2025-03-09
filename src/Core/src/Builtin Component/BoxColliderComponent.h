@@ -394,8 +394,8 @@ public:
 
 	void OnAttributeChange(AttributeIdType attributeId, void* newValue, AttributeType typeHint)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.OnAttributeChange(attributeId, newValue, typeHint);
 	}
@@ -409,8 +409,8 @@ public:
 
 	void SetBodyType(DBodyType value)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.SetBodyType(value);
 	}
@@ -424,8 +424,8 @@ public:
 	
 	void SetEnabled(DLogic value)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.SetEnabled(value);
 	}
@@ -439,8 +439,8 @@ public:
  
 	void SetIsSensor(DLogic value)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.SetIsSensor(value);
 	}
@@ -454,8 +454,8 @@ public:
 
 	void SetGravityScale(DLogic value)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.SetGravityScale(value);
 	}
@@ -469,8 +469,8 @@ public:
 
 	void SetFixedRotation(DLogic value)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.SetFixedRotation(value);
 	}
@@ -484,8 +484,8 @@ public:
 
 	void SetUseCCD(DLogic value)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.SetUseCCD(value);
 	}
@@ -499,8 +499,8 @@ public:
 
 	void SetOffset(const DVec2& value)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.SetOffset(value);
 	}
@@ -514,8 +514,8 @@ public:
 
 	void SetSizes(const DVec2& value)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.SetSizes(value);
 	}
@@ -529,8 +529,8 @@ public:
 
 	void SetPhysicsMaterial(PhysicsMaterialRef value)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.SetPhysicsMaterial(value);
 	}
@@ -544,8 +544,8 @@ public:
 
 	void SetSelfPhysicsLayer(DPhysicsLayer value)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.SetSelfPhysicsLayer(value);
 	}
@@ -559,8 +559,8 @@ public:
 
 	void SetColliderWithPhysicsLayers(DPhysicsLayer value)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.SetColliderWithPhysicsLayers(value);
 	}
@@ -574,8 +574,8 @@ public:
 
 	void SetDrawCollider(DLogic value)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.SetDrawCollider(value);
 	}
@@ -589,8 +589,8 @@ public:
 
 	void SetBodyId(DBodyId value)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.SetBodyId(value);
 	}
@@ -604,8 +604,8 @@ public:
 
 	void SetShapeId(DShapeId value)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.SetShapeId(value);
 	}
@@ -626,16 +626,16 @@ public:
 
 	void SetLinearVelocity(const DVec2& velocity)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.SetLinearVelocity(velocity);
 	}
 
 	void Clean()
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		BoxColliderComponent& boxColliderComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<BoxColliderComponent>(m_entity));
 		boxColliderComponent.Clean();	
 	}

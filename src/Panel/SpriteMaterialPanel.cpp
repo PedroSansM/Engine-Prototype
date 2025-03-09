@@ -98,19 +98,21 @@ bool SpriteMaterialPanel::Render()
 				{
 					m_spriteMaterial.ClearDiffuseMapRef();
 					m_windowFlags |= ImGuiWindowFlags_UnsavedDocument;
-					DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::Texture2DAssetManager*>(&DCore::AssetManager::Get()));
 					OnMaterialChanged();
 				}
 				ImGui::EndPopup();
 			}
-			DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::Texture2DAssetManager*>(&DCore::AssetManager::Get()));
-			if (m_spriteMaterial.GetDiffuseMapRef().IsValid())
 			{
-				DrawImageButton(m_spriteMaterial.GetDiffuseMapRef().GetId(), DCore::DVec2(64, 64), DCore::DVec4(1, 1, 1, 1));
-			}
-			else
-			{
-				DrawImageButton(m_whiteMap.GetId(), DCore::DVec2(64, 64), DCore::DVec4(0, 0, 0, 1));
+				DCore::ReadWriteLockGuard materialGuard(DCore::LockType::ReadLock, *static_cast<DCore::SpriteMaterialAssetManager*>(&DCore::AssetManager::Get()));
+				DCore::ReadWriteLockGuard textureGuard(DCore::LockType::ReadLock, *static_cast<DCore::Texture2DAssetManager*>(&DCore::AssetManager::Get()));
+				if (m_spriteMaterial.GetDiffuseMapRef().IsValid())
+				{
+					DrawImageButton(m_spriteMaterial.GetDiffuseMapRef().GetId(), DCore::DVec2(64, 64), DCore::DVec4(1, 1, 1, 1));
+				}
+				else
+				{
+					DrawImageButton(m_whiteMap.GetId(), DCore::DVec2(64, 64), DCore::DVec4(0, 0, 0, 1));
+				}
 			}
 			if (ImGui::BeginDragDropTarget())
 			{
@@ -150,8 +152,6 @@ SpriteMaterialPanel::uuidType SpriteMaterialPanel::GetSpriteMaterialUUID() const
 
 void SpriteMaterialPanel::UnloadSpriteMaterial()
 {
-	DCore::ReadWriteLockGuard spriteMaterialGuard(DCore::LockType::ReadLock, *static_cast<DCore::SpriteMaterialAssetManager*>(&DCore::AssetManager::Get()));
-	DCore::ReadWriteLockGuard textureGuard(DCore::LockType::ReadLock, *static_cast<DCore::Texture2DAssetManager*>(&DCore::AssetManager::Get()));
 	m_spriteMaterial.Unload();
 }
 
@@ -167,7 +167,7 @@ bool SpriteMaterialPanel::DrawColorPicker(dVec4& outColor)
 
 void SpriteMaterialPanel::OnMaterialChanged()
 {
-	DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::SceneAssetManager*>(&DCore::AssetManager::Get()));
+	DCore::ReadWriteLockGuard sceneGuard(DCore::LockType::WriteLock, *static_cast<DCore::SceneAssetManager*>(&DCore::AssetManager::Get()));
 	DCore::AssetManager::Get().IterateOnLoadedScenes
 	(
 		[&](DCore::SceneRef scene) -> bool

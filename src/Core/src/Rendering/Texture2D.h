@@ -116,8 +116,8 @@ using InternalTexture2DRefType = typename AssetContainerType<Texture2D>::Ref;
 class Texture2DRef
 {
 public:
-	Texture2DRef();
-	Texture2DRef(InternalTexture2DRefType ref, LockData& lockData);
+	Texture2DRef() = default;
+	Texture2DRef(InternalTexture2DRefType ref);
 	Texture2DRef(const Texture2DRef&);
 	~Texture2DRef() = default;
 public:
@@ -139,12 +139,10 @@ public:
 	Texture2DRef& operator=(const Texture2DRef& other)
 	{
 		m_ref = other.m_ref;
-		m_lockData = other.m_lockData;
 		return *this;
 	}
 private:
 	InternalTexture2DRefType m_ref;
-	LockData* m_lockData;
 };
 
 }

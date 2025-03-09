@@ -145,15 +145,15 @@ void SceneRef::GetUUID(UUIDType& outUUID) const
 
 void SceneRef::SetName(const DString& name)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	m_ref->GetAsset().SetName(name);
 }
 
 Entity SceneRef::CreateEntity(const stringType& entityName)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	return m_ref->GetAsset().CreateEntity(entityName); 
 }
 

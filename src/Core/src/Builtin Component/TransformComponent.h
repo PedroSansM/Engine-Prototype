@@ -223,7 +223,7 @@ public:
 	{}
 	~ComponentRef() = default;
 public:
-	void GetAttrbutePtr(AttributeIdType attributeId, void* out, size_t attributeSize)
+	void GetAttributePtr(AttributeIdType attributeId, void* out, size_t attributeSize)
 	{
 		DASSERT_E(IsValid());
 		TransformComponent& transformComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<TransformComponent>(m_entity));
@@ -276,32 +276,32 @@ public:
 
 	void SetTranslation(const DVec3& translation)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		TransformComponent& transformComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<TransformComponent>(m_entity));
 		transformComponent.SetTranslation(translation);
 	}
 
 	void AddTranslation(const DVec3& translation)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		TransformComponent& transformComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<TransformComponent>(m_entity));
 		transformComponent.AddTranslation(translation);
 	}
 
 	void SetRotation(DFloat rotation)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		TransformComponent& transformComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<TransformComponent>(m_entity));
 		transformComponent.SetRotation(rotation);
 	}
 
 	void SetScale(DVec2 scale)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		TransformComponent& transformComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<TransformComponent>(m_entity));
 		transformComponent.SetScale(scale);
 	}
@@ -322,8 +322,8 @@ public:
 
 	void SetIsDirty(bool value)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		TransformComponent& transformComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<TransformComponent>(m_entity));
 		transformComponent.SetIsDirty(value);
 	}

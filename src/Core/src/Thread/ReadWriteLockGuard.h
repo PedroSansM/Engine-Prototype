@@ -29,7 +29,7 @@ using LockData = struct LockData
 	std::thread::id WritingThread;
 	bool IsThreadWriting;
 	std::queue<std::thread::id> Queue;
-	std::queue<std::thread::id> PriorityQueue;
+	std::unordered_set<std::thread::id> ThreadsInQueue;
 	std::mutex Mutex;
 };
 
@@ -47,7 +47,7 @@ public:
 		m_thisThreadId(std::this_thread::get_id()),
 		m_desiredLock(desiredLock),
 		m_lockData(lockable.GetLockData()),
-		m_wasReading(false)
+		m_lockObtained(false)
 	{
 		HandleLock();
 	}
@@ -55,7 +55,7 @@ private:
 	threadIdType m_thisThreadId;
 	LockType m_desiredLock;
 	LockData& m_lockData;
-	bool m_wasReading;
+	bool m_lockObtained;
 private:
 	void HandleLock();
 };

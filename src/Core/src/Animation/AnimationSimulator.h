@@ -20,6 +20,8 @@ public:
 	template <class Func>
 	static void Simulate(EntityRef entity, AnimationRef animation, float currentSampleTime, float nextSampleTime, Func metachannelsCallback)
 	{
+		ReadWriteLockGuard sceneGuard(LockType::WriteLock, *static_cast<SceneAssetManager*>(&AssetManager::Get()));
+		ReadWriteLockGuard animationGuard(LockType::ReadLock, *static_cast<AnimationAssetManager*>(&AssetManager::Get()));
 		if (!animation.IsValid() || !entity.IsValid())
 		{
 			return;

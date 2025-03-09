@@ -111,8 +111,8 @@ public:
 	template <class Func>
 	void AddComponents(const ComponentIdType* componentIds, const size_t* componentSizes, size_t numberOfComponents, Func function)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().AddComponents
 		(
 			m_entity, componentIds, componentSizes, numberOfComponents,
@@ -126,8 +126,8 @@ public:
 	template <class Component, class ...Components, class TupleArg, class ...TupleArgs>
 	void AddComponents(TupleArg&& arg, TupleArgs&&... args)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().AddComponents<Component, Components...>(m_entity, std::forward<TupleArg>(arg), std::forward<TupleArgs>(args)...);
 	}
 	
@@ -196,8 +196,8 @@ public:
 	template <class Component, class ...Components>
 	void RemoveComponents()
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().RemoveComponents<Component, Components...>(m_entity);
 	}
 

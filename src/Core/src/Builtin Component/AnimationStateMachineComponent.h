@@ -121,6 +121,7 @@ public:
 
 	void Setup()
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		Registry& registry(m_internalSceneRef->GetAsset().GetRegistry());
 		DASSERT_E(registry.HaveComponents<AnimationStateMachineComponent>(m_entity));
@@ -130,6 +131,7 @@ public:
 
 	void Tick(float deltaTime)
 	{
+		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		DASSERT_E(IsValid());
 		Registry& registry(m_internalSceneRef->GetAsset().GetRegistry());
 		DASSERT_E(registry.HaveComponents<AnimationStateMachineComponent>(m_entity));
@@ -139,8 +141,8 @@ public:
 	
 	void AttachToEntity(EntityRef entity)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		Registry& registry(m_internalSceneRef->GetAsset().GetRegistry());
 		DASSERT_E(registry.HaveComponents<AnimationStateMachineComponent>(m_entity));
 		AnimationStateMachineComponent& component(registry.GetComponents<AnimationStateMachineComponent>(m_entity));

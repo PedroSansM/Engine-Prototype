@@ -332,7 +332,7 @@ public:
 	{}
 	~ComponentRef() = default;
 public:
-	void GetAttrbutePtr(AttributeIdType attributeId, void* out, size_t attributeSize)
+	void GetAttributePtr(AttributeIdType attributeId, void* out, size_t attributeSize)
 	{
 		DASSERT_E(IsValid());
 		SpriteComponent& spriteComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<SpriteComponent>(m_entity));
@@ -341,8 +341,8 @@ public:
 
 	void OnAttributeChange(AttributeIdType attributeId, void* newValue, AttributeType typeHint)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		SpriteComponent& spriteComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<SpriteComponent>(m_entity));
 		spriteComponent.OnAttributeChange(attributeId, newValue, typeHint);
 	}	
@@ -355,7 +355,6 @@ public:
 	DLogic GetFlipX()
 	{
 		DASSERT_E(IsValid());
-		ReadWriteLockGuard guard(LockType::ReadLock, *m_lockData);
 		SpriteComponent& spriteComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<SpriteComponent>(m_entity));
 		return spriteComponent.GetFlipX();
 	}
@@ -418,8 +417,8 @@ public:
 
 	void SetTintColor(const DVec4& color)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		SpriteComponent& spriteComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<SpriteComponent>(m_entity));
 		spriteComponent.SetTintColor(color);
 	}
@@ -433,32 +432,32 @@ public:
 
 	void SetSpriteMaterial(SpriteMaterialRef spriteMaterial)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		SpriteComponent& spriteComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<SpriteComponent>(m_entity));
 		spriteComponent.SetSpriteMaterial(spriteMaterial);
 	}
 
 	void SetNumberOfSprites(const DVec2& numberOfSprites)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		SpriteComponent& spriteComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<SpriteComponent>(m_entity));
 		spriteComponent.SetNumberOfSprites(numberOfSprites);	
 	}
 
 	void SetSpriteMaterialAndNumberOfSprites(SpriteMaterialRef spriteMaterial, const DVec2& numberOfSprites)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		SpriteComponent& spriteComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<SpriteComponent>(m_entity));
 		spriteComponent.SetSpriteMaterialAndNumberOfSprites(spriteMaterial, numberOfSprites);	
 	}
 
 	void SetSpriteIndex(size_t index)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		SpriteComponent& spriteComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<SpriteComponent>(m_entity));
 		spriteComponent.SetSpriteIndex(index);	
 	}
@@ -472,8 +471,8 @@ public:
 
 	void SetEnabled(DLogic value)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		SpriteComponent& spriteComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<SpriteComponent>(m_entity));
 		spriteComponent.SetEnabled(value);
 	}
@@ -481,8 +480,10 @@ public:
 	// Requires SpriteMaterialAssetManager and Texture2DAssetManager read lock.
 	void FillSpriteQuads()
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard sceneGuard(LockType::WriteLock, *m_lockData);
+		ReadWriteLockGuard materialGuard(LockType::ReadLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
+		ReadWriteLockGuard textureGuard(LockType::ReadLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
+		DASSERT_E(IsValid());
 		SpriteComponent& spriteComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<SpriteComponent>(m_entity));
 		spriteComponent.FillSpriteQuads();
 	}

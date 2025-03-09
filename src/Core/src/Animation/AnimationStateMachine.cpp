@@ -360,6 +360,11 @@ AnimationStateMachine::stateRefType AnimationStateMachine::TryGetStateAtIndex(si
 // End AnimationStateMachine
 
 // AnimationStateMachineRef
+AnimationStateMachineRef::AnimationStateMachineRef()
+	:
+	m_lockData(nullptr)
+{}
+
 AnimationStateMachineRef::AnimationStateMachineRef(InternalAnimationStateMachineRefType ref, LockData& lockData)
 	:
 	m_ref(ref),
@@ -379,6 +384,7 @@ bool AnimationStateMachineRef::IsValid()
 
 void AnimationStateMachineRef::Unload()
 {
+	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 	if (IsValid())
 	{
 		AssetManager::Get().RemoveAnimationStateMachine(*this);
@@ -393,8 +399,8 @@ UUIDType AnimationStateMachineRef::GetUUID()
 
 void AnimationStateMachineRef::AttachTo(EntityRef entity)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	m_ref->GetAsset().AttachTo(entity);
 }
 
@@ -407,8 +413,8 @@ AnimationStateMachineRef::stringType AnimationStateMachineRef::GetName()
 
 void AnimationStateMachineRef::SetName(const stringType& name)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	m_ref->GetAsset().SetName(name);
 }
 #endif

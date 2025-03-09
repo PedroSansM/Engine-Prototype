@@ -77,7 +77,7 @@ int main(int argc, char** argv)
 	//
 	while (!glfwWindowShouldClose(window))
 	{
-		//DCore::Timer<std::chrono::microseconds> timer("Main thread loop");
+		DCore::Timer<std::chrono::microseconds> timer("Main thread loop");
 		int width(0), height(0);
 		glfwPollEvents(); 
 		ImGui_ImplOpenGL3_NewFrame();

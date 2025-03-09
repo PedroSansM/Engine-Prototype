@@ -361,7 +361,7 @@ void AnimationManager::DeleteAnimation(const uuidType& animationUUID)
 	ostream << emitter.c_str();
 	ostream.close();
 	DASSERT_E(ostream);
-	DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
+	DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
 	if (DCore::AssetManager::Get().IsAnimationLoaded(animationUUID))
 	{
 		DCore::AssetManager::Get().UnloadAnimation(animationUUID, true);
@@ -373,7 +373,7 @@ AnimationManager::coreAnimationRefType AnimationManager::LoadCoreAnimation(const
 {
 	using coreAnimationType = DCore::Animation;
 	{
-		DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
+		DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
 		if (DCore::AssetManager::Get().IsAnimationLoaded(uuid))
 		{
 			return DCore::AssetManager::Get().GetAnimation(uuid);
@@ -389,7 +389,7 @@ AnimationManager::coreAnimationRefType AnimationManager::LoadCoreAnimation(const
 	}
 	while (true)
 	{
-		DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
+		DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
 		if (DCore::AssetManager::Get().IsAnimationLoaded(uuid))
 		{
 			return DCore::AssetManager::Get().GetAnimation(uuid);
@@ -436,7 +436,7 @@ bool AnimationManager::RenameAnimation(const uuidType& uuid, const stringType& n
 	std::filesystem::rename(oldPath, newPath);
 	s_animationsNode[uuidString] = Path::Get().MakePathRelativeToAssetsDirectory(newPath).string();
 	SaveAnimationsMap();
-	DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
+	DCore::ReadWriteLockGuard guard(DCore::LockType::WriteLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
 	if (DCore::AssetManager::Get().IsAnimationLoaded(uuid))
 	{
 		DCore::AssetManager::Get().RenameAnimation(uuid, newName);

@@ -70,8 +70,8 @@ public:
 
 	void OnAttributeChange(AttributeIdType attributeId, void* newValue, AttributeType typeHint)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		m_internalSceneRef->GetAsset().GetRegistry().GetComponents
 		(
 			m_entity, &m_componentId, 1,

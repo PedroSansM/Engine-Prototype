@@ -48,6 +48,7 @@ bool EntityRef::IsValid() const
 
 void EntityRef::SetParent(EntityRef parentRef)
 {
+	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 	DASSERT_E(IsValid());
 	if (*this == parentRef || HaveChildRecursive(parentRef))
 	{
@@ -56,7 +57,6 @@ void EntityRef::SetParent(EntityRef parentRef)
 	Registry& registry(m_internalSceneRef->GetAsset().GetRegistry());
 	if (!registry.HaveComponents<ChildComponent>(m_entity))
 	{
-		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		if (registry.HaveComponents<RootComponent>(m_entity))
 		{
 			registry.RemoveComponents<RootComponent>(m_entity);
@@ -73,19 +73,16 @@ void EntityRef::SetParent(EntityRef parentRef)
 			return;
 		}
 		oldParentRef.RemoveChild(*this, false);
-		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		childComponent.RemoveNext();
 		childComponent.RemovePrevious();
 		childComponent.SetParent(parentRef);
 	}
 	if (!registry.HaveComponents<ChildrenComponent>(parentRef.m_entity))
 	{
-		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 		const ConstructorArgs<ChildrenComponent> args;
 		registry.AddComponents<ChildrenComponent>(parentRef.m_entity, std::make_tuple(args));
 	}
 	ChildrenComponent& parentChildrenComponent(registry.GetComponents<ChildrenComponent>(parentRef.m_entity));
-	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 	parentChildrenComponent.AddChild(*this);
 }
 
@@ -120,8 +117,8 @@ size_t EntityRef::GetNumberOfChildren() const
 
 void EntityRef::RemoveChild(EntityRef entityRef, bool toRemoveChildComponent)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	if (!entityRef.IsValid())
 	{
 		return;
@@ -149,8 +146,8 @@ void EntityRef::GetName(DString& outName) const
 
 void EntityRef::SetName(const DString& name)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	Registry& registry(m_internalSceneRef->GetAsset().GetRegistry());
 	DASSERT_E(registry.HaveComponents<NameComponent>(m_entity));
 	NameComponent& nameComponent(registry.GetComponents<NameComponent>(m_entity));
@@ -168,6 +165,7 @@ void EntityRef::GetUUID(UUIDType& outUUID) const
 
 void EntityRef::Destroy()
 {
+	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 	DASSERT_E(IsValid());
 	Registry& registry(m_internalSceneRef->GetAsset().GetRegistry());
 	if (registry.HaveComponents<ChildrenComponent>(m_entity))
@@ -183,7 +181,6 @@ void EntityRef::Destroy()
 	{
 		registry.GetComponents<ChildComponent>(m_entity).GetParent().RemoveChild(*this);
 	}	
-	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 	registry.DestroyEntity
 	(
 		m_entity,
@@ -197,6 +194,7 @@ void EntityRef::Destroy()
 
 void EntityRef::RemoveParent()
 {
+	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 	DASSERT_E(IsValid());
 	Registry& registry(m_internalSceneRef->GetAsset().GetRegistry());
 	DASSERT_E(registry.HaveComponents<ChildComponent>(m_entity));
@@ -205,7 +203,6 @@ void EntityRef::RemoveParent()
 	DASSERT_E(registry.HaveComponents<ChildrenComponent>(parentRef.m_entity));
 	ChildrenComponent& parentChildrenComponent(registry.GetComponents<ChildrenComponent>(parentRef.m_entity));
 	parentChildrenComponent.RemoveChild(*this);
-	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 	registry.RemoveComponents<ChildComponent>(m_entity);
 	registry.AddComponents<RootComponent>(m_entity, std::make_tuple());
 }
@@ -299,8 +296,8 @@ bool EntityRef::HaveComponents(const ComponentIdType* componentIds, size_t numbe
 
 void EntityRef::RemoveComponents(const ComponentIdType* componentIds, size_t numberOfComponents)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	m_internalSceneRef->GetAsset().GetRegistry().RemoveComponents
 	(
 		m_entity, componentIds, numberOfComponents,
@@ -372,8 +369,8 @@ DVec3 EntityRef::GetWorldTranslation() const
 
 void EntityRef::SetWorldTranslation(const DVec3& translation)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	DMat4 desiredModel(GetWorldModelMatrix());
 	desiredModel[3][0] = translation.x;
 	desiredModel[3][1] = translation.y;
@@ -396,8 +393,8 @@ DVec3 EntityRef::GetLocalTranslation() const
 
 void EntityRef::SetLocalTranslation(const DVec3& translation)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	Registry& registry(m_internalSceneRef->GetAsset().GetRegistry());
 	DASSERT_E(registry.HaveComponents<TransformComponent>(m_entity));
 	TransformComponent& transform(registry.GetComponents<TransformComponent>(m_entity));
@@ -424,6 +421,7 @@ void EntityRef::RemoveParentTransformationsFrom(DMat4& model) const
 
 EntityRef EntityRef::Duplicate()
 {
+	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 	DASSERT_E(IsValid());
 	EntityRef parent;
 	TryGetParent(parent);
@@ -433,6 +431,7 @@ EntityRef EntityRef::Duplicate()
 
 EntityRef EntityRef::Duplicate(EntityRef entityToDuplicate, EntityRef parent)
 {
+	ReadWriteLockGuard guard(LockType::WriteLock, *entityToDuplicate.m_lockData);
 	DASSERT_E(entityToDuplicate.IsValid());
 	Registry& registry(entityToDuplicate.m_internalSceneRef->GetAsset().GetRegistry());
 	std::vector<ComponentIdType> componentIds;
@@ -453,10 +452,7 @@ EntityRef EntityRef::Duplicate(EntityRef entityToDuplicate, EntityRef parent)
 			return false;
 		}
  	);
-	EntityRef duplicated;
-	{
-		ReadWriteLockGuard guard(LockType::WriteLock, *entityToDuplicate.m_lockData);
-		duplicated = EntityRef(
+	EntityRef duplicated(
 			registry.CreateEntity(
 				componentIds.data(),
 				componentSizes.data(),
@@ -467,76 +463,72 @@ EntityRef EntityRef::Duplicate(EntityRef entityToDuplicate, EntityRef parent)
 					componentForm.PlacementNewConstructor(rawComponent, componentForm.DefaultArgs);
 				}),
 			entityToDuplicate.GetSceneRef());
-	}
-	{
-		ReadWriteLockGuard guard(LockType::WriteLock, *entityToDuplicate.m_lockData);
-		registry.IterateOnComponents
-		(
-			duplicated.m_entity,
-			[&](ComponentIdType componentId, void* rawComponent) -> bool
+	registry.IterateOnComponents
+	(
+		duplicated.m_entity,
+		[&](ComponentIdType componentId, void* rawComponent) -> bool
+		{
+			const ComponentForm& componentForm(ComponentForms::Get()[componentId]);
+			ComponentRef<Component> toDuplicate(entityToDuplicate.GetComponent(componentId));
+			Component* duplicatedComponent(static_cast<Component*>(rawComponent));
+			for (const SerializedAttribute& attribute : componentForm.SerializedAttributes)
 			{
-				const ComponentForm& componentForm(ComponentForms::Get()[componentId]);
-				ComponentRef<Component> toDuplicate(entityToDuplicate.GetComponent(componentId));
-				Component* duplicatedComponent(static_cast<Component*>(rawComponent));
-				for (const SerializedAttribute& attribute : componentForm.SerializedAttributes)
+				const AttributeIdType attributeId(attribute.GetAttributeId());
+				void* attributePtr(toDuplicate.GetRawComponent()->GetAttributePtr(attributeId));
+				const AttributeType attributeType(attribute.GetAttributeType());
+				switch (attributeType)
 				{
-					const AttributeIdType attributeId(attribute.GetAttributeId());
-					void* attributePtr(toDuplicate.GetRawComponent()->GetAttributePtr(attributeId));
-					const AttributeType attributeType(attribute.GetAttributeType());
-					switch (attributeType)
-					{
-					case AttributeType::UUID:
-					{
-						UUIDType uuid;
-						UUIDGenerator::Get().GenerateUUID(uuid);
-						duplicatedComponent->OnAttributeChange(attributeId, &uuid, attributeType);
-						break;
-					}
-					case AttributeType::SpriteMaterial:
-						DuplicateAssetAndAssignItToComponent(
-							attributeId,
-							*static_cast<SpriteMaterialRef*>(attributePtr),
-							attributeType,
-							duplicatedComponent,
-							[&](const UUIDType& uuid) -> SpriteMaterialRef {return AssetManager::Get().GetSpriteMaterial(uuid); });
-						break;
-					case AttributeType::Animation:
-						DuplicateAssetAndAssignItToComponent(
-							attributeId,
-							*static_cast<AnimationRef*>(attributePtr),
-							attributeType,
-							duplicatedComponent,
-							[&](const UUIDType& uuid) -> AnimationRef {return AssetManager::Get().GetAnimation(uuid); });
-						break;
-					case AttributeType::AnimationStateMachine:
-					{
-						AnimationStateMachineRef asmRef(*static_cast<AnimationStateMachineRef*>(attributePtr));
-						if (!asmRef.IsValid())
-						{
-							break;
-						}
-						AnimationStateMachine duplicatedAsm(asmRef.GetInternalRef()->GetAsset());
-						AnimationStateMachineRef duplicatedAsmRef(AssetManager::Get().AddAnimationStateMachine(std::move(duplicatedAsm)));
-						duplicatedComponent->OnAttributeChange(attributeId, &duplicatedAsmRef, attributeType);
-						break;
-					}
-					case AttributeType::PhysicsMaterial:
-						DuplicateAssetAndAssignItToComponent(
-							attributeId,
-							*static_cast<PhysicsMaterialRef*>(attributePtr),
-							attributeType,
-							duplicatedComponent,
-							[&](const UUIDType& uuid) -> PhysicsMaterialRef {return AssetManager::Get().GetPhysicsMaterial(uuid); });					
-						break;
-					default:
-						duplicatedComponent->OnAttributeChange(attributeId, attributePtr, attributeType);
-						break;
-					}
+				case AttributeType::UUID:
+				{
+					UUIDType uuid;
+					UUIDGenerator::Get().GenerateUUID(uuid);
+					duplicatedComponent->OnAttributeChange(attributeId, &uuid, attributeType);
+					break;
 				}
-				return false;
+				case AttributeType::SpriteMaterial:
+					DuplicateAssetAndAssignItToComponent(
+						attributeId,
+						*static_cast<SpriteMaterialRef*>(attributePtr),
+						attributeType,
+						duplicatedComponent,
+						[&](const UUIDType& uuid) -> SpriteMaterialRef {return AssetManager::Get().GetSpriteMaterial(uuid); });
+					break;
+				case AttributeType::Animation:
+					DuplicateAssetAndAssignItToComponent(
+						attributeId,
+						*static_cast<AnimationRef*>(attributePtr),
+						attributeType,
+						duplicatedComponent,
+						[&](const UUIDType& uuid) -> AnimationRef {return AssetManager::Get().GetAnimation(uuid); });
+					break;
+				case AttributeType::AnimationStateMachine:
+				{
+					AnimationStateMachineRef asmRef(*static_cast<AnimationStateMachineRef*>(attributePtr));
+					if (!asmRef.IsValid())
+					{
+						break;
+					}
+					AnimationStateMachine duplicatedAsm(asmRef.GetInternalRef()->GetAsset());
+					AnimationStateMachineRef duplicatedAsmRef(AssetManager::Get().AddAnimationStateMachine(std::move(duplicatedAsm)));
+					duplicatedComponent->OnAttributeChange(attributeId, &duplicatedAsmRef, attributeType);
+					break;
+				}
+				case AttributeType::PhysicsMaterial:
+					DuplicateAssetAndAssignItToComponent(
+						attributeId,
+						*static_cast<PhysicsMaterialRef*>(attributePtr),
+						attributeType,
+						duplicatedComponent,
+						[&](const UUIDType& uuid) -> PhysicsMaterialRef {return AssetManager::Get().GetPhysicsMaterial(uuid); });					
+					break;
+				default:
+					duplicatedComponent->OnAttributeChange(attributeId, attributePtr, attributeType);
+					break;
+				}
 			}
-		);
-	}
+			return false;
+		}
+	);
 	if (parent.IsValid())
 	{
 		duplicated.SetParent(parent);

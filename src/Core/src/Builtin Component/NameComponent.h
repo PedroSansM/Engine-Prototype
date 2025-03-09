@@ -127,7 +127,7 @@ public:
 	{}
 	~ComponentRef() = default;
 public:
-	void GetAttrbutePtr(AttributeIdType attributeId, void* out, size_t attributeSize)
+	void GetAttributePtr(AttributeIdType attributeId, void* out, size_t attributeSize)
 	{
 		DASSERT_E(IsValid());
 		NameComponent& nameComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<NameComponent>(m_entity));
@@ -136,8 +136,8 @@ public:
 
 	void OnAttributeChange(AttributeIdType attributeId, void* newValue, AttributeType typeHint)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		NameComponent& nameComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<NameComponent>(m_entity));
 		nameComponent.OnAttributeChange(attributeId, newValue, typeHint);
 	}	
@@ -160,8 +160,8 @@ public:
 
 	void SetName(const DString& name)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		NameComponent& nameComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<NameComponent>(m_entity));
 		nameComponent.SetName(name);
 	}

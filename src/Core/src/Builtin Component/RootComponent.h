@@ -60,7 +60,7 @@ public:
 	{}
 	~ComponentRef() = default;
 public:
-	void GetAttrbutePtr(AttributeIdType, void* out, size_t attributeSize)
+	void GetAttributePtr(AttributeIdType, void* out, size_t attributeSize)
 	{}
 	
 	void OnAttributeChange(AttributeIdType, void* newValue)

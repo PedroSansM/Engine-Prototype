@@ -73,54 +73,51 @@ void PhysicsMaterialRef::Invalidate()
 UUIDType PhysicsMaterialRef::GetUUID() const
 {
 	DASSERT_E(IsValid());
-	ReadWriteLockGuard guard(LockType::ReadLock, *m_lockData);
 	return m_ref->GetUUID();
 }
 
 float PhysicsMaterialRef::GetDensity() const
 {
 	DASSERT_E(IsValid());
-	ReadWriteLockGuard guard(LockType::ReadLock, *m_lockData);
 	return m_ref->GetAsset().GetDensity();
 }
 
 float PhysicsMaterialRef::GetFriction() const
 {
 	DASSERT_E(IsValid());
-	ReadWriteLockGuard guard(LockType::ReadLock, *m_lockData);
 	return m_ref->GetAsset().GetFriction();
 }
 
 float PhysicsMaterialRef::GetRestitution() const
 {
 	DASSERT_E(IsValid());
-	ReadWriteLockGuard guard(LockType::ReadLock, *m_lockData);
 	return m_ref->GetAsset().GetRestitution();
 }
 
 void PhysicsMaterialRef::SetDensity(float value)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	m_ref->GetAsset().SetDensity(value);
 }
 
 void PhysicsMaterialRef::SetFriction(float value)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	m_ref->GetAsset().SetFriction(value);
 }
 
 void PhysicsMaterialRef::SetRestitution(float value)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	m_ref->GetAsset().SetRestitution(value);
 }
 
 void PhysicsMaterialRef::Unload()
 {
+	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
 	if (IsValid())
 	{
 		AssetManager::Get().UnloadPhysicsMaterial(m_ref->GetUUID());
@@ -131,14 +128,13 @@ void PhysicsMaterialRef::Unload()
 PhysicsMaterialRef::stringType PhysicsMaterialRef::GetName() const
 {
 	DASSERT_E(IsValid());
-	ReadWriteLockGuard guard(LockType::ReadLock, *m_lockData);
 	return m_ref->GetAsset().GetName();
 }
 
 void PhysicsMaterialRef::SetName(const stringType& name)
 {
-	DASSERT_E(IsValid());
 	ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+	DASSERT_E(IsValid());
 	m_ref->GetAsset().SetName(name);
 
 }

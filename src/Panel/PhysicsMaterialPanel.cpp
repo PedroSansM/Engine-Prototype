@@ -99,7 +99,6 @@ PhysicsMaterialPanel::uuidType PhysicsMaterialPanel::GetPhysicsMaterialUUID() co
 
 void PhysicsMaterialPanel::UnloadPhysicsMaterial()
 {
-	DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::PhysicsMaterialAssetManager*>(&DCore::AssetManager::Get()));
 	m_physicsMaterial.Unload();
 }
 

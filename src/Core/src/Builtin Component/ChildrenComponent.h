@@ -160,7 +160,7 @@ public:
 	{}
 	~ComponentRef() = default;
 public:
-	void GetAttrbutePtr(AttributeIdType attributeId, void* out, size_t attributeSize)
+	void GetAttributePtr(AttributeIdType attributeId, void* out, size_t attributeSize)
 	{
 		if (m_lockData == nullptr)
 		{
@@ -188,16 +188,16 @@ public:
 	
 	void AddChild(EntityRef child)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		ChildrenComponent& childrenComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<ChildrenComponent>(m_entity));
 		childrenComponent.AddChild(child);
 	}
 
 	void RemoveChild(EntityRef child)
 	{
-		DASSERT_E(IsValid());
 		ReadWriteLockGuard guard(LockType::WriteLock, *m_lockData);
+		DASSERT_E(IsValid());
 		ChildrenComponent& childrenComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<ChildrenComponent>(m_entity));
 		childrenComponent.RemoveChild(child);
 	}
