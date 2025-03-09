@@ -478,11 +478,12 @@ public:
 		spriteComponent.SetEnabled(value);
 	}
 	 
-	// Requires SpriteMaterialAssetManager and Texture2DAssetManager read lock.
 	void FillSpriteQuads()
 	{
 		DASSERT_E(IsValid());
 		ReadWriteLockGuard sceneGuard(LockType::WriteLock, *m_lockData);
+		ReadWriteLockGuard materialGuard(LockType::ReadLock, *static_cast<SpriteMaterialAssetManager*>(&AssetManager::Get()));
+		ReadWriteLockGuard textureGuard(LockType::ReadLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
 		SpriteComponent& spriteComponent(m_internalSceneRef->GetAsset().GetRegistry().GetComponents<SpriteComponent>(m_entity));
 		spriteComponent.FillSpriteQuads();
 	}

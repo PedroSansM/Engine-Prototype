@@ -20,8 +20,8 @@ bool AnimationAssetManager::IsAnimationLoaded(const UUIDType& uuid)
 
 AnimationRef AnimationAssetManager::LoadAnimation(const UUIDType& uuid, Animation&& animation)
 {
-	DASSERT_E(m_loadedAnimations.find(uuid) == m_loadedAnimations.end());
 	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);	
+	DASSERT_E(m_loadedAnimations.find(uuid) == m_loadedAnimations.end());
 	InternalAnimationRefType internalRef(m_animations.PushBack(uuid, std::move(animation)));
 	m_loadedAnimations.insert({uuid, internalRef});
 	return AnimationRef(internalRef, m_lockData);
@@ -29,9 +29,9 @@ AnimationRef AnimationAssetManager::LoadAnimation(const UUIDType& uuid, Animatio
 
 AnimationRef AnimationAssetManager::GetAnimation(const UUIDType& uuid)
 {
+	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);	
 	DASSERT_E(m_loadedAnimations.find(uuid) != m_loadedAnimations.end());
 	InternalAnimationRefType internalRef(m_loadedAnimations.find(uuid)->second);
-	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);	
 	internalRef->AddReferenceCount();
 	return AnimationRef(internalRef, m_lockData);
 }

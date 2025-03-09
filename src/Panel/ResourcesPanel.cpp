@@ -687,7 +687,7 @@ void ResourcesPanel::OnAnimationStateMachineDoubleClick(ResourceItem& resourceIt
 void ResourcesPanel::OnPhysicsMaterialDoubleClick(ResourceItem& resourceItem)
 {
 	using physicsMaterialRefType = DCore::PhysicsMaterialRef;
-	if (PhysicsMaterialPanel::IsPanelWithPhyiscsMaterialUUIDOpened(resourceItem.GetUUID()))
+	if (PhysicsMaterialPanel::IsPanelWithPhysicsMaterialUUIDOpened(resourceItem.GetUUID()))
 	{
 		Log::Get().ConsoleLog(LogLevel::Error, "Physics material panel for physics material \"%s\" is already opened.", resourceItem.GetName().Data());
 		return;

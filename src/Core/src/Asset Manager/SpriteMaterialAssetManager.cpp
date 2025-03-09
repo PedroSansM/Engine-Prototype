@@ -21,11 +21,11 @@ bool SpriteMaterialAssetManager::IsSpriteMaterialLoaded(const UUIDType& uuid)
 
 SpriteMaterialRef SpriteMaterialAssetManager::LoadSpriteMaterial(const UUIDType& uuid, SpriteMaterial&& spriteMaterial)
 {
+	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);
 	if (m_loadedSpriteMaterials.find(uuid) != m_loadedSpriteMaterials.end())
 	{
 		return GetSpriteMaterial(uuid);
 	}
-	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);
 	InternalSpriteMaterialRefType internalRef(m_spriteMaterials.PushBack(uuid, std::move(spriteMaterial)));
 	m_loadedSpriteMaterials.insert({uuid, internalRef});
 	return SpriteMaterialRef(internalRef, m_lockData);
@@ -33,9 +33,9 @@ SpriteMaterialRef SpriteMaterialAssetManager::LoadSpriteMaterial(const UUIDType&
 
 SpriteMaterialRef SpriteMaterialAssetManager::GetSpriteMaterial(const UUIDType& uuid)
 {
+	ReadWriteLockGuard spriteMaterialGuard(LockType::WriteLock, m_lockData);
 	DASSERT_E(m_loadedSpriteMaterials.find(uuid) != m_loadedSpriteMaterials.end());
 	InternalSpriteMaterialRefType internalRef(m_loadedSpriteMaterials.find(uuid)->second);
-	ReadWriteLockGuard spriteMaterialGuard(LockType::WriteLock, m_lockData);
 	ReadWriteLockGuard textureGuard(LockType::WriteLock, *static_cast<Texture2DAssetManager*>(&AssetManager::Get()));
 	internalRef->AddReferenceCount();
 	if (internalRef->GetAsset().GetDiffuseMapRef().IsValid())

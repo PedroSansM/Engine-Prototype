@@ -111,7 +111,7 @@ Runtime::~Runtime()
 	}
 }
 
-void Runtime::MakeDefaultRendererSubmitions(const DVec2& viewportSizes, Renderer& renderer, const drawDebugBoxCommandContainerType* drawDebugBoxCommads)
+void Runtime::MakeDefaultRendererSubmitions(const DVec2& viewportSizes, Renderer& renderer, const drawDebugBoxCommandContainerType* drawDebugBoxCommands)
 {
 	DMat4 viewProjectionMatrix;
 	bool cameraFound(false);
@@ -145,7 +145,7 @@ void Runtime::MakeDefaultRendererSubmitions(const DVec2& viewportSizes, Renderer
 	{
 		return;
 	}
-	MakeRendererSubmitions(viewProjectionMatrix, renderer, drawDebugBoxCommads);
+	MakeRendererSubmitions(viewProjectionMatrix, renderer, drawDebugBoxCommands);
 }
 
 void Runtime::MakeRendererSubmitions(const DMat4& viewProjectionMatrix, Renderer& renderer, const drawDebugBoxCommandContainerType* drawDebugBoxCommands)
@@ -514,16 +514,16 @@ void Runtime::GameLoop()
 		UpdateScripts(deltaTime);
 		if (physicsAccumulatedDeltaTime >= physicsDeltaTime)
 		{
+			PhysicsUpdateScripts(physicsAccumulatedDeltaTime);
+			PhysicsUpdate(physicsAccumulatedDeltaTime);
+			PhysicsLateUpdateScripts(physicsAccumulatedDeltaTime);
 			physicsAccumulatedDeltaTime = 0.0f;
-			PhysicsUpdateScripts(physicsDeltaTime);
-			PhysicsUpdate(physicsDeltaTime);
-			PhysicsLateUpdateScripts(physicsDeltaTime);
 		}
 		if (animationAccumulatedDeltaTime >= animationDeltaTime)
 		{
+			AnimationUpdateScripts(animationAccumulatedDeltaTime);
+			AnimationUpdate(animationAccumulatedDeltaTime);
 			animationAccumulatedDeltaTime = 0.0f;
-			AnimationUpdateScripts(animationDeltaTime);
-			AnimationUpdate(animationDeltaTime);
 		}
 		LateUpdateScripts(deltaTime);
 		Sound::Get().Update();

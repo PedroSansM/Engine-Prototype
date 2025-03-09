@@ -50,7 +50,7 @@ void PhysicsMaterialPanel::RenderPanels()
 	);
 }
 
-bool PhysicsMaterialPanel::IsPanelWithPhyiscsMaterialUUIDOpened(const uuidType& uuid)
+bool PhysicsMaterialPanel::IsPanelWithPhysicsMaterialUUIDOpened(const uuidType& uuid)
 {
 	bool returnValue(false);
 	s_physicsMaterialPanels.IterateConstRef
@@ -79,6 +79,14 @@ bool PhysicsMaterialPanel::Render()
 	{
 		ImGui::End();
 		return true;
+	}
+	{
+		DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::PhysicsMaterialAssetManager*>(&DCore::AssetManager::Get()));
+		if (!m_physicsMaterial.IsValid())
+		{
+			ImGui::End();
+			return true;
+		}
 	}
 	if (ImGui::Button("Save"))
 	{
@@ -109,6 +117,7 @@ void PhysicsMaterialPanel::DrawDragFloat(const char* label, float (physicsMateri
 	std::sprintf(dragFloatLabel, "##%s", label);
 	ImGui::Text("%s", label);
 	ImGui::SameLine();
+	DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::PhysicsMaterialAssetManager*>(&DCore::AssetManager::Get()));
 	float value((m_physicsMaterial.*get)());
 	if (ImGui::DragFloat(dragFloatLabel, &value, 0.01f, 0.0f, FLT_MAX))
 	{

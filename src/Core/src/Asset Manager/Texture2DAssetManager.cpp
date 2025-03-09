@@ -21,9 +21,9 @@ bool Texture2DAssetManager::IsTexture2DLoaded(const UUIDType& uuid)
 
 Texture2DRef Texture2DAssetManager::LoadTexture2D(const UUIDType& uuid, unsigned char* binary, const DVec2& sizes, int numberChannels, Texture2DMetadata metadata)
 {
+	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);
 	DASSERT_E(m_loadedTextures2D.find(uuid) == m_loadedTextures2D.end());
 	Texture2D texture2D(GenerateTexture2D(binary, sizes, numberChannels, metadata));
-	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);
 	InternalTexture2DRefType internalRef(m_textures.PushBack(uuid, std::move(texture2D)));
 	m_loadedTextures2D.insert({uuid, internalRef});
 	return Texture2DRef(internalRef, m_lockData);
@@ -36,9 +36,9 @@ Texture2D Texture2DAssetManager::LoadRawTexture2D(unsigned char* binary, const D
 
 Texture2DRef Texture2DAssetManager::GetTexture2DRef(const UUIDType& uuid)
 {
+	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);
 	DASSERT_E(m_loadedTextures2D.find(uuid) != m_loadedTextures2D.end());
 	InternalTexture2DRefType internalRef(m_loadedTextures2D.find(uuid)->second);
-	ReadWriteLockGuard guard(LockType::WriteLock, m_lockData);
 	internalRef->AddReferenceCount();
 	return Texture2DRef(internalRef, m_lockData);
 }
@@ -105,7 +105,7 @@ Texture2D Texture2DAssetManager::GenerateTexture2D(unsigned char* binary, const 
 		break;
 	}
 	glGenerateMipmap(GL_TEXTURE_2D); CHECK_GL_ERROR;
-	glFinish(); CHECK_GL_ERROR;
+	//glFinish(); CHECK_GL_ERROR;
 	return Texture2D(id, sizes, numberChannels, metadata);
 }
 

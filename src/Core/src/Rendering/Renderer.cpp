@@ -24,10 +24,10 @@ Renderer::Renderer()
 
 void Renderer::Initiate(GLFWwindow* mainWindow)
 {
-	m_toTerminate.store(false, std::memory_order_relaxed);
-	m_isRenderingDone.store(true, std::memory_order_relaxed);
-	m_submitionsDone.store(false, std::memory_order_relaxed);
-	m_clickRequest.store(false, std::memory_order_relaxed);
+	m_toTerminate = false;
+	m_isRenderingDone = true;
+	m_submitionsDone = false;
+	m_clickRequest = false;
 	glfwWindowHint(GLFW_VISIBLE, false);
 	m_context = glfwCreateWindow(800, 600, "Offscreen Window", nullptr, mainWindow);
 	DASSERT_E(m_context != nullptr);
@@ -41,7 +41,11 @@ void Renderer::Terminate()
 	{
 		return;
 	}
-	m_toTerminate.store(true, std::memory_order_relaxed);
+	{
+		std::lock_guard guard(m_mutex);
+		m_toTerminate = true;
+	}
+	m_conditionVariable.notify_one();
 	m_thread.join();
 	if (m_context != nullptr)
 	{
@@ -84,12 +88,15 @@ void Renderer::SubmitDebugRectObject(const debugRectObjectRenderer::objectType& 
 
 void Renderer::Render()
 {
-	m_submitionsDone.store(true, std::memory_order_release);
+	{
+		std::lock_guard guard(m_mutex);
+		m_submitionsDone = true;
+	}
+	m_conditionVariable.notify_one();
 }
 
 void Renderer::RenderThread()
 {
-	bool toSetup(true);
 	GLuint outputFramebuffer1(0);
 	GLuint outputFramebuffer2(0);
 	GLuint outputTexture1(0);
@@ -99,68 +106,72 @@ void Renderer::RenderThread()
 	m_outputTexture = outputTexture2;
 	bool toDrawToFramebuffer1(true);
 	static int clickingTextureClearColor[4]{-1, -1, -1, 1};
-	while (!m_toTerminate.load(std::memory_order_relaxed))
+	glfwMakeContextCurrent(m_context);
+	gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+	m_unlitTexturesObjectRenderer.Setup();
+	m_debugRectObjectRenderer.Setup();
+	GLenum drawBuffers[2]{ GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1 };
+	// Framebuffer 1
+	glGenFramebuffers(1, &outputFramebuffer1); CHECK_GL_ERROR;
+	glBindFramebuffer(GL_FRAMEBUFFER, outputFramebuffer1); CHECK_GL_ERROR;
+	glGenTextures(1, &outputTexture1); CHECK_GL_ERROR;
+	glBindTexture(GL_TEXTURE_2D, outputTexture1); CHECK_GL_ERROR;
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 800, 600, 0, GL_RGBA, GL_UNSIGNED_BYTE, nullptr); CHECK_GL_ERROR;
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); CHECK_GL_ERROR;
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); CHECK_GL_ERROR;
+	glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, outputTexture1, 0); CHECK_GL_ERROR;
+	glGenTextures(1, &clickingTexture1); CHECK_GL_ERROR;
+	glBindTexture(GL_TEXTURE_2D, clickingTexture1); CHECK_GL_ERROR;
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32I, 800, 600, 0, GL_RGBA_INTEGER, GL_UNSIGNED_BYTE, nullptr); CHECK_GL_ERROR;
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); CHECK_GL_ERROR;
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); CHECK_GL_ERROR;
+	glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT1, GL_TEXTURE_2D, clickingTexture1, 0); CHECK_GL_ERROR;
+	glDrawBuffers(2, drawBuffers); CHECK_GL_ERROR;
+	DASSERT_E(glCheckFramebufferStatus(GL_FRAMEBUFFER) == GL_FRAMEBUFFER_COMPLETE); CHECK_GL_ERROR;
+	// 
+	// Framebuffer 2
+	glGenFramebuffers(1, &outputFramebuffer2); CHECK_GL_ERROR;
+	glBindFramebuffer(GL_FRAMEBUFFER, outputFramebuffer2); CHECK_GL_ERROR;
+	glGenTextures(1, &outputTexture2); CHECK_GL_ERROR;
+	glBindTexture(GL_TEXTURE_2D, outputTexture2); CHECK_GL_ERROR;
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 800, 600, 0, GL_RGBA, GL_UNSIGNED_BYTE, nullptr); CHECK_GL_ERROR;
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); CHECK_GL_ERROR;
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); CHECK_GL_ERROR;
+	glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, outputTexture2, 0); CHECK_GL_ERROR;
+	glGenTextures(1, &clickingTexture2); CHECK_GL_ERROR;
+	glBindTexture(GL_TEXTURE_2D, clickingTexture2); CHECK_GL_ERROR;
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32I, 800, 600, 0, GL_RGBA_INTEGER, GL_UNSIGNED_BYTE, nullptr); CHECK_GL_ERROR;
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); CHECK_GL_ERROR;
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); CHECK_GL_ERROR;
+	glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT1, GL_TEXTURE_2D, clickingTexture2, 0); CHECK_GL_ERROR;
+	glDrawBuffers(2, drawBuffers); CHECK_GL_ERROR;
+	DASSERT_E(glCheckFramebufferStatus(GL_FRAMEBUFFER) == GL_FRAMEBUFFER_COMPLETE); CHECK_GL_ERROR;
+	//
+	while (true)
 	{
-		if (toSetup)
+		std::unique_lock lock(m_mutex);
+		m_conditionVariable.wait(lock, [&]() -> bool { return m_clickRequest || m_submitionsDone || m_toTerminate; });
+		if (m_toTerminate)
 		{
-			glfwMakeContextCurrent(m_context);
-			gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-			m_unlitTexturesObjectRenderer.Setup();
-			m_debugRectObjectRenderer.Setup();
-			GLenum drawBuffers[2]{GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1};
-			// Framebuffer 1
-			glGenFramebuffers(1, &outputFramebuffer1); CHECK_GL_ERROR;
-			glBindFramebuffer(GL_FRAMEBUFFER, outputFramebuffer1); CHECK_GL_ERROR;
-			glGenTextures(1, &outputTexture1); CHECK_GL_ERROR;
-			glBindTexture(GL_TEXTURE_2D, outputTexture1); CHECK_GL_ERROR;
-			glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 800, 600, 0, GL_RGBA, GL_UNSIGNED_BYTE, nullptr); CHECK_GL_ERROR;
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); CHECK_GL_ERROR;
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); CHECK_GL_ERROR;
-			glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, outputTexture1, 0); CHECK_GL_ERROR;
-			glGenTextures(1, &clickingTexture1); CHECK_GL_ERROR;
-			glBindTexture(GL_TEXTURE_2D, clickingTexture1); CHECK_GL_ERROR;
-			glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32I, 800, 600, 0, GL_RGBA_INTEGER, GL_UNSIGNED_BYTE, nullptr); CHECK_GL_ERROR;
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); CHECK_GL_ERROR;
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); CHECK_GL_ERROR;
-			glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT1, GL_TEXTURE_2D, clickingTexture1, 0); CHECK_GL_ERROR;
-			glDrawBuffers(2, drawBuffers); CHECK_GL_ERROR;
-			DASSERT_E(glCheckFramebufferStatus(GL_FRAMEBUFFER) == GL_FRAMEBUFFER_COMPLETE); CHECK_GL_ERROR;
-			// 
-			// Framebuffer 2
-			glGenFramebuffers(1, &outputFramebuffer2); CHECK_GL_ERROR;
-			glBindFramebuffer(GL_FRAMEBUFFER, outputFramebuffer2); CHECK_GL_ERROR;
-			glGenTextures(1, &outputTexture2); CHECK_GL_ERROR;
-			glBindTexture(GL_TEXTURE_2D, outputTexture2); CHECK_GL_ERROR;
-			glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 800, 600, 0, GL_RGBA, GL_UNSIGNED_BYTE, nullptr); CHECK_GL_ERROR;
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); CHECK_GL_ERROR;
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); CHECK_GL_ERROR;
-			glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, outputTexture2, 0); CHECK_GL_ERROR;
-			glGenTextures(1, &clickingTexture2); CHECK_GL_ERROR;
-			glBindTexture(GL_TEXTURE_2D, clickingTexture2); CHECK_GL_ERROR;
-			glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32I, 800, 600, 0, GL_RGBA_INTEGER, GL_UNSIGNED_BYTE, nullptr); CHECK_GL_ERROR;
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); CHECK_GL_ERROR;
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); CHECK_GL_ERROR;
-			glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT1, GL_TEXTURE_2D, clickingTexture2, 0); CHECK_GL_ERROR;
-			glDrawBuffers(2, drawBuffers); CHECK_GL_ERROR;
-			DASSERT_E(glCheckFramebufferStatus(GL_FRAMEBUFFER) == GL_FRAMEBUFFER_COMPLETE); CHECK_GL_ERROR;
-			//
-			toSetup = false;
-			continue;
+			break;
 		}
-		if (m_clickRequest.load(std::memory_order_acquire))
+		if (m_clickRequest)
 		{
 			glBindFramebuffer(GL_FRAMEBUFFER, toDrawToFramebuffer1 ? outputFramebuffer2 : outputFramebuffer1); CHECK_GL_ERROR;
 			glReadBuffer(GL_COLOR_ATTACHMENT1); CHECK_GL_ERROR;
 			glReadPixels(m_clickRequestPos.x, m_clickRequestPos.y, 1, 1, GL_RGBA_INTEGER, GL_INT, m_clickRequestData.data()); CHECK_GL_ERROR;
-			m_clickRequest.store(false, std::memory_order_release);
+			m_clickRequest = false;
+			lock.unlock();
+			m_conditionVariable.notify_one();
 		}
-		if (!m_submitionsDone.load(std::memory_order_acquire))
+		if (!m_submitionsDone)
 		{
 			continue;
 		}
 		//Timer<std::chrono::microseconds> timer("Renderer loop");
 		const GLuint currentOutputFrameBuffer(toDrawToFramebuffer1 ? outputFramebuffer1 : outputFramebuffer2);
 		const GLuint currentOutputTexture(toDrawToFramebuffer1 ? outputTexture1 : outputTexture2);
+		//std::cout << currentOutputTexture << std::endl;
 		const GLuint currentClickingTexture(toDrawToFramebuffer1 ? clickingTexture1 : clickingTexture2);
 		glViewport(0, 0, (GLsizei)m_viewportSizes.x, (GLsizei)m_viewportSizes.y); CHECK_GL_ERROR;
 		glBindFramebuffer(GL_FRAMEBUFFER, currentOutputFrameBuffer); CHECK_GL_ERROR;
@@ -193,7 +204,7 @@ void Renderer::RenderThread()
 		m_debugRectObjectRenderer.Render();
 		glFinish(); CHECK_GL_ERROR;
 		m_outputTexture.store(currentOutputTexture, std::memory_order_release);
-		m_submitionsDone.store(false, std::memory_order_release);
+		m_submitionsDone = false;
 		m_isRenderingDone.store(true, std::memory_order_release); 
 		toDrawToFramebuffer1 = !toDrawToFramebuffer1;
 	}
@@ -210,9 +221,14 @@ bool Renderer::TryReadPixelFromClickingTexture(const DVec2& clickPos, std::array
 	{
 		return false;
 	}
-	m_clickRequestPos = clickPos;
-	m_clickRequest.store(true, std::memory_order_release);
-	while (m_clickRequest.load(std::memory_order_acquire));
+	{
+		std::lock_guard lock(m_mutex);
+		m_clickRequest = true;
+		m_clickRequestPos = clickPos;
+	}
+	m_conditionVariable.notify_one();
+	std::unique_lock lock(m_mutex);
+	m_conditionVariable.wait(lock, [&]() -> bool { return !m_clickRequest; });
 	output = m_clickRequestData;
 	return true;
 }

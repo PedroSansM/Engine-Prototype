@@ -73,28 +73,24 @@ void PhysicsMaterialRef::Invalidate()
 UUIDType PhysicsMaterialRef::GetUUID() const
 {
 	DASSERT_E(IsValid());
-	ReadWriteLockGuard guard(LockType::ReadLock, *m_lockData);
 	return m_ref->GetUUID();
 }
 
 float PhysicsMaterialRef::GetDensity() const
 {
 	DASSERT_E(IsValid());
-	ReadWriteLockGuard guard(LockType::ReadLock, *m_lockData);
 	return m_ref->GetAsset().GetDensity();
 }
 
 float PhysicsMaterialRef::GetFriction() const
 {
 	DASSERT_E(IsValid());
-	ReadWriteLockGuard guard(LockType::ReadLock, *m_lockData);
 	return m_ref->GetAsset().GetFriction();
 }
 
 float PhysicsMaterialRef::GetRestitution() const
 {
 	DASSERT_E(IsValid());
-	ReadWriteLockGuard guard(LockType::ReadLock, *m_lockData);
 	return m_ref->GetAsset().GetRestitution();
 }
 

@@ -93,7 +93,6 @@ DCore::SpriteMaterialRef MaterialManager::LoadSpriteMaterial(const DCore::UUIDTy
 		DCore::ReadWriteLockGuard materialGuard(DCore::LockType::ReadLock, *static_cast<DCore::SpriteMaterialAssetManager*>(&DCore::AssetManager::Get()));
 		if (DCore::AssetManager::Get().IsSpriteMaterialLoaded(uuid))
 		{
-			DCore::ReadWriteLockGuard textureGuard(DCore::LockType::ReadLock, *static_cast<DCore::Texture2DAssetManager*>(&DCore::AssetManager::Get()));
 			return DCore::AssetManager::Get().GetSpriteMaterial(uuid);
 		}
 	}
@@ -110,7 +109,6 @@ DCore::SpriteMaterialRef MaterialManager::LoadSpriteMaterial(const DCore::UUIDTy
 		DCore::ReadWriteLockGuard materialGuard(DCore::LockType::ReadLock, *static_cast<DCore::SpriteMaterialAssetManager*>(&DCore::AssetManager::Get()));
 		if (DCore::AssetManager::Get().IsSpriteMaterialLoaded(uuid))
 		{
-			DCore::ReadWriteLockGuard textureGuard(DCore::LockType::ReadLock, *static_cast<DCore::Texture2DAssetManager*>(&DCore::AssetManager::Get()));
 			return DCore::AssetManager::Get().GetSpriteMaterial(uuid);
 		}
 	}

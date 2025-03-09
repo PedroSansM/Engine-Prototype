@@ -25,7 +25,7 @@ public:
 	~PhysicsMaterialPanel() = default;
 public:
 	static void OpenPhysicsMaterialPanel(const stringType& panelName, physicsMaterialRefType);
-	static bool IsPanelWithPhyiscsMaterialUUIDOpened(const uuidType&);
+	static bool IsPanelWithPhysicsMaterialUUIDOpened(const uuidType&);
 	static void RenderPanels();
 public:
 	// Returns if the panel have to be closed.

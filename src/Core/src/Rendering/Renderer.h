@@ -15,8 +15,9 @@
 #include <atomic>
 #include <thread>
 #include <cstdint>
-#include <atomic>
 #include <vector>
+#include <mutex>
+#include <condition_variable>
 
 
 
@@ -31,6 +32,8 @@ public:
 public:
 	using unlitTexturedObjectRendererType = UnlitTexturedObjectRenderer<maxNumberOfUnlitTexturedObjects>;
 	using debugRectObjectRenderer = DebugRectObjectRenderer<maxNumberOfDebguRectObjects>;
+	using mutexType = std::mutex;
+	using conditionVariableType = std::condition_variable;
 public:
 	Renderer();
 	~Renderer() = default;
@@ -89,9 +92,9 @@ public:
 		return m_outputTexture.load(std::memory_order_acquire);
 	}
 
+	// Should be called after Begin and before Render
 	void SetClearColor(const DVec4& color)
 	{
-		DASSERT_E(!m_submitionsDone.load(std::memory_order_acquire));
 		m_clearColor[0] = color.r;
 		m_clearColor[1] = color.g;
 		m_clearColor[2] = color.b;
@@ -99,18 +102,20 @@ public:
 	}
 private:
 	std::atomic_bool m_isRenderingDone;
-	std::atomic_bool m_submitionsDone;
-	std::atomic_bool m_toTerminate;
+	bool m_submitionsDone;
+	bool m_toTerminate;
 	std::thread m_thread;
 	GLFWwindow* m_context;
 	DVec2 m_viewportSizes;
 	std::atomic_uint m_outputTexture;
 	std::vector<RenderStateIndicator> m_stateExecutionSequence;
 	SparseSet<uint32_t> m_addedDrawOrders;
-	std::atomic_bool m_clickRequest;
+	bool m_clickRequest;
 	std::array<int, 4> m_clickRequestData;
 	DVec2 m_clickRequestPos;
 	float m_clearColor[4];
+	mutexType m_mutex;
+	conditionVariableType m_conditionVariable;
 private:
 	unlitTexturedObjectRendererType m_unlitTexturesObjectRenderer;
 	debugRectObjectRenderer m_debugRectObjectRenderer;

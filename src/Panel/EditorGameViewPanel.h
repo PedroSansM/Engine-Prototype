@@ -39,7 +39,6 @@ public:
 	void Update();
 	bool IsRenderingDone();
 	void Render();
-//void SetTextureSlotPack(DCore::TextureSlotPack);
 public:
 	bool IsOpened()
 	{

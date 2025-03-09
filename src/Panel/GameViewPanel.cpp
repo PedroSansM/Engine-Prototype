@@ -45,7 +45,7 @@ void GameViewPanel::Render()
 		m_renderer.Terminate();
 		return;
 	}
-	if (!ImGui::Begin("Game viewport", &m_isOpened))
+	if (!ImGui::Begin("Game viewport", m_currentGameState == GameState::Playing ? nullptr : &m_isOpened))
 	{
 		ImGui::End();
 		return;

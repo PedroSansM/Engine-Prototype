@@ -47,7 +47,8 @@ public:
 		m_thisThreadId(std::this_thread::get_id()),
 		m_desiredLock(desiredLock),
 		m_lockData(lockable.GetLockData()),
-		m_wasReading(false)
+		m_wasReading(false),
+		m_toFreeLock(false)
 	{
 		HandleLock();
 	}
@@ -56,6 +57,7 @@ private:
 	LockType m_desiredLock;
 	LockData& m_lockData;
 	bool m_wasReading;
+	bool m_toFreeLock;
 private:
 	void HandleLock();
 };

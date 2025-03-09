@@ -104,7 +104,10 @@ void AnimationPanel::RenderAnimationPanels()
 		{
 			if (animationPanel->Render())
 			{
-				animationPanel->m_coreAnimation.Unload();
+				{
+					DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
+					animationPanel->m_coreAnimation.Unload();
+				}
 				animationPanel->RemoveFromAllSynchronizationPanels();
 				s_openedAnimationPanels.Remove(animationPanel);
 			}
@@ -125,6 +128,14 @@ bool AnimationPanel::Render()
 	{
 		ImGui::End();
 		return true;
+	}
+	{
+		DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::AnimationAssetManager*>(&DCore::AssetManager::Get()));
+		if (!m_coreAnimation.IsValid())
+		{
+			ImGui::End();
+			return true;
+		}
 	}
 	const ImVec2 regionAvail(ImGui::GetContentRegionAvail());
 	if (ImGui::BeginChild("Config", {regionAvail.x * 0.4f, regionAvail.y}, ImGuiChildFlags_ResizeX | ImGuiChildFlags_Border))
