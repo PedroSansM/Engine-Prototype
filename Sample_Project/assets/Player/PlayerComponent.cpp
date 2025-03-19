@@ -284,15 +284,6 @@ void PlayerComponent::Update(float deltaTime)
 	}
 }
 
-void PlayerComponent::LateUpdate(float deltaTime)
-{
-//const DCore::DVec3 currentTranslation(m_transformComponent.GetTranslation());
-//const DCore::DVec2 boxColliderSizes(m_boxColliderComponent.GetSizes());
-//const DCore::DVec2 boxColliderOffset(m_boxColliderComponent.GetOffset());
-//const DCore::DVec2 boxColliderTranslation(currentTranslation.x + boxColliderOffset.x, currentTranslation.y + boxColliderOffset.y);
-//DrawDebugBox(boxColliderTranslation + m_velocity * 1.0f/60.0f, 0.0f, boxColliderSizes, {0.0f, 0.0f, 1.0f, 1.0f});
-}
-
 void PlayerComponent::PhysicsUpdate(float physicsDeltaTime)
 {
 	const DCore::DVec2 userInput(GetDirectionalInput());
@@ -359,7 +350,7 @@ void PlayerComponent::PhysicsUpdate(float physicsDeltaTime)
 		if (castResult.Entity.HaveComponents<PlatformComponent>())
 		{
 			m_platformComponent = castResult.Entity.GetComponent(DCore::ComponentId::GetId<PlatformComponent>());
-			PlatformComponent* platform(static_cast<PlatformComponent*>(m_platformComponent.GetRawComponent()));
+			PlatformComponent* platform(TO_COMPONENT(PlatformComponent, m_platformComponent));
 			platform->BeginPlayerCollision();
 		}
 	}
@@ -369,7 +360,7 @@ void PlayerComponent::PhysicsUpdate(float physicsDeltaTime)
 		m_transformComponent.AddTranslation({0.0f, deltaY, 0.0f});
 		if (m_platformComponent.IsValid())
 		{
-			PlatformComponent* platform(static_cast<PlatformComponent*>(m_platformComponent.GetRawComponent()));
+			PlatformComponent* platform(TO_COMPONENT(PlatformComponent, m_platformComponent));
 			platform->EndPlayerCollision();
 			m_platformComponent.Invalidate();
 		}
@@ -421,7 +412,7 @@ void PlayerComponent::ShootStraight()
 	m_currentShotCooldown = m_shotCooldown;
 	for (DCore::ComponentRef<DCore::Component> shotComponentRef : m_shotComponents)
 	{
-		PlayerShotComponent* shotComponent(static_cast<PlayerShotComponent*>(shotComponentRef.GetRawComponent()));
+		PlayerShotComponent* shotComponent(TO_COMPONENT(PlayerShotComponent, shotComponentRef));
 		if (!shotComponent->IsFree())
 		{
 			continue;
@@ -446,7 +437,7 @@ void PlayerComponent::ShootUp()
 	m_currentShotCooldown = m_shotCooldown;
 	for (DCore::ComponentRef<DCore::Component> shotComponentRef : m_shotComponents)
 	{
-		PlayerShotComponent* shotComponent(static_cast<PlayerShotComponent*>(shotComponentRef.GetRawComponent()));
+		PlayerShotComponent* shotComponent(TO_COMPONENT(PlayerShotComponent, shotComponentRef));
 		if (!shotComponent->IsFree())
 		{
 			continue;
@@ -466,7 +457,7 @@ void PlayerComponent::ShootDown()
 	m_currentShotCooldown = m_shotCooldown;
 	for (DCore::ComponentRef<DCore::Component> shotComponentRef : m_shotComponents)
 	{
-		PlayerShotComponent* shotComponent(static_cast<PlayerShotComponent*>(shotComponentRef.GetRawComponent()));
+		PlayerShotComponent* shotComponent(TO_COMPONENT(PlayerShotComponent, shotComponentRef));
 		if (!shotComponent->IsFree())
 		{
 			continue;
@@ -487,7 +478,7 @@ void PlayerComponent::ShootDiagonalUp()
 	const float diagonalVelocity(m_shotVelocity / glm::sqrt(2));
 	for (DCore::ComponentRef<DCore::Component> shotComponentRef : m_shotComponents)
 	{
-		PlayerShotComponent* shotComponent(static_cast<PlayerShotComponent*>(shotComponentRef.GetRawComponent()));
+		PlayerShotComponent* shotComponent(TO_COMPONENT(PlayerShotComponent, shotComponentRef));
 		if (!shotComponent->IsFree())
 		{
 			continue;
@@ -513,7 +504,7 @@ void PlayerComponent::ShootDiagonalDown()
 	const float diagonalVelocity(m_shotVelocity / glm::sqrt(2));
 	for (DCore::ComponentRef<DCore::Component> shotComponentRef : m_shotComponents)
 	{
-		PlayerShotComponent* shotComponent(static_cast<PlayerShotComponent*>(shotComponentRef.GetRawComponent()));
+		PlayerShotComponent* shotComponent(TO_COMPONENT(PlayerShotComponent, shotComponentRef));
 		if (!shotComponent->IsFree())
 		{
 			continue;
@@ -538,7 +529,7 @@ void PlayerComponent::ShootDuck()
 	m_currentShotCooldown = m_shotCooldown;
 	for (DCore::ComponentRef<DCore::Component> shotComponentRef : m_shotComponents)
 	{
-		PlayerShotComponent* shotComponent(static_cast<PlayerShotComponent*>(shotComponentRef.GetRawComponent()));
+		PlayerShotComponent* shotComponent(TO_COMPONENT(PlayerShotComponent, shotComponentRef));
 		if (!shotComponent->IsFree())
 		{
 			continue;
@@ -1375,7 +1366,7 @@ void PlayerComponent::Hit(DCore::EntityRef entity)
 	{
 		return;
 	}
-	PlayerHealthComponent* playerHealthComponent(static_cast<PlayerHealthComponent*>(m_playerHealthComponent.GetRawComponent()));
+	PlayerHealthComponent* playerHealthComponent(TO_COMPONENT(PlayerHealthComponent, m_playerHealthComponent));
 	const DCore::DUInt currentHealth(playerHealthComponent->GetCurrentHealth());
 	if (currentHealth == 3)
 	{
@@ -1403,7 +1394,7 @@ void PlayerComponent::Hit(DCore::EntityRef entity)
 				&youDiedMessageComponentId, 1,
 				[&](DCore::Entity entity, DCore::ComponentRef<DCore::Component> component) -> bool
 				{
-					YouDiedMessageComponent* youDiedMessageComponent(static_cast<YouDiedMessageComponent*>(component.GetRawComponent()));
+					YouDiedMessageComponent* youDiedMessageComponent(TO_COMPONENT(YouDiedMessageComponent, component));
 					youDiedMessageComponent->Display();
 					return true;
 				});
@@ -1411,7 +1402,7 @@ void PlayerComponent::Hit(DCore::EntityRef entity)
 				&flowerComponentId, 1,
 				[&](DCore::Entity entity, DCore::ComponentRef<DCore::Component> component) -> bool
 				{
-					FlowerComponent* flowerComponent(static_cast<FlowerComponent*>(component.GetRawComponent()));
+					FlowerComponent* flowerComponent(TO_COMPONENT(FlowerComponent, component));
 					flowerComponent->PlayerDied();
 					return true;
 				});
@@ -1419,7 +1410,7 @@ void PlayerComponent::Hit(DCore::EntityRef entity)
 				&gameManagerComponentId, 1,
 				[&](DCore::Entity entity, DCore::ComponentRef<DCore::Component> component) -> bool
 				{
-					GameManagerComponent* gameManagerComponent(static_cast<GameManagerComponent*>(component.GetRawComponent()));
+					GameManagerComponent* gameManagerComponent(TO_COMPONENT(GameManagerComponent, component));
 					gameManagerComponent->PlayerDied();
 					return true;
 				});

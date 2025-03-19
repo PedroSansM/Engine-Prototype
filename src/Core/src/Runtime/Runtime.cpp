@@ -640,6 +640,7 @@ void Runtime::SetupEntityPhysics(EntityRef entity)
 	bodyDef.userData = reinterpret_cast<void*>(userData.GetId() - 1);
 	b2BodyId bodyId(b2CreateBody(m_physicsWorldId, &bodyDef));
 	boxCollider.SetBodyId(bodyId);
+	boxCollider.SetLinearVelocity({ 0.0f, 0.0f });
 	const DVec2 boxColliderSizes(boxCollider.GetSizes());
 	const DVec2 boxColliderOffset(boxCollider.GetOffset());
 	b2Polygon polygon(b2MakeOffsetBox(glm::abs(scale.x * boxColliderSizes.x/2.0f), glm::abs(scale.y * boxColliderSizes.y/2.0f), {scale.x * boxColliderOffset.x, scale.y * boxColliderOffset.y}, b2Rot_identity));

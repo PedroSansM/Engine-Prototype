@@ -171,7 +171,6 @@ void Renderer::RenderThread()
 		//Timer<std::chrono::microseconds> timer("Renderer loop");
 		const GLuint currentOutputFrameBuffer(toDrawToFramebuffer1 ? outputFramebuffer1 : outputFramebuffer2);
 		const GLuint currentOutputTexture(toDrawToFramebuffer1 ? outputTexture1 : outputTexture2);
-		//std::cout << currentOutputTexture << std::endl;
 		const GLuint currentClickingTexture(toDrawToFramebuffer1 ? clickingTexture1 : clickingTexture2);
 		glViewport(0, 0, (GLsizei)m_viewportSizes.x, (GLsizei)m_viewportSizes.y); CHECK_GL_ERROR;
 		glBindFramebuffer(GL_FRAMEBUFFER, currentOutputFrameBuffer); CHECK_GL_ERROR;

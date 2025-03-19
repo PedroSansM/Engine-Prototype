@@ -301,20 +301,20 @@ private:
 	attributeIndexContainerType m_attributeIndexes;
 };
 
-class Metachannel
+class Event
 {
 public:
-	Metachannel()
+	Event()
 		:
 		m_id(0),
 		m_time(0.0f)
 	{}
-	Metachannel(Metachannel&& other) noexcept
+	Event(Event&& other) noexcept
 		:
 		m_id(other.m_id),
 		m_time(other.m_time)
 	{}
-	~Metachannel() = default;
+	~Event() = default;
 public:
 	void SetId(size_t value)
 	{
@@ -337,7 +337,7 @@ public:
 		return m_time;
 	}
 public:
-	Metachannel& operator=(const Metachannel& other)
+	Event& operator=(const Event& other)
 	{
 		m_id = other.m_id;
 		m_time = other.m_time;
@@ -352,7 +352,7 @@ class Animation
 {
 public:
 	using componentIndexContainerType = SparseSet<ComponentIdType>;
-	using metachannelContainerType = ReciclingVector<Metachannel>;
+	using metachannelContainerType = ReciclingVector<Event>;
 	using stringType = std::string;
 	using componentAnimationsContainerType = std::vector<ComponentAnimations>;
 public:

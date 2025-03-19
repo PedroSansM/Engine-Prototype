@@ -298,7 +298,7 @@ private:
 				{AttributeName("Number of Sprites#Coluns#Rows"), AttributeType::UIVector2, SpriteComponent::a_numberOfSprites}, 
 				{AttributeName("Draw Order"), AttributeType::UInteger, SpriteComponent::a_drawOrder}, 
 				{AttributeName("Pixels Per Unit"), AttributeType::UInteger, SpriteComponent::a_pixelsPerUnit}, 
-				{AttributeName("Tint"), AttributeType::Color, SpriteComponent::a_tintColor}, 
+				{AttributeName("Tint#R#G#B#A"), AttributeType::Color, SpriteComponent::a_tintColor}, 
 				{AttributeName("Sprite Material"), AttributeType::SpriteMaterial, SpriteComponent::a_spriteMaterial},
 				{AttributeName("Enabled"), AttributeType::Logic, SpriteComponent::a_enabled}},
 				[](void* componentAddress, const void* args) -> void

@@ -43,6 +43,7 @@ void SceneHierarchyPanel::Render()
 	if (ImGui::IsKeyPressed(ImGuiKey_Delete) && ImGui::IsWindowFocused() && m_selectedEntityRef.IsValid())
 	{
 		GameViewPanel::Get().GetRuntime().DestroyEntity(m_selectedEntityRef);
+		DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::SceneAssetManager*>(&DCore::AssetManager::Get()));
 		m_selectedEntityRef.Destroy();
 		m_selectedEntityRef.Invalidate();
 	}
@@ -119,7 +120,7 @@ bool SceneHierarchyPanel::IterateOnEntity(DCore::EntityRef entityRef)
 		const ImGuiPayload* payload(ImGui::AcceptDragDropPayload("ENTITY_REF"));
 		if (payload != nullptr)
 		{
-			DCore::EntityRef source(*(DCore::EntityRef*)payload->Data);
+			DCore::EntityRef source(*static_cast<DCore::EntityRef*>(payload->Data));
 			if (source != entityRef)
 			{
 				source.SetParent(entityRef);

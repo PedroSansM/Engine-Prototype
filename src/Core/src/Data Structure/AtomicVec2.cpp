@@ -43,4 +43,16 @@ DVec2 AtomicVec2::Get()
 	return {m_x, m_y};
 }
 
+float AtomicVec2::GetX()
+{
+	std::lock_guard<std::mutex> guard(m_mutex);
+	return m_x;
+}
+
+float AtomicVec2::GetY()
+{
+	std::lock_guard<std::mutex> guard(m_mutex);
+	return m_y;
+}
+
 }

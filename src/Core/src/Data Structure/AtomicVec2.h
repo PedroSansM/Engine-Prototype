@@ -20,6 +20,8 @@ public:
 public:
 	void Set(DFloat x, DFloat y);
 	DVec2 Get();
+	float GetX();
+	float GetY();
 private:
 	DFloat m_x, m_y;
 	std::mutex m_mutex;

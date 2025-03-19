@@ -32,10 +32,7 @@ GameViewPanel::~GameViewPanel()
 void GameViewPanel::Open()
 {
 	m_isOpened = true;
-	if (m_currentGameState == GameState::NotPlaying)
-	{
-		m_renderer.Initiate(ProgramContext::Get().GetMainContext());
-	}
+	m_renderer.Initiate(ProgramContext::Get().GetMainContext());
 }
 
 void GameViewPanel::Render()
@@ -45,7 +42,7 @@ void GameViewPanel::Render()
 		m_renderer.Terminate();
 		return;
 	}
-	if (!ImGui::Begin("Game viewport", m_currentGameState == GameState::Playing ? nullptr : &m_isOpened))
+	if (!ImGui::Begin("Game Viewport", m_currentGameState == GameState::Playing ? nullptr : &m_isOpened))
 	{
 		ImGui::End();
 		return;
@@ -80,7 +77,7 @@ void GameViewPanel::Render()
 		{
 			SceneHierarchyPanel::Get().ClearEntitySelection();
 			DCore::AssetManager::Get().GetScenesInfo(m_scenes, m_loadedScenes);
-			DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, DCore::GlobalConfig::Get());
+			DCore::ReadWriteLockGuard globalConfigGuard(DCore::LockType::ReadLock, DCore::GlobalConfig::Get());
 			DCore::SceneRef scene;
 			SceneManager::Get().LoadScene(DCore::GlobalConfig::Get().GetStartingSceneUUID(), &scene);
 			scene.LoadingCompleted();
@@ -90,11 +87,10 @@ void GameViewPanel::Render()
 		}
 		if (m_renderer.IsRenderingDone() && rendererViewportSizes.x > 0 && rendererViewportSizes.y > 0)
 		{
-			m_renderer.Begin({rendererViewportSizes.x, rendererViewportSizes.y});
-			DCore::Runtime::MakeDefaultRendererSubmitions({rendererViewportSizes.x, rendererViewportSizes.y}, m_renderer);
+			m_renderer.Begin({ rendererViewportSizes.x, rendererViewportSizes.y });
+			DCore::Runtime::MakeDefaultRendererSubmitions({ rendererViewportSizes.x, rendererViewportSizes.y }, m_renderer);
 			m_renderer.Render();
 		}
-		ImGui::Image((ImTextureID)(uintptr_t)m_renderer.GetOutputTextureId(), rendererViewportSizes, {0, 1}, {1, 0});
 		break;	
 	case GameState::Playing:
 		if (GameStatePanel::Get().GetGameState() == GameState::NotPlaying)
@@ -111,11 +107,11 @@ void GameViewPanel::Render()
 		{
 			m_runtime.Render({rendererViewportSizes.x, rendererViewportSizes.y}, m_renderer);
 		}
-		ImGui::Image((ImTextureID)(uintptr_t)m_renderer.GetOutputTextureId(), rendererViewportSizes, {0, 1}, {1, 0});
 		break;
 	default:
 		break;
 	}
+	ImGui::Image((ImTextureID)(uintptr_t)m_renderer.GetOutputTextureId(), rendererViewportSizes, {0, 1}, {1, 0});
 	ImGui::End();
 }
 

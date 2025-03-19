@@ -99,7 +99,6 @@ public:
 public:
 	virtual void Start() override;
 	virtual void Update(float deltaTime) override;
-	virtual void LateUpdate(float deltaTime) override;
 	virtual void PhysicsUpdate(float physicsDeltaTime) override;
 	virtual void AnimationUpdate(float animationDeltaTime) override;
 	virtual void OnOverlapBegin(DCore::EntityRef) override;

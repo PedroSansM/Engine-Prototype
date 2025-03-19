@@ -6,6 +6,7 @@
 #include <unordered_set>
 #include <thread>
 #include <queue>
+#include <condition_variable>
 
 
 
@@ -31,12 +32,14 @@ using LockData = struct LockData
 	std::queue<std::thread::id> Queue;
 	std::queue<std::thread::id> PriorityQueue;
 	std::mutex Mutex;
+	std::condition_variable ConditionVariable;
 };
 
 class ReadWriteLockGuard
 {
 public:
 	using threadIdType = std::thread::id;
+	using uniqueLockType = std::unique_lock<std::mutex>;
 public:
 	ReadWriteLockGuard(LockType desiredLock, LockData&);
 	~ReadWriteLockGuard();
@@ -60,6 +63,7 @@ private:
 	bool m_toFreeLock;
 private:
 	void HandleLock();
+	void Notify(uniqueLockType&);
 };
 
 }

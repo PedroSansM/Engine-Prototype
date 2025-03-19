@@ -29,10 +29,6 @@ void EditorGameViewPanels::Render()
 	for (size_t i(0); i < numberOfPanels; i++)
 	{
 		m_viewports[i].Update();
-		if (m_viewports[i].IsOpened() && m_viewports[i].IsRenderingDone())
-		{
-			m_viewports[i].Render();
-		}
 	}
 }
 

@@ -36,6 +36,7 @@ EditorGameViewPanel::EditorGameViewPanel(const char* panelName, size_t panelId, 
 	m_gizmoOperation(GizmoOperation::Translation),
 	m_gizmoSpace(GizmoSpace::Global)
 {
+	m_cameraTransformComponent.SetTranslation({ 0.0f, 0.0f, 50.0f});
 	if (m_isOpened)
 	{
 		m_isGizmoActive = true;
@@ -69,8 +70,8 @@ void EditorGameViewPanel::Update()
 		ImGui::End();
 		return;
 	}
-	m_viewportSizes = ImGui::GetContentRegionAvail();
-	if (m_viewportSizes.x <= 0 || m_viewportSizes.y <= 0)
+	ImVec2 viewportSizes(ImGui::GetContentRegionAvail());
+	if (viewportSizes.x <= 0 || viewportSizes.y <= 0)
 	{
 		ImGui::End();
 		return;
@@ -159,8 +160,11 @@ void EditorGameViewPanel::Update()
 	ImVec2 cursorPos(ImGui::GetCursorScreenPos());
 	DCore::DVec2 mouseLocalPos(GetMouseLocalPosition());
 	bool isUsingGizmo(false);
-	unsigned int outputTextureId(m_renderer.GetOutputTextureId());
-	ImGui::Image((ImTextureID)(uintptr_t)outputTextureId, m_viewportSizes, {0, 1}, {1, 0});
+	if (m_renderer.IsRenderingDone() && viewportSizes.x > 0.0f && viewportSizes.y > 0.0f)
+	{
+		Render({ viewportSizes.x, viewportSizes.y });
+	}
+	ImGui::Image((ImTextureID)(uintptr_t)m_renderer.GetOutputTextureId(), viewportSizes, {0, 1}, {1, 0});
 	// Gizmo Draw
 	if (SceneHierarchyPanel::Get().IsEntitySelected() && m_isGizmoActive)
 	{
@@ -169,7 +173,7 @@ void EditorGameViewPanel::Update()
 		DCore::ComponentRef<DCore::TransformComponent> transformComponent(entityRef.GetComponents<DCore::TransformComponent>());
 		DASSERT_E(transformComponent.IsValid());
 		ImGuizmo::SetDrawlist();
-		ImGuizmo::SetRect(cursorPos.x, cursorPos.y, m_viewportSizes.x, m_viewportSizes.y);
+		ImGuizmo::SetRect(cursorPos.x, cursorPos.y, viewportSizes.x, viewportSizes.y);
 		DCore::DMat4 modelMatrix;
 		if (entityRef.HaveParent())
 		{
@@ -198,7 +202,7 @@ void EditorGameViewPanel::Update()
 		ImGuizmo::Manipulate
 		(
 			glm::value_ptr(m_cameraTransformComponent.GetInverseModelMatrix()), 
-			glm::value_ptr(m_cameraComponent.GetProjectionMatrix({m_viewportSizes.x, m_viewportSizes.y})),
+			glm::value_ptr(m_cameraComponent.GetProjectionMatrix({viewportSizes.x, viewportSizes.y})),
 			operation,
 			m_gizmoSpace == GizmoSpace::Local ? ImGuizmo::LOCAL : ImGuizmo::WORLD,
 			glm::value_ptr(modelMatrix)
@@ -242,7 +246,7 @@ void EditorGameViewPanel::Update()
 	// Entity Selection
 	if (m_isWindowHovered && !isUsingGizmo && ImGui::IsMouseClicked(ImGuiMouseButton_Left))
 	{
-		mouseLocalPos.y = m_viewportSizes.y - mouseLocalPos.y;
+		mouseLocalPos.y = viewportSizes.y - mouseLocalPos.y;
 		if (std::array<int, 4> pixelData; m_renderer.TryReadPixelFromClickingTexture(mouseLocalPos, pixelData))
 		{
 			if (pixelData[0] == -1 || (pixelData[0] == 0 && pixelData[1] == 0 && pixelData[2] == 0 && pixelData[3] == 0))
@@ -264,28 +268,18 @@ void EditorGameViewPanel::Update()
 	ImGui::End();
 }
 
-bool EditorGameViewPanel::IsRenderingDone()
+void EditorGameViewPanel::Render(const DCore::DVec2& viewportSizes)
 {
-	return m_renderer.IsRenderingDone();
-}
-
-void EditorGameViewPanel::Render()
-{
-	if (m_viewportSizes.x <= 0 || m_viewportSizes.y <= 0)
-	{
-		return;
-	}
-	DASSERT_E(m_isOpened && m_renderer.IsRenderingDone());
-	MakeViewProjection(m_viewportSizes);
-	m_renderer.Begin(DCore::DVec2(m_viewportSizes.x, m_viewportSizes.y));
+	MakeViewProjection(viewportSizes);
+	m_renderer.Begin(viewportSizes);
 	DCore::ReadWriteLockGuard guard(DCore::LockType::ReadLock, *static_cast<DCore::SceneAssetManager*>(&DCore::AssetManager::Get()));
 	DCore::Runtime::MakeRendererSubmitions(m_viewProjection, m_renderer);
 	m_renderer.Render();
 }
 
-void EditorGameViewPanel::MakeViewProjection(ImVec2 viewportSizes)
+void EditorGameViewPanel::MakeViewProjection(const DCore::DVec2& viewportSizes)
 {
-	m_viewProjection = m_cameraComponent.GetProjectionMatrix({viewportSizes.x, viewportSizes.y}) * m_cameraTransformComponent.GetInverseModelMatrix();
+	m_viewProjection = m_cameraComponent.GetProjectionMatrix(viewportSizes) * m_cameraTransformComponent.GetInverseModelMatrix();
 }
 
 }

@@ -473,7 +473,7 @@ public:
 			m_reciclingListSize--;
 			return ref;
 		}
-		m_vector.emplace_back(data);
+		m_vector.push_back(data);
 		return Ref((IdType)m_vector.size(), 0, *this);
 	}
 
@@ -488,7 +488,7 @@ public:
 			m_reciclingListSize--;
 			return ref;
 		}
-		m_vector.emplace_back(std::move(data));
+		m_vector.push_back(std::move(data));
 		return Ref((IdType)m_vector.size(), 0, *this);
 	}
 

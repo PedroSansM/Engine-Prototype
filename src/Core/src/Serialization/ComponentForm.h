@@ -229,15 +229,16 @@ struct ComponentForm
 	using constructorFunctionType = std::function<void(void*, const void*)>;
 	using destructorFunctionType = std::function<void(void*)>;
 
-	ComponentForm(ComponentIdType, 
-				std::string&&, 
-				bool, 
-				size_t, 
-				size_t, 
-				serializedAttributeContainerType&&, 
-				constructorFunctionType&&, 
-				destructorFunctionType&&, 
-				const void*);
+	ComponentForm(
+		ComponentIdType, 
+		std::string&&, 
+		bool, 
+		size_t, 
+		size_t, 
+		serializedAttributeContainerType&&, 
+		constructorFunctionType&&, 
+		destructorFunctionType&&, 
+		const void*);
 
 	ComponentForm(ComponentForm&&) noexcept;
 

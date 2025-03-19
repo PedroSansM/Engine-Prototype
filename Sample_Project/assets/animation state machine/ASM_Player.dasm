@@ -108,147 +108,147 @@ States:
   Idle:
     Animation: 16aa830a-394b-4f34-a12c-ab12ea49c2b6
     IsInitialState: false
-    StatePosition: [-15.043128, 0.754024863]
+    StatePosition: [-15.043128, 0.75402486]
   Running:
     Animation: 1f5f7689-441f-41ad-acd6-fec981d7646a
     IsInitialState: false
-    StatePosition: [-15.1305904, -2.13115168]
+    StatePosition: [-15.13059, -2.1311517]
   Dash:
     Animation: 44361595-ae77-443d-bcc7-92cc89f85659
     IsInitialState: false
-    StatePosition: [-15.0811729, -0.59677285]
+    StatePosition: [-15.081173, -0.59677285]
   Aim Straight:
     Animation: 2249e0c6-48d9-4d4a-9c8d-c726c60de24b
     IsInitialState: false
-    StatePosition: [3.01760125, 6.96072149]
+    StatePosition: [3.0176013, 6.9607215]
   Aim Down:
     Animation: 81c2ec17-8ec9-41ed-802b-94aacb9191a8
     IsInitialState: false
-    StatePosition: [6.67395306, 6.94908571]
+    StatePosition: [6.673953, 6.9490857]
   Aim Up:
     Animation: 491733b1-9153-4f97-ba4e-60841e274f3d
     IsInitialState: false
-    StatePosition: [10.121911, 6.97978544]
+    StatePosition: [10.121911, 6.9797854]
   Aim Diag. Down:
     Animation: 198da19d-4df9-41d3-a6d3-df68cf42919b
     IsInitialState: false
-    StatePosition: [13.5842361, 7.02170658]
+    StatePosition: [13.705174, 7.7473364]
   Aim Diag. Up:
     Animation: 76db8480-2509-4fd8-85da-a6c1c81e5de8
     IsInitialState: false
-    StatePosition: [17.4956017, 7.0343895]
+    StatePosition: [17.495602, 7.0343895]
   Aim Stub:
     Animation: ""
     IsInitialState: false
-    StatePosition: [9.94983482, 1.62027025]
+    StatePosition: [9.949835, 1.6202703]
   Aim Shoot Stub:
     Animation: ""
     IsInitialState: false
-    StatePosition: [10.3807192, -3.06502533]
+    StatePosition: [10.380719, -3.0650253]
   Shoot Straight:
     Animation: 84317172-c008-4bd6-848f-f791465e3dc4
     IsInitialState: false
-    StatePosition: [17.1299114, 0.529374003]
+    StatePosition: [17.129911, 0.529374]
   Shoot Down:
     Animation: 95ce2a6c-1797-4963-a629-3bfb693e8473
     IsInitialState: false
-    StatePosition: [17.0794773, -1.10956216]
+    StatePosition: [17.079477, -1.1095622]
   Shoot Up:
     Animation: 6b9d41ce-2704-4771-bc95-48de0813894a
     IsInitialState: false
-    StatePosition: [17.1805916, -2.66543198]
+    StatePosition: [17.180592, -2.665432]
   Shoot Diag. Down:
     Animation: 1a2c36a8-089d-46f6-b2dd-873ef9923c4c
     IsInitialState: false
-    StatePosition: [17.0772114, -4.51271057]
+    StatePosition: [17.077211, -4.5127106]
   Shoot Diag.Up:
     Animation: 3b501078-dda2-470f-9f46-057e515341bf
     IsInitialState: false
-    StatePosition: [17.0590267, -6.44424057]
+    StatePosition: [17.059027, -6.4442406]
   Free Shoot Stub:
     Animation: ""
     IsInitialState: false
-    StatePosition: [-2.76045299, -5.96483564]
+    StatePosition: [-2.760453, -5.9648356]
   Free Soot R. Diag. Up:
     Animation: 8a576267-5b2b-414a-8f28-c6de5c4753e3
     IsInitialState: false
-    StatePosition: [-10.3011637, -8.43659687]
+    StatePosition: [-11.147732, -9.444409]
   Free Shoot R. Straight:
     Animation: 4b321759-1a40-4573-bea7-591fc7e275fa
     IsInitialState: false
-    StatePosition: [-4.77337027, -8.39059353]
+    StatePosition: [-4.845933, -10.180478]
   Free Shoot Straight:
     Animation: 84317172-c008-4bd6-848f-f791465e3dc4
     IsInitialState: false
-    StatePosition: [0.320046782, -8.45334911]
+    StatePosition: [0.40067193, -8.775851]
   Movement Stub:
     Animation: ""
     IsInitialState: false
-    StatePosition: [-9.9840889, -0.601813197]
+    StatePosition: [-9.984089, -0.6018132]
   Free Shoot Up:
     Animation: 6b9d41ce-2704-4771-bc95-48de0813894a
     IsInitialState: false
-    StatePosition: [5.08463478, -8.37046528]
+    StatePosition: [5.084635, -8.370465]
   Free Shoot Down:
     Animation: 95ce2a6c-1797-4963-a629-3bfb693e8473
     IsInitialState: false
-    StatePosition: [9.16365051, -8.34196758]
+    StatePosition: [9.365214, -7.8179016]
   Duck Begin:
     Animation: 69b24c62-1bf6-4a52-98f4-1c19a88db306
     IsInitialState: false
-    StatePosition: [-15.069726, -3.39008355]
+    StatePosition: [-15.069726, -3.3900836]
   Duck Loop:
     Animation: 98c241a4-f014-4f58-977f-328d59e295f7
     IsInitialState: false
-    StatePosition: [-15.0245829, -4.73858261]
+    StatePosition: [-15.024583, -4.7385826]
   Free Shoot Duck:
     Animation: 04faf954-6ed0-4604-b0bc-d8f1e48f6ee3
     IsInitialState: false
-    StatePosition: [-14.7498007, -8.38852787]
+    StatePosition: [-15.717307, -8.1063385]
   Jump:
     Animation: 7c3194d6-fb86-4a74-b1d9-8e6c0e9061e8
     IsInitialState: false
-    StatePosition: [-14.9993362, 2.14187765]
+    StatePosition: [-14.999336, 2.1418777]
   Shoot Jumping:
     Animation: 2506d7eb-81a6-4a38-940f-8430701b4dc0
     IsInitialState: false
-    StatePosition: [-14.9744225, 3.55663276]
+    StatePosition: [-14.974422, 3.5566328]
   Hit Begin:
     Animation: 6b71f215-2a68-48fe-a8a4-0e008f420136
     IsInitialState: false
-    StatePosition: [-6.54952621, 4.33202505]
+    StatePosition: [-6.549526, 4.332025]
   Hit Loop:
     Animation: 51be2ab4-4602-43f5-aac5-b279c439cf66
     IsInitialState: false
-    StatePosition: [-3.02806592, 4.31490517]
+    StatePosition: [-3.028066, 4.314905]
   Hit End:
     Animation: dcc669d2-0dbc-4a43-8178-f53ed6455078
     IsInitialState: false
-    StatePosition: [0.61248827, 4.41213846]
+    StatePosition: [0.61248827, 4.4121385]
   Hit Stub:
     Animation: ""
     IsInitialState: false
-    StatePosition: [-3.16136146, 2.03752041]
+    StatePosition: [-3.1613615, 2.0375204]
   Dead:
     Animation: 0f26b405-0194-4fd2-bcb8-67477f959321
     IsInitialState: false
-    StatePosition: [-9.61770725, -4.87823772]
+    StatePosition: [-9.617707, -4.8782377]
   Intro Hub:
     Animation: ""
     IsInitialState: false
-    StatePosition: [-10.4166861, 4.72312641]
+    StatePosition: [-10.416686, 4.7231264]
   Intro Begin:
     Animation: 70adcfa6-0f50-48f7-8866-1e3a1a61e9e7
     IsInitialState: true
-    StatePosition: [-14.0000105, 7.04668999]
+    StatePosition: [-14.0000105, 7.04669]
   Intro Loop:
     Animation: d40d1864-d9c0-4622-a5a6-8792c1993da8
     IsInitialState: false
-    StatePosition: [-10.3047132, 7.04668999]
+    StatePosition: [-10.304713, 7.04669]
   Intro End:
     Animation: 71d4d44f-66de-43ca-9453-0b66d3cd7703
     IsInitialState: false
-    StatePosition: [-6.27346897, 6.93470955]
+    StatePosition: [-6.273469, 6.9347095]
 Transitions:
   - FromState: Idle
     ToState: Movement Stub

@@ -18,6 +18,7 @@
 #include <vector>
 #include <mutex>
 #include <condition_variable>
+#include <functional>
 
 
 
@@ -84,6 +85,7 @@ public:
 public:
 	bool IsRenderingDone() const
 	{
+		//return false;
 		return m_isRenderingDone.load(std::memory_order_acquire);
 	}
 

@@ -5,8 +5,6 @@
 #include "DommusCore.h"
 
 
-#include "imgui.h"
-
 #include <cstdint>
 #include <string>
 
@@ -37,8 +35,7 @@ private:
 public:
 	void Open();
 	void Update();
-	bool IsRenderingDone();
-	void Render();
+	void Render(const DCore::DVec2& viewportSizes);
 public:
 	bool IsOpened()
 	{
@@ -68,7 +65,6 @@ private:
 	DCore::PerspectiveCameraComponent m_cameraComponent;
 	DCore::TransformComponent m_cameraTransformComponent;
 	DCore::DMat4 m_viewProjection;
-	ImVec2 m_viewportSizes;
 	float m_cameraVelocity;
 	float m_deltaCameraVelocity;
 	bool m_isWindowHovered;
@@ -76,7 +72,7 @@ private:
 	GizmoOperation m_gizmoOperation;
 	GizmoSpace m_gizmoSpace;
 private:
-	void MakeViewProjection(ImVec2 viewportSizes);
+	void MakeViewProjection(const DCore::DVec2& viewportSizes);
 };
 
 }

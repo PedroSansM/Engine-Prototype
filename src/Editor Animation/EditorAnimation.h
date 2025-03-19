@@ -416,7 +416,7 @@ public:
 	using attributeIdType = DCore::AttributeIdType;
 	using componentContainerType = DCore::SparseSet<componentIdType>;
 	using coreAnimationType = DCore::Animation;
-	using metachannelContainerType = DCore::ReciclingVector<DCore::Metachannel>;
+	using metachannelContainerType = DCore::ReciclingVector<DCore::Event>;
 	using stringType = std::string;
 	using animationContainerType = std::vector<ComponentAnimations>;
 public:

@@ -6,7 +6,7 @@ Entities:
     Name Component:
       Name: Ground
     Transform Component:
-      Translation: [-0.430725813, -3.5108223, 0]
+      Translation: [-0.4307258, -3.5108223, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -30,14 +30,14 @@ Entities:
     Name Component:
       Name: UI
     Transform Component:
-      Translation: [0, 0, 8.19999981]
+      Translation: [0, 0, 8.2]
       Rotation: 0
       Scale: [1, 1]
     Root component:
       {}
     Perspective Camera:
       Field of View: 60
-      Near: 0.300000012
+      Near: 0.3
       Far: 1000
     Children Component:
       First Child: cd4d510d-4aea-4e33-80ab-f28120aefb4b
@@ -47,7 +47,7 @@ Entities:
     Name Component:
       Name: Left Barrier
     Transform Component:
-      Translation: [-8.72867489, 1.29999995, 0]
+      Translation: [-8.728675, 1.3, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -71,7 +71,7 @@ Entities:
     Name Component:
       Name: Right Barrier
     Transform Component:
-      Translation: [8.75109863, 1.29999995, 0]
+      Translation: [8.751099, 1.3, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -95,7 +95,7 @@ Entities:
     Name Component:
       Name: Player
     Transform Component:
-      Translation: [-4.62762594, -2.24580574, 0]
+      Translation: [-4.627626, -2.2458057, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -108,7 +108,7 @@ Entities:
       Fixed Rotation: false
       Use CCD: false
       Offset: [0, 0]
-      Sizes: [0.800000012, 1.5]
+      Sizes: [0.8, 1.5]
       Physics Material: ""
       Self Physics Layer: Layer1
       Collide With Physics Layer:
@@ -119,15 +119,15 @@ Entities:
       Number Of Children: 8
     PlayerComponent:
       Movement Velocity: 6.5
-      Dash Cooldown: 0.100000001
+      Dash Cooldown: 0.1
       Dash Velocity: 15
       Jump Initial Velocity: 22
       Gravity Scale: 6
       Shot velocity: 22
       Shot Material: 49ce1570-6f9d-4866-8e52-84e379d804b5
       Shot Animation State Machine: 9f8918d2-63a6-4c71-86b2-62611e969173
-      Shot Cooldown: 0.140000001
-      Blink Period: 0.100000001
+      Shot Cooldown: 0.14
+      Blink Period: 0.1
       Blink Time: 2
       Shoot Sound: event:/Player/Shoot Event
       Dash Sound: event:/Player/Dash
@@ -143,7 +143,7 @@ Entities:
     Name Component:
       Name: PlayerSprite
     Transform Component:
-      Translation: [-0.987035751, 0.491539955, 0]
+      Translation: [-0.98703575, 0.49153996, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -169,7 +169,7 @@ Entities:
     Name Component:
       Name: Straight Shoot Point
     Transform Component:
-      Translation: [0.730000019, 0.204999998, 0]
+      Translation: [0.73, 0.205, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -181,7 +181,7 @@ Entities:
     Name Component:
       Name: Up Shoot Point
     Transform Component:
-      Translation: [0.379689932, 1.44366336, 0]
+      Translation: [0.37968993, 1.4436634, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -193,7 +193,7 @@ Entities:
     Name Component:
       Name: Down Shoot Point
     Transform Component:
-      Translation: [0.344999999, -0.61500001, 0]
+      Translation: [0.345, -0.615, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -205,7 +205,7 @@ Entities:
     Name Component:
       Name: Diagonal Down Shoot Point
     Transform Component:
-      Translation: [0.787735462, -0.247233868, 0]
+      Translation: [0.78773546, -0.24723387, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -217,7 +217,7 @@ Entities:
     Name Component:
       Name: Diagonal Up Shoot Point
     Transform Component:
-      Translation: [0.730000019, 0.57220459, 0]
+      Translation: [0.73, 0.5722046, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -229,7 +229,7 @@ Entities:
     Name Component:
       Name: Duck Shoot Point
     Transform Component:
-      Translation: [0.867999971, -0.279000014, 0]
+      Translation: [0.868, -0.279, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -241,7 +241,7 @@ Entities:
     Name Component:
       Name: PlayerShot
     Transform Component:
-      Translation: [-0.378154695, 9.63563347, 0]
+      Translation: [-0.3781547, 9.635633, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -263,8 +263,8 @@ Entities:
       Gravity Scale: 1
       Fixed Rotation: true
       Use CCD: false
-      Offset: [0.300000012, 0]
-      Sizes: [20, 0.100000001]
+      Offset: [0.3, 0]
+      Sizes: [20, 0.1]
       Physics Material: ""
       Self Physics Layer: Unspecified
       Collide With Physics Layer:
@@ -290,7 +290,7 @@ Entities:
     Name Component:
       Name: Platform
     Transform Component:
-      Translation: [0.0742238164, 0.484573722, 0]
+      Translation: [0.07422382, 0.48457372, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -312,7 +312,7 @@ Entities:
     Name Component:
       Name: Background
     Transform Component:
-      Translation: [0.150000006, 2.20000005, 0]
+      Translation: [0.15, 2.2, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -334,7 +334,7 @@ Entities:
     Name Component:
       Name: Plants
     Transform Component:
-      Translation: [0, -3.98395538, 0]
+      Translation: [0, -3.9839554, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -356,7 +356,7 @@ Entities:
     Name Component:
       Name: Sky
     Transform Component:
-      Translation: [0.111457825, 1.84764862, 0]
+      Translation: [0.111457825, 1.8476486, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -378,7 +378,7 @@ Entities:
     Name Component:
       Name: Floating Platform A
     Transform Component:
-      Translation: [-6.28013992, -0.219999999, 0]
+      Translation: [-6.28014, -0.22, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -401,7 +401,7 @@ Entities:
       Fixed Rotation: true
       Use CCD: false
       Offset: [0, 0]
-      Sizes: [2.20000005, 0.5]
+      Sizes: [2.2, 0.5]
       Physics Material: ""
       Self Physics Layer: Layer2
       Collide With Physics Layer:
@@ -414,16 +414,16 @@ Entities:
       Number Of Children: 1
     PlatformComponent:
       Initial Coefficient: 0.5
-      Altitude Variation: 0.474999994
+      Altitude Variation: 0.475
       Movement Period: 6
-      Minimal Altitude: -0.694999993
+      Minimal Altitude: -0.695
       Transition Velocity: 3
   - UUID Component:
       UUID: bd17eab5-80db-43e4-b5f7-4a6bcf97c08a
     Name Component:
       Name: Propelor A
     Transform Component:
-      Translation: [0.06275177, -0.584347725, 0]
+      Translation: [0.06275177, -0.5843477, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -447,7 +447,7 @@ Entities:
     Name Component:
       Name: Floating Platform B
     Transform Component:
-      Translation: [-2.82527924, -0.781585217, 0]
+      Translation: [-2.8252792, -0.7815852, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -470,7 +470,7 @@ Entities:
       Fixed Rotation: true
       Use CCD: false
       Offset: [0, 0]
-      Sizes: [2.20000005, 0.5]
+      Sizes: [2.2, 0.5]
       Physics Material: ""
       Self Physics Layer: Layer2
       Collide With Physics Layer:
@@ -483,16 +483,16 @@ Entities:
       Number Of Children: 1
     PlatformComponent:
       Initial Coefficient: 0
-      Altitude Variation: 0.474999994
+      Altitude Variation: 0.475
       Movement Period: 6
-      Minimal Altitude: -0.694999993
+      Minimal Altitude: -0.695
       Transition Velocity: 3
   - UUID Component:
       UUID: 6a51a43c-9c77-4310-823c-72a8c97a02bb
     Name Component:
       Name: Propelor B
     Transform Component:
-      Translation: [0.063000001, -0.583999991, 0]
+      Translation: [0.063, -0.584, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -516,7 +516,7 @@ Entities:
     Name Component:
       Name: Floating Platform C
     Transform Component:
-      Translation: [0.468002439, -0.281400412, 0]
+      Translation: [0.46800244, -0.2814004, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -539,7 +539,7 @@ Entities:
       Fixed Rotation: true
       Use CCD: false
       Offset: [0, 0]
-      Sizes: [2.20000005, 0.5]
+      Sizes: [2.2, 0.5]
       Physics Material: ""
       Self Physics Layer: Layer2
       Collide With Physics Layer:
@@ -552,16 +552,16 @@ Entities:
       Number Of Children: 1
     PlatformComponent:
       Initial Coefficient: 0.5
-      Altitude Variation: 0.474999994
+      Altitude Variation: 0.475
       Movement Period: 6
-      Minimal Altitude: -0.694999993
+      Minimal Altitude: -0.695
       Transition Velocity: 3
   - UUID Component:
       UUID: ffc683e3-879d-4ab5-bf90-3f63f4b39e41
     Name Component:
       Name: Propelor C
     Transform Component:
-      Translation: [0.063000001, -0.583999991, 0]
+      Translation: [0.063, -0.584, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -585,7 +585,7 @@ Entities:
     Name Component:
       Name: Flower
     Transform Component:
-      Translation: [1.20144415, -0.519611597, 0]
+      Translation: [1.2014441, -0.5196116, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -593,7 +593,7 @@ Entities:
     Sprite Component:
       Flip X: false
       Flip Y: false
-      Sprite Index: 148
+      Sprite Index: 0
       Number of Sprites: [20, 8]
       Draw Order: 5
       Pixels Per Unit: 74
@@ -623,7 +623,7 @@ Entities:
     Name Component:
       Name: Venus 0
     Transform Component:
-      Translation: [-3.46285772, 15.3004303, 0]
+      Translation: [-3.4628577, 15.30043, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -639,7 +639,7 @@ Entities:
       Fixed Rotation: true
       Use CCD: false
       Offset: [0, 0]
-      Sizes: [0.5, 0.699999988]
+      Sizes: [0.5, 0.7]
       Physics Material: ""
       Self Physics Layer: Layer3
       Collide With Physics Layer:
@@ -684,7 +684,7 @@ Entities:
     Name Component:
       Name: Acorn 1
     Transform Component:
-      Translation: [3.66127896, 2.46261573, 0]
+      Translation: [3.661279, 2.4626157, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -706,7 +706,7 @@ Entities:
       Gravity Scale: 0
       Fixed Rotation: false
       Use CCD: false
-      Offset: [-0.150000006, 0.0500000007]
+      Offset: [-0.15, 0.05]
       Sizes: [1, 0.5]
       Physics Material: ""
       Self Physics Layer: Layer3
@@ -724,7 +724,7 @@ Entities:
     Name Component:
       Name: Acorn 2
     Transform Component:
-      Translation: [3.66100001, 0.764808178, 0]
+      Translation: [3.661, 0.7648082, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -746,7 +746,7 @@ Entities:
       Gravity Scale: 0
       Fixed Rotation: false
       Use CCD: false
-      Offset: [-0.150000006, 0.0500000007]
+      Offset: [-0.15, 0.05]
       Sizes: [1, 0.5]
       Physics Material: ""
       Self Physics Layer: Layer3
@@ -764,7 +764,7 @@ Entities:
     Name Component:
       Name: Acorn 3
     Transform Component:
-      Translation: [3.66100001, -0.97351104, 0]
+      Translation: [3.661, -0.97351104, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -786,7 +786,7 @@ Entities:
       Gravity Scale: 0
       Fixed Rotation: false
       Use CCD: false
-      Offset: [-0.150000006, 0.0500000007]
+      Offset: [-0.15, 0.05]
       Sizes: [1, 0.5]
       Physics Material: ""
       Self Physics Layer: Layer3
@@ -816,7 +816,7 @@ Entities:
     Name Component:
       Name: Boomerang 1
     Transform Component:
-      Translation: [3.42439842, 0.929730535, 0]
+      Translation: [3.4243984, 0.92973053, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -862,15 +862,15 @@ Entities:
     BoomerangManagerComponent:
       Half Life Time: 2
       Velocity: 10
-      Low Translation Y: -1.45599997
+      Low Translation Y: -1.456
       Time To Launch: 0.5
-      Additional Return Life Time: 0.699999988
+      Additional Return Life Time: 0.7
   - UUID Component:
       UUID: 6ee4e120-6d35-4295-9c58-beb613c93638
     Name Component:
       Name: Boomerang 2
     Transform Component:
-      Translation: [3.42400002, 0.930000007, 0]
+      Translation: [3.424, 0.93, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -908,7 +908,7 @@ Entities:
     Name Component:
       Name: Hurt Box
     Transform Component:
-      Translation: [4.51969957, 2.66059494, 0]
+      Translation: [4.5196996, 2.660595, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -934,7 +934,7 @@ Entities:
     Name Component:
       Name: Attack Hit Box
     Transform Component:
-      Translation: [4.76410341, 2.69431877, 0]
+      Translation: [4.7641034, 2.6943188, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -960,7 +960,7 @@ Entities:
     Name Component:
       Name: Seed Ground
     Transform Component:
-      Translation: [-0.430999994, -3.51099992, 0]
+      Translation: [-0.431, -3.511, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -999,7 +999,7 @@ Entities:
       Fixed Rotation: false
       Use CCD: false
       Offset: [0, 0]
-      Sizes: [1.20000005, 0.800000012]
+      Sizes: [1.2, 0.8]
       Physics Material: ""
       Self Physics Layer: Layer5
       Collide With Physics Layer:
@@ -1010,7 +1010,7 @@ Entities:
     Name Component:
       Name: Burst
     Transform Component:
-      Translation: [0, 2.51634979, 0]
+      Translation: [0, 2.5163498, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1036,7 +1036,7 @@ Entities:
     Name Component:
       Name: Venus 1
     Transform Component:
-      Translation: [1.41975641, 15.3004303, 0]
+      Translation: [1.4197564, 15.30043, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -1052,7 +1052,7 @@ Entities:
       Fixed Rotation: true
       Use CCD: false
       Offset: [0, 0]
-      Sizes: [0.5, 0.699999988]
+      Sizes: [0.5, 0.7]
       Physics Material: ""
       Self Physics Layer: Layer3
       Collide With Physics Layer:
@@ -1071,7 +1071,7 @@ Entities:
     Name Component:
       Name: Seed
     Transform Component:
-      Translation: [-0.0410000011, 0, 0]
+      Translation: [-0.041, 0, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1097,7 +1097,7 @@ Entities:
     Name Component:
       Name: Burst
     Transform Component:
-      Translation: [0, 2.51634979, 0]
+      Translation: [0, 2.5163498, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1123,7 +1123,7 @@ Entities:
     Name Component:
       Name: Venus
     Transform Component:
-      Translation: [-0.493732452, 5.00799561, 0]
+      Translation: [-0.49373245, 5.0079956, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1150,7 +1150,7 @@ Entities:
       Fixed Rotation: false
       Use CCD: false
       Offset: [0, 0]
-      Sizes: [1.20000005, 0.800000012]
+      Sizes: [1.2, 0.8]
       Physics Material: ""
       Self Physics Layer: Layer3
       Collide With Physics Layer:
@@ -1166,7 +1166,7 @@ Entities:
     Name Component:
       Name: Vines
     Transform Component:
-      Translation: [-0.0946121216, 2.33863831, 0]
+      Translation: [-0.09461212, 2.3386383, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1192,7 +1192,7 @@ Entities:
     Name Component:
       Name: Seed
     Transform Component:
-      Translation: [-0.0410000011, 0, 0]
+      Translation: [-0.041, 0, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1218,7 +1218,7 @@ Entities:
     Name Component:
       Name: Chomper 0
     Transform Component:
-      Translation: [0, 7.94226074, 0]
+      Translation: [0, 7.9422607, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -1234,7 +1234,7 @@ Entities:
       Fixed Rotation: true
       Use CCD: false
       Offset: [0, 0]
-      Sizes: [0.5, 0.699999988]
+      Sizes: [0.5, 0.7]
       Physics Material: ""
       Self Physics Layer: Layer3
       Collide With Physics Layer:
@@ -1276,8 +1276,8 @@ Entities:
       Gravity Scale: 0
       Fixed Rotation: true
       Use CCD: false
-      Offset: [0, 0.200000003]
-      Sizes: [0.800000012, 1]
+      Offset: [0, 0.2]
+      Sizes: [0.8, 1]
       Physics Material: ""
       Self Physics Layer: Layer3
       Collide With Physics Layer:
@@ -1307,8 +1307,8 @@ Entities:
       Gravity Scale: 0
       Fixed Rotation: true
       Use CCD: false
-      Offset: [0, 0.200000003]
-      Sizes: [0.800000012, 1]
+      Offset: [0, 0.2]
+      Sizes: [0.8, 1]
       Physics Material: ""
       Self Physics Layer: Layer5
       Collide With Physics Layer:
@@ -1319,7 +1319,7 @@ Entities:
     Name Component:
       Name: Burst
     Transform Component:
-      Translation: [0, 2.51634979, 0]
+      Translation: [0, 2.5163498, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1345,7 +1345,7 @@ Entities:
     Name Component:
       Name: Seed
     Transform Component:
-      Translation: [-0.0410919189, 0, 0]
+      Translation: [-0.04109192, 0, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1371,7 +1371,7 @@ Entities:
     Name Component:
       Name: Vines
     Transform Component:
-      Translation: [-0.0946121216, 2.33863831, 0]
+      Translation: [-0.09461212, 2.3386383, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1412,7 +1412,7 @@ Entities:
       Fixed Rotation: false
       Use CCD: false
       Offset: [0, 0]
-      Sizes: [1.20000005, 0.800000012]
+      Sizes: [1.2, 0.8]
       Physics Material: ""
       Self Physics Layer: Layer5
       Collide With Physics Layer:
@@ -1423,7 +1423,7 @@ Entities:
     Name Component:
       Name: Venus 2
     Transform Component:
-      Translation: [-1.18967175, 15.3004303, 0]
+      Translation: [-1.1896718, 15.30043, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -1439,7 +1439,7 @@ Entities:
       Fixed Rotation: true
       Use CCD: false
       Offset: [0, 0]
-      Sizes: [0.5, 0.699999988]
+      Sizes: [0.5, 0.7]
       Physics Material: ""
       Self Physics Layer: Layer3
       Collide With Physics Layer:
@@ -1458,7 +1458,7 @@ Entities:
     Name Component:
       Name: Seed
     Transform Component:
-      Translation: [-0.0410000011, 0, 0]
+      Translation: [-0.041, 0, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1484,7 +1484,7 @@ Entities:
     Name Component:
       Name: Vines
     Transform Component:
-      Translation: [-0.0946121216, 2.33863831, 0]
+      Translation: [-0.09461212, 2.3386383, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1510,7 +1510,7 @@ Entities:
     Name Component:
       Name: Venus
     Transform Component:
-      Translation: [-0.493732452, 5.00799561, 0]
+      Translation: [-0.49373245, 5.0079956, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1537,7 +1537,7 @@ Entities:
       Fixed Rotation: false
       Use CCD: false
       Offset: [0, 0]
-      Sizes: [1.20000005, 0.800000012]
+      Sizes: [1.2, 0.8]
       Physics Material: ""
       Self Physics Layer: Layer3
       Collide With Physics Layer:
@@ -1553,7 +1553,7 @@ Entities:
     Name Component:
       Name: Seed Enemies Launcher
     Transform Component:
-      Translation: [-8.25150299, 7.84599304, 0]
+      Translation: [-8.251503, 7.845993, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -1565,7 +1565,7 @@ Entities:
     Name Component:
       Name: Venus
     Transform Component:
-      Translation: [-0.493732452, 5.00799561, 0]
+      Translation: [-0.49373245, 5.0079956, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1592,7 +1592,7 @@ Entities:
       Fixed Rotation: false
       Use CCD: false
       Offset: [0, 0]
-      Sizes: [1.20000005, 0.800000012]
+      Sizes: [1.2, 0.8]
       Physics Material: ""
       Self Physics Layer: Layer3
       Collide With Physics Layer:
@@ -1623,7 +1623,7 @@ Entities:
       Fixed Rotation: false
       Use CCD: false
       Offset: [0, 0]
-      Sizes: [1.20000005, 0.800000012]
+      Sizes: [1.2, 0.8]
       Physics Material: ""
       Self Physics Layer: Layer5
       Collide With Physics Layer:
@@ -1634,7 +1634,7 @@ Entities:
     Name Component:
       Name: Burst
     Transform Component:
-      Translation: [0, 2.51634979, 0]
+      Translation: [0, 2.5163498, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1660,7 +1660,7 @@ Entities:
     Name Component:
       Name: Ground Hit Box
     Transform Component:
-      Translation: [5.53272295, -0.868356705, 0]
+      Translation: [5.532723, -0.8683567, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1712,7 +1712,7 @@ Entities:
     Name Component:
       Name: Player Health
     Transform Component:
-      Translation: [-9.22476196, -5.09923649, -10]
+      Translation: [-9.224762, -5.0992365, -10]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1779,7 +1779,7 @@ Entities:
       Number of Sprites: [1, 1]
       Draw Order: 10
       Pixels Per Unit: 2
-      Tint: [0, 0, 0, 0.470588237]
+      Tint: [0, 0, 0, 0.47058824]
       Sprite Material: ""
       Enabled: false
   - UUID Component:
@@ -1787,7 +1787,7 @@ Entities:
     Name Component:
       Name: Seed Missiles
     Transform Component:
-      Translation: [4.34580088, 5.0544281, 0]
+      Translation: [4.345801, 5.054428, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:
@@ -1811,7 +1811,7 @@ Entities:
     Name Component:
       Name: Iris Transition
     Transform Component:
-      Translation: [0, 0.207481384, 0]
+      Translation: [0, 0.20748138, 0]
       Rotation: 0
       Scale: [1, 1]
     Root component:
@@ -1844,13 +1844,13 @@ Entities:
       Ready Sound: event:/Announcer/Ready
       Begin Sound: event:/Announcer/Begin
       Delay To Start Ready Sound: 0.5
-      Delay To Start Begin Sound: 2.20000005
+      Delay To Start Begin Sound: 2.2
   - UUID Component:
       UUID: 4a279145-a4f8-4a20-849e-f4296eca54a2
     Name Component:
       Name: Press R To Restart
     Transform Component:
-      Translation: [0.0543289185, 1.76870739, 0]
+      Translation: [0.05432892, 1.7687074, 0]
       Rotation: 0
       Scale: [1, 1]
     Child Component:

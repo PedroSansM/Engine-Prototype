@@ -23,6 +23,8 @@
 namespace DCore
 {
 
+#define TO_COMPONENT(TYPE, COMPONENT_REF) static_cast<TYPE*>(COMPONENT_REF.GetRawComponent())
+
 class Runtime;
 
 class ScriptComponent : public Component

@@ -192,15 +192,15 @@ void ResourcesPanel::Render()
 					MakeEnterNamePopup("Enter material name:", "A material name cannot be empty!", &ResourcesPanel::CreateUnlitSpriteMaterial);
 					ImGui::EndPopup();
 				}
-				if (ImGui::Button("Lit Sprite Material"))
-				{
-					ImGui::OpenPopup("Create Lit Sprite Material Popup");
-				}
-				if (ImGui::BeginPopup("Create Lit Sprite Material Popup"))
-				{
-					// TODO: Create lit sprite material.
-					ImGui::EndPopup();
-				}
+				//if (ImGui::Button("Lit Sprite Material"))
+				//{
+				//	ImGui::OpenPopup("Create Lit Sprite Material Popup");
+				//}
+				//if (ImGui::BeginPopup("Create Lit Sprite Material Popup"))
+				//{
+				//	// TODO: Create lit sprite material.
+				//	ImGui::EndPopup();
+				//}
 				if (ImGui::Button("Physics Material"))
 				{
 					ImGui::OpenPopup("Create Physics Material Popup");
